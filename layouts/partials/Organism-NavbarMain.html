@@ -5,10 +5,11 @@
         <a href="/" class="mx-8">
             <h2>
                 <!-- Logo -->
-                <!-- <svg
+                <svg
                     id="f0d78c45-ce1a-4bfa-913f-81db976cf25b"
                     data-name="svg-layer-01"
                     xmlns="http://www.w3.org/2000/svg"
+                    class="md:hidden"
                     viewBox="0 0 237.42 94.47"
                     height="25"
                 >
@@ -23,11 +24,12 @@
                         class="bd168108-cf83-4627-aa5c-9a3ceba99cd2"
                         d="M229.7,1.57l-62.93,75a4.37,4.37,0,0,1-7.72-2.81V4.38a4.37,4.37,0,0,0-7.72-2.81l-62.93,75a4.37,4.37,0,0,1-7.72-2.81V4.38A4.37,4.37,0,0,0,73,1.57L1,87.29a4.37,4.37,0,0,0,3.35,7.18H233.05a4.37,4.37,0,0,0,4.37-4.37V4.38A4.37,4.37,0,0,0,229.7,1.57Z"
                     />
-                </svg> -->
+                </svg>
 
                 <!-- Logomark -->
                 <svg
                     height="20"
+                    class="hidden md:block"
                     id="ef2203ae-1682-4336-8784-0e3b730f6813"
                     data-name="svg-layer-01"
                     xmlns="http://www.w3.org/2000/svg"
@@ -100,15 +102,25 @@
         </a>
     </div>
 
-    <ul class="left-0 flex w-full border-l lg:w-1/2 border-stone-200">
+    <ul class="left-0 flex w-full lg:w-1/2 border-stone-200">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-            <li class="flex-1">
+            <li
+                class="flex-1
+            {{ if eq .Title "首頁" }}
+                    hidden md:inline-block
+                {{ end }}
+                
+                
+            
+            "
+            >
                 <a
-                    class="inline-block w-full p-4 text-center border-r text-stone-600 border-stone-200 hover:bg-stone-100
+                    class="inline-block w-full p-4 text-center border-l text-stone-600 border-stone-200 hover:bg-stone-100
                     {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
                         bg-stone-100 text-stone-900
-                    {{ end }}"
+                    {{ end }}
+                    "
                     href="{{ .URL }}"
                     title="{{ .Title }}"
                     >{{ .Name }}</a
