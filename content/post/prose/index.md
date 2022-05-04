@@ -1,11 +1,19 @@
 ---
-title: "Prose"
-date: 2021-12-18T11:10:36+08:00
 draft: false
+titletc: 繁中標題
+toc: false
+client: tester
+cover:
+  - https://ucarecdn.com/64decfeb-8680-46ad-ac1d-6f3bef79d6fd/
+  - https://ucarecdn.com/d34cefac-943d-4cff-a566-b6071577d5ba/
+  - https://ucarecdn.com/6714f263-7bb1-4721-b112-2d6e692fa270/-/crop/952x1300/414,0/-/preview/
+title: Prose
+date: 2021-12-18T11:10:36+08:00
 language: en
+tag:
+  - 1
+  - 2
 description: A test with @tailwindcss/typography & Prose
-tag: [1, 2]
-client: "tester"
 ---
 
 ## A Test with Tailwind Prose Classes   
