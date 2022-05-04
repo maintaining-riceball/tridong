@@ -3,10 +3,12 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 media_folder: static/img
 public_folder: /img
+
 media_library:
   name: uploadcare
-    config:
-      publickey: 5fa87fb5d63e84fccf01
+  config:
+    publicKey: 5fa87fb5d63e84fccf01
+
 collections:
   - name: 'blog'
     label: 'Blog'
