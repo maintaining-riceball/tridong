@@ -18,6 +18,14 @@ collections:
     path: '{{slug}}/index'
     fields:
       - {label: "草稿", name: "draft", widget: "boolean", default: true, required: false}
+      - label: "封面圖片"
+        name: "cover"
+        widget: "image"
+        media_library:
+          config:
+            multiple: true
+            previewStep: false
+
       - {label: "英文標題", name: "title", widget: "string"}
       - {label: "繁中標題", name: "titletc", widget: "string"}
       - {label: "簡介", name: "description", widget: "text"}
@@ -69,15 +77,15 @@ collections:
         widget: "list"
         fields:
           - {label: Credites Type, name: crediteType, widget: string, required: false}
-          - label: "Persons"
+          - label: "參與人員"
             name: "persons"
             widget: "list"
             fields:
-              - label: "Person"
+              - label: "人"
                 name: "person"
                 widget: "object"
                 collapsed: true
                 fields:
                   - {label: "人名", name: "personName", widget: "string"}
-                  - {label: "人名-資料", name: "personInfo", widget: "string", required: false}
-                  - {label: "人名-連結", name: "personUrl", widget: "string", required: false}
+                  - {label: "人的資料", name: "personInfo", widget: "string", required: false}
+                  - {label: "人的連結", name: "personUrl", widget: "string", required: false}
