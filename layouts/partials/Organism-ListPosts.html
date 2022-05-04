@@ -1,0 +1,30 @@
+<h2>
+    <a class="inline-block p-8 py-4 bg-stone-100" href="/post"> 文章列表 </a>
+</h2>
+<ul class="grid grid-cols-5 p-8 py-4 border-b bg-stone-100 border-stone-200">
+    <li class="">年份</li>
+    <li class="col-span-2">篇名</li>
+    <li class="">標籤</li>
+</ul>
+{{ range where $.Site.RegularPages "Section" "post" }}
+    <a href="{{ .Permalink }}">
+        <ul
+            class="grid grid-cols-5 p-8 py-4 border-b border-stone-200 hover:bg-stone-100 transition-background"
+        >
+            <!-- Date -->
+            <li>
+                {{ .Params.Date.Format "2006/01" }}
+            </li>
+
+            <!-- Title -->
+            <li class="col-span-2">
+                {{ .Params.Title }}
+            </li>
+
+            <!-- Tags -->
+            <li>
+                {{ .Params.tag }}
+            </li>
+        </ul>
+    </a>
+{{ end }}

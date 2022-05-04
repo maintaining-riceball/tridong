@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}">
+    <head>
+        {{ partial "head.html" . }}
+    </head>
+    <body class="text-stone-900 bg-stone-50">
+        {{ partial "partials/Organism-NavbarMain.html" . }}
+        <div class="lg:mt-14 lg:mb-0 mb-14">
+            {{ block "main" . }}
+            {{ end }}
+            {{ partial "partials/Organism-FooterMain.html" . }}
+        </div>
+    </body>
+</html>

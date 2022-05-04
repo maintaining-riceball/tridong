@@ -1,0 +1,33 @@
+<h2>
+    <a class="inline-block p-8 py-4 bg-stone-100" href="/project"> 專案列表 </a>
+</h2>
+<ul class="grid grid-cols-5 p-8 py-4 border-b bg-stone-100 border-stone-200">
+    <li class="">年份</li>
+    <li class="col-span-2">專案名稱</li>
+    <li class="">標籤</li>
+    <li class="">客戶</li>
+</ul>
+{{ range where $.Site.RegularPages "Section" "project" }}
+    <a href="{{ .Permalink }}">
+        <ul
+            class="grid grid-cols-5 p-8 py-4 border-b border-stone-200 hover:bg-stone-100 transition-background"
+        >
+            <!-- Date -->
+            <li>
+                {{ .Params.Date.Format "2006" }}
+            </li>
+
+            <!-- Title -->
+            <li class="col-span-2">
+                {{ .Params.Title }}
+            </li>
+
+            <!-- Tags -->
+            <li>
+                {{ .Params.tag }}
+            </li>
+
+            <li>{{ .Params.client }}</li>
+        </ul>
+    </a>
+{{ end }}

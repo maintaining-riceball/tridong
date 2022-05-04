@@ -1,0 +1,90 @@
+{{ define "main" }}
+    <div
+        style="min-height: calc(100vh - var(--navbarMainHeight) * 2)"
+        class="grid grid-auto lg:grid-cols-2"
+    >
+        <div>
+            <div class="flex items-center h-40 p-8 text-3xl">
+                {{ .Params.titletc }}
+                <br />
+                {{ .Title }}
+            </div>
+            <div>
+                <img
+                    class="sticky top-0 w-full"
+                    src="https://dummyimage.com/300x300/d6cdbf/fff.jpg"
+                    srcset="
+                        https://dummyimage.com/600x600/d6cdbf/fff.jpg    600w,
+                        https://dummyimage.com/800x800/d6cdbf/fff.jpg    800w,
+                        https://dummyimage.com/1200x1200/d6cdbf/fff.jpg 1200w
+                    "
+                    alt="Hero Image"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    loading="lazy"
+                />
+                <img
+                    class="sticky top-0 w-full"
+                    src="https://dummyimage.com/300x300/d6cdbf/fff.jpg"
+                    srcset="
+                        https://dummyimage.com/600x600/d6cdbf/fff.jpg    600w,
+                        https://dummyimage.com/800x800/d6cdbf/fff.jpg    800w,
+                        https://dummyimage.com/1200x1200/d6cdbf/fff.jpg 1200w
+                    "
+                    alt="Hero Image"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    loading="lazy"
+                />
+
+                <img
+                    class="sticky top-0 w-full"
+                    src="https://dummyimage.com/300x300/d6cdbf/fff.jpg"
+                    srcset="
+                        https://dummyimage.com/600x600/d6cdbf/fff.jpg    600w,
+                        https://dummyimage.com/800x800/d6cdbf/fff.jpg    800w,
+                        https://dummyimage.com/1200x1200/d6cdbf/fff.jpg 1200w
+                    "
+                    alt="Hero Image"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    loading="lazy"
+                />
+            </div>
+        </div>
+
+        <div class="px-8 pb-8 border-0 lg:border-l">
+            <div class="h-40 py-8">
+                <ul>
+                    <li>
+
+                    <!-- Time -->
+                    {{ if .Params.time }}
+                        時間 :
+                        <time>
+                            {{ .Params.Date.Format "2006" }}
+                        </time>
+                    </li>
+                    {{ end }}
+
+                    <!-- Tag -->
+                    {{ if .Params.tag }}
+                        <li>
+                            標籤:
+                            {{ .Params.tag }}
+                        </li>
+                    {{ end }}
+
+
+                    <!-- Client -->
+                    {{ if .Params.client }}
+                        <li>
+                            客戶:
+                            {{ .Params.client }}
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+            <div style="top: var(--navbarMainHeight)" class="sticky prose ">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+{{ end }}

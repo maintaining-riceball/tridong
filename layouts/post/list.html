@@ -1,0 +1,43 @@
+{{ define "main" }}
+    <div class="grid grid-auto lg:grid-cols-2">
+        <div class="border-r border-stone-200">
+            <h1 class="p-8 text-3xl leading-relaxed prose">
+                這裡是對於文章區的敘述，你可以填寫一些文字，然後放個連結之類的，連結到相關聯的東西。
+            </h1>
+            <div class="mx-8 mb-8">
+                <a href="#" class="inline-flex items-center text-xl"
+                    >Youtube
+                    <svg
+                        class="mt-0.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24"
+                        width="24"
+                    >
+                        <path d="M9 19V17H15.6L4 5.4L5.4 4L17 15.6V9H19V19Z" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="">
+                <img
+                    class="sticky top-0 w-full"
+                    src="https://dummyimage.com/300x300/a6cdbf/fff&text=Post-Show.jpg"
+                    srcset="
+                        https://dummyimage.com/600x600/a6cdbf/fff&text=Post-Show.jpg    600w,
+                        https://dummyimage.com/800x800/a6cdbf/fff&text=Post-Show.jpg    800w,
+                        https://dummyimage.com/1200x1200/a6cdbf/fff&text=Post-Show.jpg 1200w
+                    "
+                    alt="Hero Image"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    loading="lazy"
+                />
+            </div>
+        </div>
+        <div
+            id="project"
+            class="sticky top-0 lg:max-h-screen lg:overflow-y-scroll h-max"
+        >
+            {{ partial "partials/Organism-ListPosts.html" . }}
+        </div>
+    </div>
+{{ end }}

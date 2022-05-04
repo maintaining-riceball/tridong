@@ -1,0 +1,95 @@
+# Params
+[Params]
+brand = 'TriangleDongDong'
+brandtc = '三角東東'
+brandLogo = ''
+
+
+# Navbar
+[menu]
+[[menu.main]]
+  # Identifier must match the section name
+  identifier = 'home'
+  name = '首頁'
+  title = '首頁'
+  url = '/'
+  weight = 1
+[[menu.main]]
+  identifier = 'about'
+  name = '關於'
+  title = '關於'
+  url = '/about/'
+  weight = 2
+[[menu.main]]
+  identifier = 'post'
+  name = '文章'
+  title = '查看部落格文章'
+  url = '/post/'
+  weight = 3
+[[menu.main]]
+  identifier = 'project'
+  name = '專案'
+  title = '查看作品'
+  url = '/project/'
+  weight = 4
+
+# Taxonomy
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  project = "projects"
+
+baseURL = '/'
+languageCode = 'en-us'
+
+disableKinds = ["taxonomy","taxonomyTerm"]
+
+# Markup Engine
+enableEmoji = true
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
+
+# Netlify CMS
+media_folder = "static/img"
+public_folder = "/img"
+
+[backend]
+name = "git-gateway"
+branch = "main"
+
+[[collections]]
+name = "blog"
+label = "Blog"
+folder = "content/blog"
+create = true
+slug = "{{year}}-{{month}}-{{day}}-{{slug}}"
+
+  [collections.editor]
+  preview = false
+
+  [[collections.fields]]
+  label = "Title"
+  name = "title"
+  widget = "string"
+
+  [[collections.fields]]
+  label = "Publish Date"
+  name = "date"
+  widget = "datetime"
+
+  [[collections.fields]]
+  label = "Description"
+  name = "description"
+  widget = "string"
+
+  [[collections.fields]]
+  label = "Body"
+  name = "body"
+  widget = "markdown"

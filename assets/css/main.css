@@ -1,0 +1,16 @@
+/* assets */ 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --navbarMainHeight: 3.5rem;
+}
+
+.navbarMainHeight{
+    height: var(--navbarMainHeight)
+}
+
+.top-navbarMainHeight{
+    top: var(--navbarMainHeight)
+}
