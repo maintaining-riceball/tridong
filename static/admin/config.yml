@@ -10,3 +10,127 @@ media_library:
     publicKey: 5fa87fb5d63e84fccf01
 
 collections:
+  # Pages
+  - name: "pages"
+    label: "頁面"
+    files:
+      - file: "site/content/_index.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - {label: Title, name: title, widget: string}
+
+  # notes
+  - name: "筆記"
+    label: "notes"
+    folder: "content/notes"
+    create: true
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    nested:
+      depth: 1000
+    fields:
+      - {label: "草稿", name: "draft", widget: "boolean", default: true, required: false}
+      - {label: "縮圖", name: "thumbnail", widget: "image", required: false}
+      - {label: "標題", name: "title", widget: "string"}
+      - {label: "標題-繁中", name: "titletc", widget: "string"}
+      - {label: "簡介", name: "description", widget: "text"}
+      - {label: "發布日期", name: "date", widget: "datetime", date_format: "YYYY-MM-DDTHH:mm:ssZ", format: "YYYY-MM-DDTHH:mm:ssZ", picker_utc: false }
+      - {label: "類別", name: "categories", widget: "list", default: [""]}
+      - {label: "標籤", name: "tags", widget: "list", default: ["tags"]}
+      - label: "參與人員"
+        name: "credites"
+        widget: "list"
+        fields:
+          - {label: Credites Type, name: crediteType, widget: string, required: false}
+          - label: "人物"
+            name: "persons"
+            widget: "list"
+            fields:
+              - label: "人"
+                name: "person"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - {label: "Person Name", name: "personName", widget: "string"}
+                  - {label: "Person Link", name: "personLink", widget: "string", required: false}
+
+
+      - {label: "顏色系", name: "imageText", widget: "select", options: ["light", "dark"], default: ["dark"] }
+      - {label: "目錄", name: "toc", widget: "boolean", default: false}
+      - {label: "內文", name: "body", widget: "markdown"}
+
+  # Projects
+  - name: "專案"
+    label: "Projects"
+    summary: '{{fields.titletc}}-{{fields.title}}'
+    folder: "content/projects"
+    create: true
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    nested:
+      depth: 1000
+    fields:
+      - {label: "草稿", name: "draft", widget: "boolean", default: true}
+      - {label: "縮圖", name: "thumbnail", widget: "image", required: false}
+      - {label: "主視覺圖", name: "image", widget: "image", required: false}
+      - {label: "標題", name: "title", widget: "string"}
+      - {label: "標題-繁中", name: "titletc", widget: "string"}
+      - {label: '顏色-專案字', name: 'textColor', widget: 'color', required: false}
+      - {label: '顏色-專案背景', name: 'projectBG', widget: 'color', required: false}
+      - {label: '顏色-縮圖背景', name: 'thumbnailBg', widget: 'color', required: false}
+      - {label: "客戶", name: "client", widget: "string"}
+      - {label: "簡介", name: "description", widget: "text"}
+
+      - label: 簡介-詳細
+        name: metas
+        widget: list
+        fields:
+          - {label: 標題, name: heading, widget: string, required: false}
+          - {label: 內文, name: text, widget: text, required: false}
+
+      - {label: "發布日期", name: "date", widget: "datetime", date_format: "YYYY-MM-DDTHH:mm:ssZ", format: "YYYY-MM-DDTHH:mm:ssZ", picker_utc: false }
+      - {label: "開始日期", name: "dateStart", widget: "datetime", date_format: "YYYY-MM-DD", format: "YYYY-MM-DD", picker_utc: false }
+      - {label: "結束日期", name: "dateEnd", widget: "datetime", date_format: "YYYY-MM-DD", format: "YYYY-MM-DD", picker_utc: false }
+      - {label: "專案標籤", name: "projects", widget: "list", default: [""]}
+      - {label: "內文", name: "body", widget: "markdown"}
+
+      - label: "參與人員"
+        name: "credites"
+        widget: "list"
+        fields:
+          - {label: Credites Type, name: crediteType, widget: string, required: false}
+          - label: "Persons"
+            name: "persons"
+            widget: "list"
+            fields:
+              - label: "Person"
+                name: "person"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - {label: "人名", name: "personName", widget: "string"}
+                  - {label: "人名-資料", name: "personInfo", widget: "string", required: false}
+                  - {label: "人名-連結", name: "personUrl", widget: "string", required: false}
+  # Notesold
+  - name: "Notesold"
+    label: "Notesold"
+    summary: '{{fields.titletc}}-{{fields.title}}'
+    folder: "content/notes"
+    create: true
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: 'Color', name: 'color', widget: 'color', required: false}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "TitleTC", name: "titletc", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DDTHH:mm:ssZ", format: "YYYY-MM-DDTHH:mm:ssZ", picker_utc: false }
+      - {label: "Note", name: "notes", widget: "list", default: [""]}
+      - {label: "Body", name: "body", widget: "markdown"}
+
