@@ -1,8 +1,11 @@
 {
-  "name": "Portfolio and Blog",
+  "name": "triangledongdong",
   "version": "1.0.0",
   "description": "Portfolio and Blog site",
   "main": "index.js",
+  "author": "Riceball",
+	"license": "UNLICENSED",
+	"private": true,
   "dependencies": {},
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.1",
@@ -13,9 +16,6 @@
     "prettier": "^2.6.2",
     "prettier-plugin-go-template": "^0.0.12",
     "tailwindcss": "^3.0.24"
-	"author": "Riceball",
-	"license": "UNLICENSED",
-	"private": true,
   },
   "scripts": {
     "dev": "concurrently npm:watch:*",
@@ -26,5 +26,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/4044ever/Hugo-Tailwind-3.0.git"
-  },
+  }
 }
