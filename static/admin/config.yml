@@ -25,7 +25,6 @@ collections:
           config:
             multiple: true
             imagesOnly: true
-            
 
       - {label: "英文標題", name: "title", widget: "string"}
       - {label: "繁中標題", name: "titletc", widget: "string"}
@@ -61,8 +60,13 @@ collections:
     path: '{{slug}}/index'
     fields:
       - {label: "草稿", name: "draft", widget: "boolean", default: true}
-      # - {label: "縮圖", name: "thumbnail", widget: "image", required: false}
-      # - {label: "主視覺圖", name: "image", widget: "image", required: false}
+      - label: "封面圖片"
+        name: "cover"
+        widget: "image"
+        media_library:
+          config:
+            multiple: true
+            imagesOnly: true
       - {label: "英文標題", name: "title", widget: "string"}
       - {label: "繁中標題", name: "titletc", widget: "string"}
       - {label: "客戶", name: "client", widget: "string"}

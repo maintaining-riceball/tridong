@@ -55,9 +55,6 @@ baseURL = '/'
 languageCode = 'en-us'
 
 
-# Disable Default taxonomy
-disableKinds = ['taxonomy', 'term']
-
 # Markup Engine
 enableEmoji = true
 [markup]
