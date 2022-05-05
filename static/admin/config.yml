@@ -8,7 +8,6 @@ media_library:
   name: uploadcare
   config:
     publicKey: 5fa87fb5d63e84fccf01
-    locale: zhTW
 
 collections:
   # notes
