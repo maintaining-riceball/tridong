@@ -12,19 +12,16 @@
 
             <div>
                 {{ range .Params.cover }}
-                    {{ $img := . }}
-                    {{ $smartProcess :=  "/-/quality/smart_retina/-/format/auto/-" }}
                     <img
                         class="sticky top-0 w-full"
-                        src="{{ path.Dir $img }}{{ $smartProcess }}{{ path.Base $img }}"
+                        src="{{ . }}{{ $.Site.Params.imgAuto }}"
                         srcset="
-                            {{ path.Dir $img }}{{ $smartProcess }}/resize/300x/{{ path.Base $img }}   300w,
-                            {{ path.Dir $img }}{{ $smartProcess }}/resize/600x/{{ path.Base $img }}   600w,
-                            {{ path.Dir $img }}{{ $smartProcess }}/resize/900x/{{ path.Base $img }}   900w,
-                            {{ path.Dir $img }}{{ $smartProcess }}/resize/1200x/{{ path.Base $img }} 1200w
+                            {{ . }}{{ $.Site.Params.imgmd }}{{ $.Site.Params.imgAuto }}    600w,
+                            {{ . }}{{ $.Site.Params.imglg }}{{ $.Site.Params.imgAuto }}    800w,
+                            {{ . }}{{ $.Site.Params.imgxl }}{{ $.Site.Params.imgAuto }} 1200w
                         "
-                        sizes="(min-width: 1040px) 50vw, 100vw"
-                        alt="{{ path.Base $img }}"
+                        alt="Hero Image"
+                        sizes="(min-width: 1040px) 50vw, (min-width: 540px) 100vw, calc(10.91vw + 463px)"
                         loading="lazy"
                     />
                 {{ end }}
@@ -35,16 +32,16 @@
         <div class="px-8 pb-8 border-0 lg:border-l">
             <div class="h-40 py-8">
                 <ul>
-                    <!-- Time -->
-                    {{ if .Params.date }}
-                        <li>
-                            時間 :
-                            <time>
-                                {{ .Params.Date.Format "2006" }}
-                            </time>
-                        </li>
-                    {{ end }}
+                    <li>
 
+                    <!-- Time -->
+                    {{ if .Params.time }}
+                        時間 :
+                        <time>
+                            {{ .Params.Date.Format "2006" }}
+                        </time>
+                    </li>
+                    {{ end }}
 
                     <!-- Tag -->
                     {{ if .Params.tag }}

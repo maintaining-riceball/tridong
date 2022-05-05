@@ -1,13 +1,25 @@
+
+
+display_url: https://your-site.com
+logo_url: https://ucarecdn.com/d9d6fe9d-4e7c-493f-baa1-7237a2b08df3/triangledongdong.svg
+
+
+locale: 'zh_Hant'
+
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
 media_folder: static/img
 public_folder: /img
+local_backend: true
+
 
 media_library:
   name: uploadcare
   config:
-    
+    publicKey: 5fa87fb5d63e84fccf01
+  settings:
+    autoFilename: true
 
 collections:
   # notes
