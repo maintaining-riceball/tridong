@@ -7,7 +7,7 @@ public_folder: /img
 media_library:
   name: uploadcare
   config:
-    publicKey: 5fa87fb5d63e84fccf01
+    
 
 collections:
   # notes
@@ -25,6 +25,7 @@ collections:
           config:
             multiple: true
             imagesOnly: true
+            publicKey: 5fa87fb5d63e84fccf01
 
       - {label: "英文標題", name: "title", widget: "string"}
       - {label: "繁中標題", name: "titletc", widget: "string"}
@@ -67,6 +68,8 @@ collections:
           config:
             multiple: true
             imagesOnly: true
+            publicKey: 5fa87fb5d63e84fccf01
+
       - {label: "英文標題", name: "title", widget: "string"}
       - {label: "繁中標題", name: "titletc", widget: "string"}
       - {label: "客戶", name: "client", widget: "string"}
