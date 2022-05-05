@@ -13,6 +13,8 @@
             <div>
                 {{ range .Params.cover }}
                     {{ $img := . }}
+                    {{ path.Dir $img }}
+                    {{ path.Base $img }}
                     {{ $smartProcess :=  "/-/quality/smart_retina/-/format/auto/-" }}
                     <img
                         class="sticky top-0 w-full"
