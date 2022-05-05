@@ -54,7 +54,9 @@ imgProgress = '-/progressive/yes/'
 baseURL = '/'
 languageCode = 'en-us'
 
-disableKinds = ["taxonomy","taxonomyTerm"]
+
+# Disable Default taxonomy
+disableKinds = ['taxonomy', 'term']
 
 # Markup Engine
 enableEmoji = true

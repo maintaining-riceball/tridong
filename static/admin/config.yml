@@ -24,7 +24,7 @@ collections:
         media_library:
           config:
             multiple: true
-            previewStep: false
+            imagesOnly: true
             
 
       - {label: "英文標題", name: "title", widget: "string"}
