@@ -4,6 +4,17 @@ brand = 'TriangleDongDong'
 brandtc = '三角東東'
 brandLogo = ''
 
+testimg = 'https://ucarecdn.com/16d84bf3-b31e-4a87-a82a-566364a85030/'
+
+imgsm = '-/smart_resize/300x300/'
+imgmd = '-/smart_resize/600x600/'
+imglg = '-/smart_resize/900x900/'
+imgxl = '-/smart_resize/1200x1200/'
+
+imgResize = '-/smart_resize/'
+imgAuto = '-/format/auto/'
+
+imgProgress = '-/progressive/yes/'
 
 # Navbar
 [menu]

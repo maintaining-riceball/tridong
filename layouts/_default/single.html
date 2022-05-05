@@ -9,44 +9,23 @@
                 <br />
                 {{ .Title }}
             </div>
-            <div>
-                <img
-                    class="sticky top-0 w-full"
-                    src="https://dummyimage.com/300x300/d6cdbf/fff.jpg"
-                    srcset="
-                        https://dummyimage.com/600x600/d6cdbf/fff.jpg    600w,
-                        https://dummyimage.com/800x800/d6cdbf/fff.jpg    800w,
-                        https://dummyimage.com/1200x1200/d6cdbf/fff.jpg 1200w
-                    "
-                    alt="Hero Image"
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    loading="lazy"
-                />
-                <img
-                    class="sticky top-0 w-full"
-                    src="https://dummyimage.com/300x300/d6cdbf/fff.jpg"
-                    srcset="
-                        https://dummyimage.com/600x600/d6cdbf/fff.jpg    600w,
-                        https://dummyimage.com/800x800/d6cdbf/fff.jpg    800w,
-                        https://dummyimage.com/1200x1200/d6cdbf/fff.jpg 1200w
-                    "
-                    alt="Hero Image"
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    loading="lazy"
-                />
 
-                <img
-                    class="sticky top-0 w-full"
-                    src="https://dummyimage.com/300x300/d6cdbf/fff.jpg"
-                    srcset="
-                        https://dummyimage.com/600x600/d6cdbf/fff.jpg    600w,
-                        https://dummyimage.com/800x800/d6cdbf/fff.jpg    800w,
-                        https://dummyimage.com/1200x1200/d6cdbf/fff.jpg 1200w
-                    "
-                    alt="Hero Image"
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    loading="lazy"
-                />
+            <div>
+                {{ range .Params.cover }}
+                    <img
+                        class="sticky top-0 w-full"
+                        src="{{ . }}{{ $.Site.Params.imgAuto }}"
+                        srcset="
+                            {{ . }}{{ $.Site.Params.imgmd }}{{ $.Site.Params.imgAuto }}    600w,
+                            {{ . }}{{ $.Site.Params.imglg }}{{ $.Site.Params.imgAuto }}    800w,
+                            {{ . }}{{ $.Site.Params.imgxl }}{{ $.Site.Params.imgAuto }} 1200w
+                        "
+                        alt="Hero Image"
+                        sizes="(min-width: 1040px) 50vw, (min-width: 540px) 100vw, calc(10.91vw + 463px)"
+                        loading="lazy"
+                    />
+                {{ end }}
+
             </div>
         </div>
 

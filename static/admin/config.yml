@@ -8,6 +8,7 @@ media_library:
   name: uploadcare
   config:
     publicKey: 5fa87fb5d63e84fccf01
+    Locale: zhTW
 
 collections:
   # notes
@@ -25,6 +26,7 @@ collections:
           config:
             multiple: true
             previewStep: false
+            
 
       - {label: "英文標題", name: "title", widget: "string"}
       - {label: "繁中標題", name: "titletc", widget: "string"}

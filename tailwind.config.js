@@ -9,7 +9,7 @@ module.exports = {
             DEFAULT: {
                 css: {
                     "code::before": {content: ''},
-                    "code::after": {content: ''}
+                    "code::after": {content: ''},
                 }
             }
         }

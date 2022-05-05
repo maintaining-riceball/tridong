@@ -4,6 +4,12 @@ draft: false
 heroImageSize: square
 projectBGColor: "#efc6cc"
 titletc: 新民高級中學畢業紀念冊
+cover: 
+  - 'https://ucarecdn.com/fd2a5e3f-e678-40b7-88e9-6d51120f9b6a/'
+  - 'https://ucarecdn.com/43936f9d-fe3e-45e5-8615-8a26a72d5218/'
+  - 'https://ucarecdn.com/2c388feb-366f-474b-b834-7c75564a9ef8/'
+  - 'https://ucarecdn.com/a4b47028-78f2-444f-8260-73c05fa54600/'
+
 credites:
   - Type: 單位
     persons:
