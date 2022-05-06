@@ -13,17 +13,17 @@
             <div>
                 {{ range .Params.cover }}
                     {{ $img := . }}
-                    {{ path.Dir $img }}
-                    {{ path.Base $img }}
+                    {{ $dirFile := path.Split $img }}
+
                     {{ $smartProcess :=  "/-/quality/smart_retina/-/format/auto/-" }}
                     <img
                         class="sticky top-0 w-full"
-                        src="{{ path.Dir $img }}{{ $smartProcess }}{{ path.Base $img }}"
+                        src="{{ $dirFile.Dir }}{{ $smartProcess }}{{ path.Base $img }}"
                         srcset="
-                            {{ path.Dir $img }}{{ $smartProcess }}/resize/300x/{{ path.Base $img }}   300w,
-                            {{ path.Dir $img }}{{ $smartProcess }}/resize/600x/{{ path.Base $img }}   600w,
-                            {{ path.Dir $img }}{{ $smartProcess }}/resize/900x/{{ path.Base $img }}   900w,
-                            {{ path.Dir $img }}{{ $smartProcess }}/resize/1200x/{{ path.Base $img }} 1200w
+                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/300x/{{ path.Base $img }}   300w,
+                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/600x/{{ path.Base $img }}   600w,
+                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/900x/{{ path.Base $img }}   900w,
+                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/1200x/{{ path.Base $img }} 1200w
                         "
                         sizes="(min-width: 1040px) 50vw, 100vw"
                         alt="{{ path.Base $img }}"
