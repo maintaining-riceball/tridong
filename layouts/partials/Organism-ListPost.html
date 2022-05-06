@@ -6,7 +6,14 @@
     <li class="col-span-2">篇名</li>
     <li class="">標籤</li>
 </ul>
-{{ range where $.Site.RegularPages "Section" "post" }}
+{{ range  $index, $value := ((.Paginate .RegularPagesRecursive).Pages) }}
+    <!-- categoryType variable -->
+    {{ $categoryType := newScratch }}
+
+    {{ $firstArrayItem := index (.Params.category) 0 }}
+    {{ .Scratch.Set "categoryType" $firstArrayItem }}
+
+
     <a href="{{ .Permalink }}">
         <ul
             class="grid grid-cols-5 p-8 py-4 border-b border-stone-200 hover:bg-stone-100 transition-background"

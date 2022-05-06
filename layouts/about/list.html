@@ -1,13 +1,14 @@
 {{ define "main" }}
     <div class="grid grid-auto lg:grid-cols-2">
         <div class="border-r border-stone-200">
-            <h1 class="p-8 text-3xl leading-relaxed prose">
-                「未來、創新與效率」為三要點，連成三角形且像是洶湧的後浪，表示三角東東隨著時代潮流不斷前行演進。
-                <br />
-                <br />
-                我們創作趣味性十足跳脫平庸的作品，站在專業的角度有趣的玩設計。
-            </h1>
-            <div class="mx-8 mb-8"></div>
+            <div class="h-auto p-8 xl:h-96">
+                <h1 class="text-2xl leading-relaxed prose">
+                    「未來、創新與效率」為三要點，連成三角形且像是洶湧的後浪，表示三角東東隨著時代潮流不斷前行演進。
+                    <br />
+                    <br />
+                    我們創作趣味性十足跳脫平庸的作品，站在專業的角度有趣的玩設計。
+                </h1>
+            </div>
 
             <div class="">
                 {{ range .Params.cover }}
@@ -31,7 +32,7 @@
                 {{ end }}
             </div>
         </div>
-        <div>
+        <div class="w-full mx-8 prose max-w-none">
             {{ .Content }}
         </div>
     </div>

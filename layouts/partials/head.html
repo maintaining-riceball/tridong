@@ -20,7 +20,7 @@
 {{ if .IsHome }}
     {{ $title.Add "content" $.Site.Params.slogan }}
     {{ $title.Add "content" " - " }}
-    {{ $title.Add "content" $.Site.Params.brand }}
+    {{ $title.Add "content" $.Site.Params.brandLogo }}
     <!-- Is not in .Kind of Home -->
 {{ else }}
     {{ if eq .Kind "section" }}

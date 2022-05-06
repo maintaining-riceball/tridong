@@ -6,7 +6,6 @@ backend:
 media_folder: static/img
 public_folder: /img
 local_backend: true
-
 publish_mode: editorial_workflow
 
 
@@ -24,14 +23,24 @@ media_library:
     autoFilename: true
 
 collections:
-  - label: "文章"
-    name: "post"
-    folder: "content/post/"
+  - name: post
+    label: 文章
+    label_singular: 'post'
+    folder: content/post
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     preview_path: "post/{{slug}}"
     create: true
+    # adding a nested object will show the collection folder structure
+    nested:
+      depth: 100 # max depth to show in the collection tree
+      summary: '{{title}} lorema' # optional summary for a tree node, defaults to the inferred title field
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image",required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
+    # adding a meta object with a path property allows editing the path of entries
+    # moving an existing entry will move the entire sub tree of the entry to the new location
+    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }

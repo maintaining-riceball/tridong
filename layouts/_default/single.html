@@ -56,6 +56,15 @@
                     {{ end }}
 
 
+                    <!-- Tag -->
+                    {{ if .Params.Project }}
+                        <li>
+                            標籤:
+                            {{ .Params.Project }}
+                        </li>
+                    {{ end }}
+
+
                     <!-- Client -->
                     {{ if .Params.client }}
                         <li>
