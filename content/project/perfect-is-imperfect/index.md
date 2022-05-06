@@ -1,6 +1,7 @@
 ---
 draft: false
 cover:
+  - https://ucarecdn.com/c9e8fef4-9078-46ff-b3a6-e58708b21dcd/20220321_v6-0-0_半個展基本系統_3D化_宗瑋-04.jpg
   - https://ucarecdn.com/ac1abbe2-d625-453d-be61-4797a7401e34/半個展-海報視覺.jpg
   - https://ucarecdn.com/5dce4186-780c-4ac0-bb38-9678721f1dd2/半個展-基本系統.jpg
   - https://ucarecdn.com/7c5d5972-5e29-45db-9d4c-22b95b5e4df0/半個展-卡片.png
@@ -19,6 +20,8 @@ description: >-
 
   「正因為不完美，才創造完美」半個展述說的是一種生活處事的態度。畢製是審視自己學習成果的一項重大挑戰，展覽中我們鼓勵每一位畢業生除了展現自己完美的一面外，同時也接納並不完美的另一面，讓我們一起來半個展！
 date: 2021-01-14T01:55:20+08:00
+dateStart: 2022-05-06
+dateEnd: 2022-05-06
 projects:
   - exhibition
   - cis
