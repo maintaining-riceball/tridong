@@ -1,6 +1,6 @@
 {{ define "main" }}
     <div
-        style="min-height: calc(100vh - var(--navbarMainHeight) * 2)"
+        style="min-height: calc(100vh - var(--navbarMainHeight) * 2 + 2rem)"
         class="grid grid-auto lg:grid-cols-2"
     >
         <div>
@@ -30,7 +30,6 @@
                         loading="lazy"
                     />
                 {{ end }}
-
             </div>
         </div>
 
@@ -66,7 +65,10 @@
                     {{ end }}
                 </ul>
             </div>
-            <div style="top: var(--navbarMainHeight)" class="sticky prose ">
+            <div
+                style="top: calc(var(--navbarMainHeight) + 2rem) "
+                class="sticky prose "
+            >
                 {{ .Content }}
             </div>
         </div>

@@ -2,23 +2,33 @@
     <div class="grid grid-auto lg:grid-cols-2">
         <div class="border-r border-stone-200">
             <h1 class="p-8 text-3xl leading-relaxed prose">
-                用「專業的角度有趣地玩設計」是我們專注的事情。
+                「未來、創新與效率」為三要點，連成三角形且像是洶湧的後浪，表示三角東東隨著時代潮流不斷前行演進。
+                <br />
+                <br />
+                我們創作趣味性十足跳脫平庸的作品，站在專業的角度有趣的玩設計。
             </h1>
             <div class="mx-8 mb-8"></div>
 
             <div class="">
-                <img
-                    class="sticky top-0 w-full"
-                    src="https://dummyimage.com/300x300/d6cdbf/fff&text=Project-Show.jpg"
-                    srcset="
-                        https://dummyimage.com/600x600/d6cdbf/fff&text=Project-Show.jpg    600w,
-                        https://dummyimage.com/800x800/d6cdbf/fff&text=Project-Show.jpg    800w,
-                        https://dummyimage.com/1200x1200/d6cdbf/fff&text=Project-Show.jpg 1200w
-                    "
-                    alt="Hero Image"
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    loading="lazy"
-                />
+                {{ range .Params.cover }}
+                    {{ $img := . }}
+                    {{ $dirFile := path.Split $img }}
+
+                    {{ $smartProcess :=  "/-/quality/smart_retina/-/format/auto/-" }}
+                    <img
+                        class="sticky top-0 w-full"
+                        src="{{ $dirFile.Dir }}{{ $smartProcess }}{{ path.Base $img }}"
+                        srcset="
+                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/300x/{{ path.Base $img }}   300w,
+                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/600x/{{ path.Base $img }}   600w,
+                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/900x/{{ path.Base $img }}   900w,
+                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/1200x/{{ path.Base $img }} 1200w
+                        "
+                        sizes="(min-width: 1040px) 50vw, 100vw"
+                        alt="{{ path.Base $img }}"
+                        loading="lazy"
+                    />
+                {{ end }}
             </div>
         </div>
         <div>

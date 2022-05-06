@@ -1,17 +1,19 @@
-
-
-display_url: https://your-site.com
-logo_url: https://ucarecdn.com/d9d6fe9d-4e7c-493f-baa1-7237a2b08df3/triangledongdong.svg
-
-
-locale: 'zh_Hant'
-
+# CMS Setup
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
+
 media_folder: static/img
 public_folder: /img
 local_backend: true
+
+publish_mode: editorial_workflow
+
+
+# CMS Decoration
+display_url: https://your-site.com
+logo_url: https://ucarecdn.com/d9d6fe9d-4e7c-493f-baa1-7237a2b08df3/triangledongdong.svg
+locale: 'zh_Hant'
 
 
 media_library:
@@ -22,90 +24,14 @@ media_library:
     autoFilename: true
 
 collections:
-  # notes
-  - name: "note"
-    label: "筆記"
-    folder: "content/post"
+  - label: "文章"
+    name: "post"
+    folder: "content/post/"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "post/{{slug}}"
     create: true
-    path: '{{slug}}/index'
     fields:
-      - {label: "草稿", name: "draft", widget: "boolean", default: true, required: false}
-      - label: "封面圖片"
-        name: "cover"
-        widget: "image"
-        media_library:
-          config:
-            multiple: true
-            imagesOnly: true
-            publicKey: 5fa87fb5d63e84fccf01
-
-      - {label: "英文標題", name: "title", widget: "string"}
-      - {label: "繁中標題", name: "titletc", widget: "string"}
-      - {label: "簡介", name: "description", widget: "text"}
-      - {label: "發布日期", name: "date", widget: "datetime", date_format: "YYYY-MM-DDTHH:mm:ssZ", format: "YYYY-MM-DDTHH:mm:ssZ", picker_utc: false }
-      - {label: "類別", name: "categories", widget: "list", default: [""]}
-      - {label: "標籤", name: "tags", widget: "list", default: ["tags"]}
-      - label: "參與人員"
-        name: "credites"
-        widget: "list"
-        fields:
-          - {label: Credites Type, name: crediteType, widget: string, required: false}
-          - label: "人物"
-            name: "persons"
-            widget: "list"
-            fields:
-              - label: "人"
-                name: "person"
-                widget: "object"
-                collapsed: true
-                fields:
-                  - {label: "Person Name", name: "personName", widget: "string"}
-                  - {label: "Person Link", name: "personLink", widget: "string", required: false}
-      - {label: "顯示目錄", name: "toc", widget: "boolean", default: false}
-      - {label: "內文", name: "body", widget: "markdown"}
-
-  # Projects
-  - name: "Project"
-    label: "專案"
-    summary: '{{fields.titletc}}-{{fields.title}}'
-    folder: "content/project"
-    create: true
-    path: '{{slug}}/index'
-    fields:
-      - {label: "草稿", name: "draft", widget: "boolean", default: true}
-      - label: "封面圖片"
-        name: "cover"
-        widget: "image"
-        media_library:
-          config:
-            multiple: true
-            imagesOnly: true
-            publicKey: 5fa87fb5d63e84fccf01
-
-      - {label: "英文標題", name: "title", widget: "string"}
-      - {label: "繁中標題", name: "titletc", widget: "string"}
-      - {label: "客戶", name: "client", widget: "string"}
-      - {label: "簡介", name: "description", widget: "text"}
-      - {label: "發布日期", name: "date", widget: "datetime", date_format: "YYYY-MM-DDTHH:mm:ssZ", format: "YYYY-MM-DDTHH:mm:ssZ", picker_utc: false }
-      - {label: "開始日期", name: "dateStart", widget: "datetime", date_format: "YYYY-MM-DD", format: "YYYY-MM-DD", picker_utc: false }
-      - {label: "結束日期", name: "dateEnd", widget: "datetime", date_format: "YYYY-MM-DD", format: "YYYY-MM-DD", picker_utc: false }
-      - {label: "專案標籤", name: "projects", widget: "list", default: [""]}
-      - {label: "內文", name: "body", widget: "markdown"}
-
-      - label: "參與人員"
-        name: "credites"
-        widget: "list"
-        fields:
-          - {label: Credites Type, name: crediteType, widget: string, required: false}
-          - label: "參與人員"
-            name: "persons"
-            widget: "list"
-            fields:
-              - label: "人"
-                name: "person"
-                widget: "object"
-                collapsed: true
-                fields:
-                  - {label: "人名", name: "personName", widget: "string"}
-                  - {label: "人的資料", name: "personInfo", widget: "string", required: false}
-                  - {label: "人的連結", name: "personUrl", widget: "string", required: false}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image",required: false}
+      - {label: "Body", name: "body", widget: "markdown"}

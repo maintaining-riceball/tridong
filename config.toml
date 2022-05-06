@@ -1,8 +1,11 @@
 # Params
 [Params]
-brand = 'TriangleDongDong'
+brand = 'Triangle Dong Dong'
 brandtc = '三角東東'
 brandLogo = ''
+slogan = "專業的角度有趣地玩設計"
+brandDescription = "創立於2020年，三角東東 Triangle Dong Dong 是一個專注於品牌設計的新創設計公司。 "
+
 
 testimg = 'https://ucarecdn.com/16d84bf3-b31e-4a87-a82a-566364a85030/'
 
