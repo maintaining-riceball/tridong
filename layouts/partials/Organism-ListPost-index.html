@@ -7,24 +7,24 @@
     <li class="">標籤</li>
 </ul>
 {{ range where $.Site.RegularPages "Section" "post" }}
-<a href="{{ .Permalink }}">
-    <ul
-        class="grid grid-cols-5 p-8 py-4 border-b border-stone-200 hover:bg-stone-100 transition-background"
-    >
-        <!-- Date -->
-        <li>
-            {{ .Params.Date.Format "2006/01" }}
-        </li>
+    <a href="{{ .Permalink }}">
+        <ul
+            class="grid grid-cols-5 p-8 py-4 border-b border-stone-200 hover:bg-stone-100 transition-background"
+        >
+            <!-- Date -->
+            <li>
+                {{ .Params.Date.Format "2006/01" }}
+            </li>
 
-        <!-- Title -->
-        <li class="col-span-2">
-            {{ .Params.Title }}
-        </li>
+            <!-- Title -->
+            <li class="col-span-2">
+                {{ .Params.Title }}
+            </li>
 
-        <!-- Tags -->
-        <li>
-            {{ .Params.tag }}
-        </li>
-    </ul>
-</a>
+            <!-- Tags -->
+            <li>
+                {{ .Params.category }}
+            </li>
+        </ul>
+    </a>
 {{ end }}
