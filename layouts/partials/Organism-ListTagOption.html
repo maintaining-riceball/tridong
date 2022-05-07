@@ -1,5 +1,5 @@
 <h2 class="p-8 py-4 bg-stone-100">
-    專案標籤
+    文章標籤
     {{ if or (eq .Title "Category") (eq .Title "post") }}
 
     {{ else }}
@@ -8,16 +8,16 @@
 
 </h2>
 <div class="p-8">
-    <!-- !If project is not empty -->
-    {{ if ne (len $.Site.Taxonomies.project) 0 }}
+    <!-- !If tag is not empty -->
+    {{ if ne (len $.Site.Taxonomies.tag) 0 }}
         <div class="-ml-2">
             <!-- Fetch current title & sectionName -->
             {{ $currentTitle := .Title | lower }}
             {{ $currentSection := .Section }}
-            {{ $target := "project" }}
+            {{ $target := "tag" }}
 
             {{/* Show "All option" when --- */}}
-            {{/* 1. Is NOT in project index page */}}
+            {{/* 1. Is NOT in tag index page */}}
             {{ if not (eq $currentSection $currentTitle) }}
                 <a
                     class="relative inline-block p-4 py-1 text-2xl capitalize"
@@ -28,12 +28,12 @@
             {{ end }}
 
             {{/* Loop thought options */}}
-            {{ range $name, $taxonomy := ($.Site.Taxonomies.project) }}
+            {{ range $name, $taxonomy := ($.Site.Taxonomies.tag) }}
                 {{ $tagCount := len $taxonomy.Pages }}
                 {{ if not (eq $name $currentTitle) }}
                     <a
                         class="relative inline-block p-4 py-1 text-2xl capitalize"
-                        href="{{ "/project/" | relURL }}{{ $name | urlize }}"
+                        href="{{ "/tag/" | relURL }}{{ $name | urlize }}"
                     >
                         {{- $name -}}
                         <sup class="absolute top-0 right-0 text-sm"

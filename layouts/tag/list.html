@@ -2,11 +2,11 @@
     <div class="grid grid-auto lg:grid-cols-2">
         <div class="border-r border-stone-200">
             <h1 class="p-8 text-3xl leading-relaxed prose">
-                我們撰寫文章設計思考、軟體教學、實用工具……等文章，蒐集日常生活日常凝聚起來的靈感。
+                一些專案東東(っ◔◡◔)っ ◢◢◢
             </h1>
             <div class="mx-8 mb-8">
                 <a href="#" class="inline-flex items-center text-xl"
-                    >Youtube
+                    >聯絡我們
                     <svg
                         class="mt-0.5"
                         xmlns="http://www.w3.org/2000/svg"
@@ -21,11 +21,11 @@
             <div class="">
                 <img
                     class="sticky top-0 w-full"
-                    src="https://dummyimage.com/300x300/a6cdbf/fff&text=Post-Show.jpg"
+                    src="https://dummyimage.com/300x300/d6cdbf/fff&text=Project-Show.jpg"
                     srcset="
-                        https://dummyimage.com/600x600/a6cdbf/fff&text=Post-Show.jpg    600w,
-                        https://dummyimage.com/800x800/a6cdbf/fff&text=Post-Show.jpg    800w,
-                        https://dummyimage.com/1200x1200/a6cdbf/fff&text=Post-Show.jpg 1200w
+                        https://dummyimage.com/600x600/d6cdbf/fff&text=Project-Show.jpg    600w,
+                        https://dummyimage.com/800x800/d6cdbf/fff&text=Project-Show.jpg    800w,
+                        https://dummyimage.com/1200x1200/d6cdbf/fff&text=Project-Show.jpg 1200w
                     "
                     alt="Hero Image"
                     sizes="(min-width: 768px) 50vw, 100vw"
@@ -33,12 +33,9 @@
                 />
             </div>
         </div>
-        <div
-            id="project"
-            class="sticky top-0 lg:max-h-screen lg:overflow-y-auto h-max"
-        >
-            {{ partial "partials/Organism-ListPostOption.html" . }}
-            {{ partial "partials/Organism-ListPost.html" . }}
+        <div class="sticky top-0 lg:max-h-screen lg:overflow-y-auto h-max">
+            {{ partial "partials/Organism-ListTagOption.html" . }}
+            {{ partial "partials/Organism-ListTag.html" . }}
         </div>
     </div>
 {{ end }}

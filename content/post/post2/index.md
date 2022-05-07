@@ -6,6 +6,7 @@ tag:
   - exhibition
   - cis
 date: 2022-01-03
+author: "cdfg"
 cover:
 - https://ucarecdn.com/69d71a6d-3384-4476-aaa9-413f5e61ac94/-/preview/-/quality/smart/
 - https://ucarecdn.com/04f77099-ad71-4a80-90f4-49ff91e91c91/-/preview/-/quality/smart/
