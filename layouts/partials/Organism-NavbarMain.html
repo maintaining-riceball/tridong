@@ -110,9 +110,6 @@
             {{ if eq .Title "首頁" }}
                     hidden md:inline-block
                 {{ end }}
-                
-                
-            
             "
             >
                 <a
@@ -123,8 +120,9 @@
                     "
                     href="{{ .URL }}"
                     title="{{ .Title }}"
-                    >{{ .Name }}</a
                 >
+                    {{ .Name }}
+                </a>
             </li>
         {{ end }}
     </ul>

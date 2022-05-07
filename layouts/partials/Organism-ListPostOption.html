@@ -1,8 +1,16 @@
-<h2 class="p-8 py-4 bg-stone-100">文章標籤</h2>
+<h2 class="p-8 py-4 bg-stone-100">
+    文章類別
+    {{ if or (eq .Title "Category") (eq .Title "post") }}
+
+    {{ else }}
+        (搜尋：{{ .Title }})
+    {{ end }}
+
+</h2>
 <div class="p-8">
     <!-- !If category is not empty -->
     {{ if ne (len $.Site.Taxonomies.category) 0 }}
-        <div class="mt-4 -ml-2">
+        <div class="-ml-2">
             <!-- Fetch current title & sectionName -->
             {{ $currentTitle := .Title | lower }}
             {{ $currentSection := .Section }}
@@ -24,7 +32,7 @@
                 {{ $tagCount := len $taxonomy.Pages }}
                 {{ if not (eq $name $currentTitle) }}
                     <a
-                        class="relative inline-block p-4 py-1 text-2xl capitalize"
+                        class="relative inline-block p-4 px-4 py-1 text-2xl capitalize "
                         href="{{ "/category/" | relURL }}{{ $name | urlize }}"
                     >
                         {{- $name -}}

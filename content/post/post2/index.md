@@ -1,6 +1,10 @@
 ---
 title: post2
-category: [2, 22]
+titletc: "你好冰淇淋"
+category: test
+tag:
+  - exhibition
+  - cis
 date: 2022-01-03
 cover:
 - https://ucarecdn.com/69d71a6d-3384-4476-aaa9-413f5e61ac94/-/preview/-/quality/smart/

@@ -35,10 +35,13 @@
         </div>
         <div
             id="project"
-            class="sticky top-0 lg:max-h-screen lg:overflow-y-scroll h-max"
+            class="sticky top-0 lg:max-h-screen lg:overflow-y-auto h-max"
         >
             {{ partial "partials/Organism-ListPostOption.html" . }}
             {{ partial "partials/Organism-ListPost.html" . }}
+            {{ range .Paginator.Pages }}
+                {{ .Title }}
+            {{ end }}
         </div>
     </div>
 {{ end }}

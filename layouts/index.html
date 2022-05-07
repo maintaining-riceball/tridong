@@ -11,14 +11,6 @@
             <div class="flex gap-12 mx-8 mb-8">
                 <a href="/about" class="inline-flex items-center gap-2 text-xl">
                     關於我們
-                    <svg
-                        class="mt-0.5"
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24"
-                        width="24"
-                    >
-                        <path d="M9 19V17H15.6L4 5.4L5.4 4L17 15.6V9H19V19Z" />
-                    </svg>
                 </a>
 
                 <a
@@ -49,7 +41,7 @@
         </div>
         <div
             id="project"
-            class="sticky top-0 z-40 lg:max-h-screen lg:overflow-y-scroll h-max bg-stone-50"
+            class="sticky top-0 z-40 lg:max-h-screen lg:overflow-y-auto h-max bg-stone-50"
         >
             {{ partial "partials/Organism-ListProject-index.html" . }}
             {{ partial "partials/Organism-ListPost-index.html" . }}

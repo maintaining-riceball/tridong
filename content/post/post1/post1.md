@@ -1,6 +1,8 @@
 ---
 title: post01
-category: [1,2]
+titletc: 測試文
+category: feswjfoew
+tag: [1,2,"asdasd"]
 date: 2022-01-02
 cover:
 - https://ucarecdn.com/69d71a6d-3384-4476-aaa9-413f5e61ac94/-/preview/-/quality/smart/

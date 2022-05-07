@@ -2,7 +2,7 @@
 <div class="p-8">
     <!-- !If project is not empty -->
     {{ if ne (len $.Site.Taxonomies.project) 0 }}
-        <div class="mt-4 -ml-2">
+        <div class="-ml-2">
             <!-- Fetch current title & sectionName -->
             {{ $currentTitle := .Title | lower }}
             {{ $currentSection := .Section }}
