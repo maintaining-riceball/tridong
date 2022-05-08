@@ -62,7 +62,36 @@
 
         <!-- Author -->
         <li class="hidden sm:inline-block">
-            {{ .Params.author }}
+            {{ with .Params.author }}
+                {{ range . }}
+                    <div class="flex items-center gap-4">
+                        {{ if .image }}
+                            {{ $img := .image }}
+                            {{ $dirFile := path.Split $img }}
+                            {{ $smartProcess :=  "/-/preview/50x50/-/quality/smart_retina/-/format/auto/-" }}
+                            <img
+                                class="rounded-full"
+                                src="{{ $dirFile.Dir }}{{ $smartProcess }}"
+                                alt="{{ path.Base .image }}"
+                                loading="lazy"
+                            />
+                        {{ else }}
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 300 300"
+                                width="50"
+                            >
+                                <circle cx="150" cy="150" r="150" fill="#fff" />
+                                <path
+                                    d="M93.5 212.4h98.3c3 0 5.4-2.4 5.4-5.4V93.1c0-5-6.2-7.3-9.5-3.5L89.4 203.4c-3 3.5-.5 9 4.1 9z"
+                                    fill="#262626"
+                                />
+                            </svg>
+                        {{ end }}
+                        {{ .name }}
+                    </div>
+                {{ end }}
+            {{ end }}
         </li>
     </ul>
 {{ end }}

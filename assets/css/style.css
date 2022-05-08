@@ -1032,16 +1032,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 50%;
 }
 
-.max-w-none {
-  max-width: none;
-}
-
-.max-w-fit {
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
 .max-w-prose {
   max-width: 65ch;
 }
@@ -1057,11 +1047,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .list-none {
   list-style-type: none;
-}
-
-.columns-2 {
-  -moz-columns: 2;
-       columns: 2;
 }
 
 .columns-1 {
@@ -1089,6 +1074,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 0.5rem;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-48 {
+  gap: 12rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
 .divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -1097,6 +1098,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .whitespace-nowrap {
   white-space: nowrap;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .border-0 {
@@ -1286,15 +1291,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:hidden {
     display: none;
-  }
-
-  .md\:max-w-none {
-    max-width: none;
-  }
-
-  .md\:columns-2 {
-    -moz-columns: 2;
-         columns: 2;
   }
 }
 

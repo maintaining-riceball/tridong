@@ -11,11 +11,10 @@
             </div>
 
             <div>
+                {{ $smartProcess :=  "/-/quality/smart_retina/-/format/auto/-" }}
                 {{ range .Params.cover }}
                     {{ $img := . }}
                     {{ $dirFile := path.Split $img }}
-
-                    {{ $smartProcess :=  "/-/quality/smart_retina/-/format/auto/-" }}
                     <img
                         class="sticky top-0 w-full"
                         src="{{ $dirFile.Dir }}{{ $smartProcess }}{{ path.Base $img }}"

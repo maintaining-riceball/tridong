@@ -6,8 +6,6 @@ backend:
 media_folder: static/img
 public_folder: /img
 local_backend: true
-publish_mode: editorial_workflow
-
 
 # CMS Decoration
 display_url: https://your-site.com
@@ -22,25 +20,125 @@ media_library:
   settings:
     autoFilename: true
 
+# https://github.com/netlify/netlify-cms/blob/master/dev-test/config.yml
 collections:
+  # Post Collection
   - name: post
     label: 文章
-    label_singular: 'post'
+    label_singular: 文章
+    description: >
+      這個區域存放部落格文章。
     folder: content/post
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    preview_path: "post/{{slug}}"
     create: true
-    # adding a nested object will show the collection folder structure
-    nested:
-      depth: 100 # max depth to show in the collection tree
-      summary: '{{title}} lorema' # optional summary for a tree node, defaults to the inferred title field
+    nested: { depth: 100 }
+    view_filters:
+      - label: 草稿
+        field: draft
+        pattern: true
+    view_groups:
+      - label: 年分
+        field: date
+        pattern: \d{4}
     fields:
-      - label: Title
-        name: title
-        widget: string
-      - label: Body
-        name: body
-        widget: markdown
-    # adding a meta object with a path property allows editing the path of entries
-    # moving an existing entry will move the entire sub tree of the entry to the new location
-    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+      - { label: '草稿', name: 'draft', widget: 'boolean', default: false, hint: 草稿並不會真的顯現到網站上，但會在「後台」中顯示。}
+      - label: "封面圖片"
+        name: "cover"
+        widget: "image"
+        hint: 用於文章的封面圖片，可以提交多張，圖片的檔名最好「務必」命名清楚，會用於讓機器人了解這是什麼樣的圖片，或是當圖片無法加載時的替代文字。例如：三角東東的周邊商品陳列於木頭桌上。圖片會被自動裁切優化至1200px的正方形。
+        default: [https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg]
+        required: false
+        media_library:
+          config:
+            multiple: true
+            imagesOnly: true
+            publicKey: 3c44e0c4ee3e0eeabf65
+
+
+      - {label: "英文標題", name: "title", widget: "string", tagname: 'h1', hint: 整篇文章的英文，會用於 Google 搜尋上對於這個頁面的標題。文字介於 50 英文字元左右，可以少但不要太長。}
+      - {label: "繁中標題", name: "titletc", widget: "string", hint: 整篇文章的繁中標題，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 15 中文字左右，可以少但不要太長。}
+      - {label: "簡介", name: "description", widget: "text", hint: 整篇文章的精華描述，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 65~80 個中文字。}
+      - {label: "顯示目錄", name: "toc", widget: "boolean", default: false, hint: 決定要不要生成目錄，在很長的文章中可以使用。}
+      - {
+        label: '發布日期',
+        name: 'date',
+        widget: 'datetime',
+        date_format: 'YYYY-MM-DD',
+        time_format: 'HH:mm',
+        format: 'YYYY-MM-DD HH:mm',
+      }
+      - {
+        label: '最後更改日期',
+        name: 'lastUpdateDate',
+        widget: 'datetime',
+        date_format: 'YYYY-MM-DD',
+        time_format: 'HH:mm',
+        format: 'YYYY-MM-DD HH:mm',
+      }
+      - {label: "類別", name: "categories", widget: string, default: ["未分類"], hint: 類別只能有一個，是一個大分類，例如：教學、設計、包裝}
+      - {label: "標籤", name: "tags", widget: "list", default: [標籤一,標籤二], hint: 標籤是更細節的分類，例如：印刷、某工具}
+      - label: "作者"
+        name: "author" 
+        widget: "list"
+        fields:
+          - { label: 名稱, name: name, widget: string, default: 王小明}
+          - { label: 稱呼, name: title, widget: string, default: 資深前端設計師} 
+          - { label: 連結, name: url, widget: string, required: false} 
+          - { label: 圖片, name: image, widget: image, required: false} 
+      - {label: "內文", name: "body", widget: "markdown"}
+
+    meta: { path: { label: 文章存放位置, widget: parent, index_file: 'index' } }
+
+  # Project Collection
+  - name: project
+    label: 專案
+    label_singular: 專案
+    description: >
+      這個區域存放專案作品。
+    folder: content/project
+    create: true
+    nested: { depth: 100 }
+    view_filters:
+      - label: 草稿
+        field: draft
+        pattern: true
+    view_groups:
+      - label: 年分
+        field: date
+        pattern: \d{4}
+    fields:
+      - {label: "草稿", name: "draft", widget: "boolean", default: true}
+      - label: "封面圖片"
+        name: "cover"
+        widget: "image"
+        required: false
+        hint: 用於文章的封面圖片，可以提交多張，圖片的檔名最好「務必」命名清楚，會用於讓機器人了解這是什麼樣的圖片，或是當圖片無法加載時的替代文字。例如：三角東東的周邊商品陳列於木頭桌上。圖片會被自動裁切優化至1200px的正方形。
+        media_library:
+          config:
+            multiple: true
+            imagesOnly: true
+            publicKey: 5fa87fb5d63e84fccf01
+
+            
+
+      - {label: "英文標題", name: "title", widget: "string", tagname: 'h1', hint: 整篇文章的英文，會用於 Google 搜尋上對於這個頁面的標題。文字介於 50 英文字元左右，可以少但不要太長。}
+      - {label: "繁中標題", name: "titletc", widget: "string", hint: 整篇文章的繁中標題，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 15 中文字左右，可以少但不要太長。}
+      - {label: "簡介", name: "description", widget: "text", hint: 整篇文章的精華描述，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 65~80 個中文字。}
+      - {label: "專案標籤", name: "project", widget: "list", default: ["包裝設計"]}
+      - {
+        label: '發布日期',
+        name: 'date',
+        widget: 'datetime',
+        date_format: 'YYYY-MM-DD',
+        time_format: 'HH:mm',
+        format: 'YYYY-MM-DD HH:mm',
+      }
+      - {label: "客戶", name: "client", widget: "string"}
+      - label: "提名"
+        name: "credit" 
+        widget: "list"
+        fields:
+          - { label: 名稱, name: name, widget: string, default: 王小明}
+          - { label: 稱呼, name: title, widget: string, default: 資深前端設計師} 
+          - { label: 連結, name: url, widget: string, required: false} 
+          - { label: 圖片, name: image, widget: image, required: false} 
+      - {label: "內文", name: "body", widget: "markdown"}
