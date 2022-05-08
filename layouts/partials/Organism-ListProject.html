@@ -9,6 +9,7 @@
     <li class="">標籤</li>
     <li class="">客戶</li>
 </ul>
+
 {{ range  $index, $value := ((.Paginate .RegularPagesRecursive).Pages) }}
     <ul
         class="grid items-center grid-cols-5 p-8 py-4 border-b border-stone-200 hover:bg-stone-100 transition-background"

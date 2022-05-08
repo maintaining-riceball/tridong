@@ -1,8 +1,6 @@
 <h2 class="p-8 py-4 bg-stone-100">
     專案標籤
-    {{ if or (eq .Title "Category") (eq .Title "post") }}
-
-    {{ else }}
+    {{ if not (eq .Title "project") }}
         (搜尋：{{ .Title }})
     {{ end }}
 

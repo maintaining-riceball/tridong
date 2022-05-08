@@ -3,6 +3,12 @@
 brand = 'Triangle Dong Dong'
 brandtc = '三角東東'
 brandLogo = '◢◢◢'
+brandEmail = 'triangledongdong@gmail.com'
+brandPhone = '09-3636-1996'
+brandLocation = 'No. 129, Section 3, Sanmin Rd, North District, Taichung City, 404'
+brandLocationtc = '臺中市北區三民路三段129號'
+brandWorktime = '營業時間 9:30am - 18:30pm'
+
 slogan = "專業的角度有趣地玩設計"
 brandDescription = "創立於2020年，三角東東 Triangle Dong Dong 是一個專注於品牌設計的新創設計公司。 "
 

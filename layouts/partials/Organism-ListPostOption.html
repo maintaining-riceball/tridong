@@ -1,8 +1,6 @@
 <h2 class="p-8 py-4 bg-stone-100">
     文章類別
-    {{ if or (eq .Title "Category") (eq .Title "post") }}
-
-    {{ else }}
+    {{ if (and (eq .Title "post") (eq .Title "category")) }}
         (搜尋：{{ .Title }})
     {{ end }}
 

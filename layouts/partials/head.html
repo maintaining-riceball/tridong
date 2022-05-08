@@ -9,12 +9,14 @@
 
 <!-- !Title -->
 {{ $title := newScratch }}
+{{ $isTerm := false }}
 
 
 <!-- Is in .Kind of Term -->
 {{ if eq .Kind "term" }}
     {{ $taxonomyPrefix := print (.Data.Singular | title) " → " }}
     {{ $title.Add "content" $taxonomyPrefix }}
+    {{ $isTerm = true }}
 {{ end }}
 
 
@@ -30,12 +32,14 @@
     {{ if eq .Kind "section" }}
         {{ $title.Add "content" (.Params.titletc | humanize  ) }}
     {{ else if eq .Kind "taxonomy" }}
-        {{ $title.Add "content" (.Params.Titletc | plainify  ) }}
+        {{ $title.Add "content" (.Params.titletc | plainify  ) }}
     {{ else }}
-        {{ $title.Add "content" (.Params.Titletc | plainify  ) }}
+        {{ $title.Add "content" (.Params.titletc | plainify  ) }}
     {{ end }}
 
-    {{ $title.Add "content" " - " }}
+    {{ if not $isTerm }}
+        {{ $title.Add "content" " - " }}
+    {{ end }}
     {{ $title.Add "content" $.Site.Params.brand }}
 {{ end }}
 

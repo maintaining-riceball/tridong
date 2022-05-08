@@ -32,8 +32,123 @@
                 {{ end }}
             </div>
         </div>
-        <div class="w-full mx-8 prose max-w-none">
-            {{ .Content }}
+        <div class="w-full">
+            <!-- About -->
+            <h2 class="p-8 py-4 bg-stone-100">
+                <svg
+                    class="inline-block mr-4 md:hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="20"
+                    width="20"
+                >
+                    <path
+                        d="M10 12.812 5 7.812 6.229 6.583 10 10.354 13.771 6.583 15 7.812Z"
+                    />
+                </svg>
+                關於我們
+            </h2>
+            <div
+                class="p-8 prose columns-1 lg:columns-2 max-w-prose lg:max-w-none"
+            >
+                <p>
+                    三角東東團隊是一群由平面設計、企劃研究、網頁設計、包裝設計、商業設計、資料整合…等專業人士共同組成；我們追求的是在設計過程中，不只是考慮視覺上的美感，而是更深入思考背後的問題，讓設計發揮最大的效益，給予使用者最佳的生活體驗！
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Excepturi quis fugit nobis impedit ab enim similique magnam.
+                    Quos aspernatur illum nulla delectus animi! Similique nulla
+                    possimus fuga labore corporis repellat. Fake Eng fillword
+                </p>
+            </div>
+
+            <!-- Award -->
+            <h2 class="p-8 py-4 bg-stone-100">
+                <svg
+                    class="inline-block mr-4 md:hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="20"
+                    width="20"
+                >
+                    <path
+                        d="M10 12.812 5 7.812 6.229 6.583 10 10.354 13.771 6.583 15 7.812Z"
+                    />
+                </svg>
+                獎項
+            </h2>
+            <ul class="p-0 list-none divide-y">
+                <li class="px-8">
+                    <a class="inline-block py-4" href="#">
+                        2021 TAIWAN TOP STAR 乳酪東東 優異獎
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Service -->
+            <h2 class="p-8 py-4 bg-stone-100">
+                <svg
+                    class="inline-block mr-4 md:hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="20"
+                    width="20"
+                >
+                    <path
+                        d="M10 12.812 5 7.812 6.229 6.583 10 10.354 13.771 6.583 15 7.812Z"
+                    />
+                </svg>
+                服務項目
+            </h2>
+            <ul class="p-0 list-none divide-y">
+                <li class="px-8">
+                    <a class="inline-block py-4" href="#"
+                        >包裝設計 Package Design</a
+                    >
+                </li>
+                <li class="px-8">
+                    <a class="inline-block py-4" href="#"
+                        >平面設計 Graphic Design</a
+                    >
+                </li>
+                <li class="px-8">
+                    <a class="inline-block py-4" href="#"
+                        >網頁設計 Web Design</a
+                    >
+                </li>
+                <li class="px-8">
+                    <a class="inline-block py-4" href="#"
+                        >產品拍攝 Commercial Photography</a
+                    >
+                </li>
+            </ul>
+
+            <!-- Contact -->
+            <h2 class="">
+                <a class="block p-8 py-4 bg-stone-100" href="/post">
+                    <svg
+                        class="inline-block mr-4 md:hidden"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        width="20"
+                    >
+                        <path
+                            d="M10 12.812 5 7.812 6.229 6.583 10 10.354 13.771 6.583 15 7.812Z"
+                        />
+                    </svg>
+                    聯絡我們
+                </a>
+            </h2>
+            <div class="p-8">
+                <p>
+                    電話：{{ .Site.Params.brandphone }}
+                </p>
+                <p>
+                    電子信箱：{{ .Site.Params.brandEmail }}
+                </p>
+                <br />
+                <p>{{ .Site.Params.brandLocationtc }}</p>
+                <p>{{ .Site.Params.brandLocation }}</p>
+                <br />
+                <p>{{ .Site.Params.brandWorktime }}</p>
+            </div>
         </div>
     </div>
 {{ end }}

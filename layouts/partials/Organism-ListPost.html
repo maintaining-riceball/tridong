@@ -18,9 +18,11 @@
 
         <!-- Title -->
         <li class="col-span-4 sm:col-span-2">
-            {{ .Params.titletc }}
-            <br />
-            {{ .Params.title }}
+            <a href="{{ .Permalink }}">
+                {{ .Params.titletc }}
+                <br />
+                {{ .Params.title }}
+            </a>
         </li>
 
         <!-- Tags -->
