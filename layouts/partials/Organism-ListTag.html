@@ -8,7 +8,7 @@
 </ul>
 {{ range  $index, $value := ((.Paginate .RegularPagesRecursive).Pages) }}
     <ul
-        class="grid grid-cols-5 p-8 py-4 border-b border-stone-200 hover:bg-stone-100 transition-background"
+        class="grid items-center grid-cols-5 p-8 py-4 border-b border-stone-200 hover:bg-stone-100 transition-background"
     >
         <!-- Date -->
         <li class="hidden sm:inline-block">
@@ -17,9 +17,9 @@
 
         <!-- Title -->
         <li class="col-span-4 sm:col-span-2">
-            {{ .Params.titletc }}
-            <br />
-            {{ .Params.title }}
+            <a href="{{ .Permalink }}">
+                {{ .Params.titletc }}
+            </a>
         </li>
 
         <!-- Tags -->

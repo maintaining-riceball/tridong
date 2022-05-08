@@ -62,9 +62,6 @@ collections:
         label: '發布日期',
         name: 'date',
         widget: 'datetime',
-        date_format: 'YYYY-MM-DD',
-        time_format: 'HH:mm',
-        format: 'YYYY-MM-DD HH:mm',
       }
       - {
         label: '最後更改日期',
@@ -74,8 +71,8 @@ collections:
         time_format: 'HH:mm',
         format: 'YYYY-MM-DD HH:mm',
       }
-      - {label: "類別", name: "categories", widget: string, default: ["未分類"], hint: 類別只能有一個，是一個大分類，例如：教學、設計、包裝}
-      - {label: "標籤", name: "tags", widget: "list", default: [標籤一,標籤二], hint: 標籤是更細節的分類，例如：印刷、某工具}
+      - {label: "類別", name: "category", widget: string, default: ["未分類"], hint: 類別只能有一個，是一個大分類，例如：教學、設計、包裝}
+      - {label: "標籤", name: "tag", widget: "list", default: [標籤一,標籤二], hint: 標籤是更細節的分類，例如：印刷、某工具}
       - label: "作者"
         name: "author" 
         widget: "list"
@@ -128,9 +125,6 @@ collections:
         label: '發布日期',
         name: 'date',
         widget: 'datetime',
-        date_format: 'YYYY-MM-DD',
-        time_format: 'HH:mm',
-        format: 'YYYY-MM-DD HH:mm',
       }
       - {label: "客戶", name: "client", widget: "string"}
       - label: "提名"
@@ -142,3 +136,4 @@ collections:
           - { label: 連結, name: url, widget: string, required: false} 
           - { label: 圖片, name: image, widget: image, required: false} 
       - {label: "內文", name: "body", widget: "markdown"}
+    meta: { path: { label: 文章存放位置, widget: parent, index_file: 'index' } }
