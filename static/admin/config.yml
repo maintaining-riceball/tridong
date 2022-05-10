@@ -134,6 +134,5 @@ collections:
           - { label: 名稱, name: name, widget: string, default: 王小明}
           - { label: 稱呼, name: title, widget: string, default: 資深前端設計師} 
           - { label: 連結, name: url, widget: string, required: false} 
-          - { label: 圖片, name: image, widget: image, required: false} 
       - {label: "內文", name: "body", widget: "markdown"}
     meta: { path: { label: 文章存放位置, widget: parent, index_file: 'index' } }

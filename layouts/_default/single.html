@@ -33,14 +33,14 @@
         </div>
 
         <div class="px-8 pb-8 border-0 lg:border-l">
-            <div class="h-40 py-8">
+            <div class="h-40 py-8 leading-relaxed">
                 <ul>
                     <!-- Time -->
                     {{ if .Params.date }}
                         <li>
                             時間 :
                             <time>
-                                {{ .Params.Date.Format "2006" }}
+                                {{ .Params.date.Format "2006 / 01" }}
                             </time>
                         </li>
                     {{ end }}
@@ -58,8 +58,21 @@
                     <!-- Tag -->
                     {{ if .Params.Project }}
                         <li>
-                            標籤:
-                            {{ .Params.Project }}
+                            <a href="/tag">標籤：</a>
+                            <ul class="hidden sm:inline-block">
+                                {{ range $i, $e := .Params.project }}
+                                    <li class="inline-block">
+                                        <span class="inline-block">
+                                            {{ if $i }},{{ end }}
+                                        </span>
+                                        <a
+                                            class="inline-block p-2 -m-2 capitalize first-of-type:p-0 hover:bg-glass dark:hover:bg-glass-dark whitespace-nowrap"
+                                            href="{{ "project/" | relLangURL }}{{ . | urlize }}"
+                                            >{{- . -}}</a
+                                        >
+                                    </li>
+                                {{ end }}
+                            </ul>
                         </li>
                     {{ end }}
 

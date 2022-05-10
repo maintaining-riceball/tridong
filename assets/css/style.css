@@ -966,6 +966,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .ml-8 {
   margin-left: 2rem;
 }
@@ -984,6 +988,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-14 {
   margin-bottom: 3.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.-mb-20 {
+  margin-bottom: -5rem;
+}
+
+.-mb-12 {
+  margin-bottom: -3rem;
+}
+
+.-mb-8 {
+  margin-bottom: -2rem;
 }
 
 .block {
@@ -1024,12 +1044,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 10rem;
 }
 
-.max-h-20 {
-  max-height: 5rem;
-}
-
-.max-h-96 {
-  max-height: 24rem;
+.h-20 {
+  height: 5rem;
 }
 
 .w-full {
@@ -1040,8 +1056,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 50%;
 }
 
-.max-w-prose {
-  max-width: 65ch;
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
 }
 
 .flex-1 {
@@ -1057,29 +1089,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   list-style-type: none;
 }
 
-.columns-1 {
-  -moz-columns: 1;
-       columns: 1;
-}
-
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
-.flex-row {
-  flex-direction: row;
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
   flex-direction: column;
 }
 
-.flex-nowrap {
-  flex-wrap: nowrap;
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -1096,6 +1131,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]) {
@@ -1145,6 +1184,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-stone-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 244 / var(--tw-bg-opacity));
+}
+
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
+.bg-current {
+  background-color: currentColor;
+}
+
+.bg-stone-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 229 228 / var(--tw-bg-opacity));
 }
 
 .p-8 {
@@ -1215,6 +1268,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.25rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1261,6 +1319,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: var(--navbarMainHeight)
 }
 
+.first-of-type\:bg-red-300:first-of-type {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
+.first-of-type\:p-0:first-of-type {
+  padding: 0px;
+}
+
 .hover\:bg-stone-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 244 / var(--tw-bg-opacity));
@@ -1281,6 +1348,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:grid {
     display: grid;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:text-left {
@@ -1331,17 +1402,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 50%;
   }
 
-  .lg\:max-w-none {
-    max-width: none;
-  }
-
-  .lg\:columns-2 {
-    -moz-columns: 2;
-         columns: 2;
-  }
-
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:overflow-y-auto {
@@ -1354,5 +1420,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:border-l {
     border-left-width: 1px;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
