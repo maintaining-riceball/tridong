@@ -1,14 +1,14 @@
-<h2 class="p-8 py-4 bg-stone-100">
+<h2 class="p-8 py-4 bg-stone-100 gsap-list">
     文章類別
     {{ if (and (eq .Title "post") (eq .Title "category")) }}
         (搜尋：{{ .Title }})
     {{ end }}
 
 </h2>
-<div class="p-8">
+<div class="p-8 gsap-list">
     <!-- !If category is not empty -->
     {{ if ne (len $.Site.Taxonomies.category) 0 }}
-        <div class="-ml-2">
+        <div class="-ml-2 ">
             <!-- Fetch current title & sectionName -->
             {{ $currentTitle := .Title | lower }}
             {{ $currentSection := .Section }}

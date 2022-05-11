@@ -19,7 +19,7 @@
             </div>
 
             <div class="">
-                <img
+                <!-- <img
                     class="sticky top-0 w-full"
                     src="https://dummyimage.com/300x300/a6cdbf/fff&text=Post-Show.jpg"
                     srcset="
@@ -30,12 +30,13 @@
                     alt="Hero Image"
                     sizes="(min-width: 768px) 50vw, 100vw"
                     loading="lazy"
-                />
+                /> -->
             </div>
         </div>
         <div
             id="project"
             class="sticky top-0 lg:max-h-screen lg:overflow-y-auto h-max"
+            style="min-height:calc(100vh - var(--navbarMainHeight)*2)"
         >
             {{ partial "partials/Organism-ListPostOption.html" . }}
             {{ partial "partials/Organism-ListPost.html" . }}

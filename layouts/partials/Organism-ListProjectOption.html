@@ -1,11 +1,11 @@
-<h2 class="p-8 py-4 bg-stone-100">
+<h2 class="p-8 py-4 bg-stone-100 gsap-list">
     專案標籤
     {{ if not (eq .Title "project") }}
         (搜尋：{{ .Title }})
     {{ end }}
 
 </h2>
-<div class="p-8">
+<div class="p-8 gsap-list">
     <!-- !If project is not empty -->
     {{ if ne (len $.Site.Taxonomies.project) 0 }}
         <div class="-ml-2">

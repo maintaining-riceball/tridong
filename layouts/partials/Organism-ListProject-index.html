@@ -1,4 +1,4 @@
-<h2>
+<h2 class="gsap-list">
     <a class="block p-8 py-4 bg-stone-100" href="/project">
         <svg
             class="inline-block mr-4 md:hidden"
@@ -14,7 +14,7 @@
     </a>
 </h2>
 <ul
-    class="hidden grid-cols-5 p-8 py-4 border-t border-b border-stone-200 sm:grid"
+    class="hidden grid-cols-5 p-8 py-4 border-t border-b border-stone-200 sm:grid gsap-list"
 >
     <li class="">年份</li>
     <li class="col-span-2">專案名稱</li>
@@ -23,7 +23,7 @@
 </ul>
 {{ range where $.Site.RegularPages "Section" "project" }}
     <ul
-        class="grid items-center grid-cols-5 p-8 py-4 border-b border-stone-200 hover:bg-stone-100 transition-background"
+        class="grid items-center grid-cols-5 p-8 py-4 border-b border-stone-200 hover:bg-stone-100 transition-background gsap-list"
     >
         <!-- Date -->
         <li class="hidden sm:inline-block">

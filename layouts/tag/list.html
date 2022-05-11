@@ -19,7 +19,7 @@
             </div>
 
             <div class="">
-                <img
+                <!-- <img
                     class="sticky top-0 w-full"
                     src="https://dummyimage.com/300x300/d6cdbf/fff&text=Project-Show.jpg"
                     srcset="
@@ -30,10 +30,13 @@
                     alt="Hero Image"
                     sizes="(min-width: 768px) 50vw, 100vw"
                     loading="lazy"
-                />
+                /> -->
             </div>
         </div>
-        <div class="sticky top-0 lg:max-h-screen lg:overflow-y-auto h-max">
+        <div
+            class="sticky top-0 lg:max-h-screen lg:overflow-y-auto h-max"
+            style="min-height:calc(100vh - var(--navbarMainHeight)*2)"
+        >
             {{ partial "partials/Organism-ListTagOption.html" . }}
             {{ partial "partials/Organism-ListTag.html" . }}
         </div>
