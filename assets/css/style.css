@@ -1115,10 +1115,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 0px;
 }
 
-.border-8 {
-  border-width: 8px;
-}
-
 .border-r {
   border-right-width: 1px;
 }
