@@ -13,11 +13,16 @@ titletc: 半個展
 description: 半個展的介紹
 project:
   - 活動
-date: 2022-05-08T22:19:52.645Z
+date: 2021-11-30T22:19:00.000Z
 client: 國立臺中科技大學模擬
 credit:
   - name: 王小明
-    title: 資深前端設計師
+    title: 黃宗瑋
+    person: 視覺設計
+  - title: 王耀輝
+    person: 文案企劃
+  - title: 陳奕杉
+    person: 展場規劃設計
 ---
 
 ## 完美與不完美，<br>是每個創作者心中都存在的掙扎。
