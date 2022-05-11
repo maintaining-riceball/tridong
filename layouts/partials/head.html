@@ -73,6 +73,21 @@
 <meta name="twitter:title" content="{{ $title.Get `content` }}" />
 <meta name="twitter:description" content="{{ $pageDescription.Get "desc" }}" />
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-FS2XJ14995"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+        dataLayer.push(arguments)
+    }
+    gtag('js', new Date())
+
+    gtag('config', 'G-FS2XJ14995')
+</script>
+
 <!-- CSS -->
 {{ $styles := resources.Get "/css/style.css" | postCSS }}
 {{ if .Site.IsServer }}
