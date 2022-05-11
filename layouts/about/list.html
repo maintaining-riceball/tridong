@@ -14,9 +14,17 @@
             </div>
 
             <div class="">
-                {{ range .Params.cover }}
+                {{ $lazy := newScratch }}
+
+                {{ range $index, $element := .Params.cover }}
                     {{ $img := . }}
                     {{ $dirFile := path.Split $img }}
+
+                    {{ if eq $index 0 }}
+                        {{ $lazy.Set "lazy" "" }}
+                    {{ else }}
+                        {{ $lazy.Set "lazy" "lazy" }}
+                    {{ end }}
 
                     {{ $smartProcess :=  "/-/quality/smart_retina/-/format/auto/-" }}
                     <img
@@ -30,7 +38,7 @@
                         "
                         sizes="(min-width: 1040px) 50vw, 100vw"
                         alt="{{ path.Base $img }}"
-                        loading="lazy"
+                        loading="{{ $lazy.Get "lazy" }}"
                     />
                 {{ end }}
             </div>
@@ -77,7 +85,10 @@
                 </h2>
                 <ul class="p-0 list-none divide-y">
                     <li class="px-8 gsap-list">
-                        <a class="inline-block py-4" href="#">
+                        <a
+                            class="inline-block py-4"
+                            href="/project/design/cheese-dong-dong/"
+                        >
                             2021 TAIWAN TOP STAR 乳酪東東 優異獎
                         </a>
                     </li>

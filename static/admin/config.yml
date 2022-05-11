@@ -126,7 +126,7 @@ collections:
         name: 'date',
         widget: 'datetime',
       }
-      - {label: "客戶", name: "client", widget: "string"}
+      - {label: "客戶", name: "client", widget: "string",default: 客戶名稱, required: false}
       - label: "提名"
         name: "credit" 
         widget: "list"
