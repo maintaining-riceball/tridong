@@ -1,5 +1,5 @@
 <footer
-    class="flex items-center justify-between hidden border-t lg:flex navbarMainHeight border-stone-200"
+    class="items-center justify-between hidden border-t lg:flex navbarMainHeight border-stone-200"
 >
     <p class="inline-block ml-8 border-r scroll-px-8 border-stone-200">
         {{ .Site.Params.brand }}™ All Right Reserved
@@ -8,28 +8,28 @@
         <li class="">
             <a
                 class="px-8 py-4 border-l border-stone-200 hover:bg-stone-100"
-                href="https://www.instagram.com/triangle_dongdong"
+                href="{{ $.Site.Params.brandInstagram }}"
                 >IG</a
             >
         </li>
         <li class="">
             <a
                 class="px-8 py-4 border-l border-stone-200 hover:bg-stone-100"
-                href="#"
+                href="{{ $.Site.Params.brandYoutube }}"
                 >YT</a
             >
         </li>
         <li class="">
             <a
                 class="px-8 py-4 border-l border-stone-200 hover:bg-stone-100"
-                href="https://www.behance.net/triangledongdong2020"
+                href="{{ $.Site.Params.brandBehance }}"
                 >Be</a
             >
         </li>
         <li class="">
             <a
                 class="px-8 py-4 border-l border-stone-200 hover:bg-stone-100"
-                href="mailto:triangledongdong@gmail.com"
+                href="mailto:{{ $.Site.Params.brandEmail }}"
             >
                 Mail
             </a>

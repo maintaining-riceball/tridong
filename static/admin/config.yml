@@ -8,7 +8,7 @@ public_folder: /img
 local_backend: true
 
 # CMS Decoration
-display_url: https://your-site.com
+display_url: https://tridong.com
 logo_url: https://ucarecdn.com/d9d6fe9d-4e7c-493f-baa1-7237a2b08df3/triangledongdong.svg
 locale: 'zh_Hant'
 
@@ -131,8 +131,8 @@ collections:
         name: "credit" 
         widget: "list"
         fields:
-          - { label: 名稱, name: name, widget: string, default: 王小明}
-          - { label: 稱呼, name: title, widget: string, default: 資深前端設計師} 
-          - { label: 連結, name: url, widget: string, required: false} 
+          - { label: 職位名稱, name: title, widget: string, default: 包裝設計} 
+          - { label: 提名, name: person, widget: string, default: 王小明}
+          
       - {label: "內文", name: "body", widget: "markdown"}
     meta: { path: { label: 文章存放位置, widget: parent, index_file: 'index' } }

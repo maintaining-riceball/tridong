@@ -15,25 +15,43 @@
                 {{ range .Params.cover }}
                     {{ $img := . }}
                     {{ $dirFile := path.Split $img }}
-                    <img
-                        class="sticky top-0 w-full"
-                        src="{{ $dirFile.Dir }}{{ $smartProcess }}{{ path.Base $img }}"
-                        srcset="
-                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/300x/{{ path.Base $img }}   300w,
-                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/600x/{{ path.Base $img }}   600w,
-                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/900x/{{ path.Base $img }}   900w,
-                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/1200x/{{ path.Base $img }} 1200w
-                        "
-                        sizes="(min-width: 1040px) 50vw, 100vw"
-                        alt="{{ path.Base $img }}"
-                        loading="lazy"
-                    />
+
+
+                    <!-- 如果有預設的動畫 -->
+                    {{ if in . "動畫" }}
+                        <picture class="sticky top-0 w-full">
+                            <source
+                                srcset="{{ $dirFile.Dir }}{{ path.Base $img }}"
+                                type="image/webp"
+                            />
+                            <img
+                                src="{{ $dirFile.Dir }}/format/jpg/{{ path.Base $img }}"
+                                alt="{{ path.Base $img }}"
+                                loading="lazy"
+                            />
+                        </picture>
+                    {{ else }}
+                        <img
+                            class="sticky top-0 w-full"
+                            src="{{ $dirFile.Dir }}{{ $smartProcess }}{{ path.Base $img }}"
+                            srcset="
+                                {{ $dirFile.Dir }}{{ $smartProcess }}/resize/300x/{{ path.Base $img }}   300w,
+                                {{ $dirFile.Dir }}{{ $smartProcess }}/resize/600x/{{ path.Base $img }}   600w,
+                                {{ $dirFile.Dir }}{{ $smartProcess }}/resize/900x/{{ path.Base $img }}   900w,
+                                {{ $dirFile.Dir }}{{ $smartProcess }}/resize/1200x/{{ path.Base $img }} 1200w
+                            "
+                            sizes="(min-width: 1040px) 50vw, 100vw"
+                            alt="{{ path.Base $img }}"
+                            loading="lazy"
+                        />
+                    {{ end }}
                 {{ end }}
+
             </div>
         </div>
 
         <div class="px-8 pb-8 border-0 lg:border-l">
-            <div class="h-40 py-8 leading-relaxed">
+            <div class="py-8 leading-relaxed ">
                 <ul>
                     <!-- Time -->
                     {{ if .Params.date }}
@@ -83,6 +101,17 @@
                             客戶:
                             {{ .Params.client }}
                         </li>
+                    {{ end }}
+
+                    {{ if .Params.credit }}
+                        <div class="mt-8">
+                            {{ range .Params.credit }}
+                                {{ .title }}
+                                -
+                                {{ .person }}
+                                <br />
+                            {{ end }}
+                        </div>
                     {{ end }}
                 </ul>
             </div>
