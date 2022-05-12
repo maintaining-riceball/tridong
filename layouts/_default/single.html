@@ -4,7 +4,8 @@
         class="grid grid-auto lg:grid-cols-2"
     >
         <div>
-            <h1 class="items-center h-40 p-8 text-3xl ">
+            <!-- Article Heading -->
+            <h1 class="p-8 text-3xl">
                 <div class="gsap-heading">
                     {{ .Params.titletc }}
                 </div>
@@ -12,6 +13,116 @@
                     {{ .Title }}
                 </div>
             </h1>
+
+            <!-- Article Metas -->
+            <div
+                class="flex items-center justify-between py-0 border-t border-b gsap-heading border-stone-200"
+            >
+                <!-- Client -->
+                {{ if .Params.client }}
+                    <div class="px-8 py-8 pr-8 border-r border-stone-200">
+                        {{ .Params.client }}
+                    </div>
+                {{ end }}
+
+                {{ with .Params.author }}
+                    {{ range . }}
+                        <div
+                            class="flex items-center gap-4 px-8 pr-8 border-r border-stone-200"
+                        >
+                            {{ if .image }}
+                                {{ $img := .image }}
+                                {{ $dirFile := path.Split $img }}
+                                {{ $smartProcess :=  "/-/preview/50x50/-/quality/smart_retina/-/format/auto/-" }}
+                                <img
+                                    class="rounded-full"
+                                    src="{{ $dirFile.Dir }}{{ $smartProcess }}"
+                                    alt="{{ path.Base .image }}"
+                                    loading="lazy"
+                                />
+                            {{ else }}
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 300 300"
+                                    width="50"
+                                >
+                                    <circle
+                                        cx="150"
+                                        cy="150"
+                                        r="150"
+                                        fill="#fff"
+                                    />
+                                    <path
+                                        d="M93.5 212.4h98.3c3 0 5.4-2.4 5.4-5.4V93.1c0-5-6.2-7.3-9.5-3.5L89.4 203.4c-3 3.5-.5 9 4.1 9z"
+                                        fill="#262626"
+                                    />
+                                </svg>
+                            {{ end }}
+                            {{ .name }}
+                        </div>
+                    {{ end }}
+                {{ end }}
+
+
+                <div class="px-8 text-right border-l border-stone-200">
+                    <div>
+                        <!-- Time -->
+                        {{ if .Params.date }}
+                            <time>
+                                {{ .Params.date.Format "2006/01" }}
+                            </time>
+                        {{ end }}
+
+                    </div>
+                    <div>
+                        {{ if .Params.category }}
+                            <a href="/category/{{ .Params.category }}">
+                                {{ .Params.category }}
+                            </a>
+                        {{ end }}
+
+
+                        <!-- Tag -->
+                        {{ if .Params.tag }}
+                            -
+                            <ul class="inline-block">
+                                {{ range $i, $e := .Params.tag }}
+                                    <li class="inline-block">
+                                        <span class="inline-block">
+                                            {{ if $i }},{{ end }}
+                                        </span>
+
+                                        <a
+                                            class="inline-block p-2 -m-2 capitalize first-of-type:p-0 hover:bg-glass dark:hover:bg-glass-dark whitespace-nowrap"
+                                            href="{{ "project/" | relLangURL }}{{ . | urlize }}"
+                                            >{{- . -}}</a
+                                        >
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        {{ end }}
+                    </div>
+
+                    <!-- Tag -->
+                    {{ if .Params.Project }}
+                        -
+                        <ul class="hidden sm:inline-block">
+                            {{ range $i, $e := .Params.project }}
+                                <li class="inline-block">
+                                    <span class="inline-block">
+                                        {{ if $i }},{{ end }}
+                                    </span>
+                                    <a
+                                        class="inline-block p-2 -m-2 capitalize first-of-type:p-0 hover:bg-glass dark:hover:bg-glass-dark whitespace-nowrap"
+                                        href="{{ "project/" | relLangURL }}{{ . | urlize }}"
+                                        >{{- . -}}</a
+                                    >
+                                </li>
+                            {{ end }}
+                        </ul>
+                    {{ end }}
+                </div>
+            </div>
 
             <div>
                 {{ $smartProcess :=  "/-/quality/smart_retina/-/format/auto/-" }}
@@ -53,76 +164,31 @@
             </div>
         </div>
 
-        <div class="px-8 pb-8 border-0 lg:border-l">
-            <div class="py-8 leading-relaxed ">
-                <ul>
-                    <!-- Time -->
-                    {{ if .Params.date }}
-                        <li>
-                            時間 :
-                            <time>
-                                {{ .Params.date.Format "2006 / 01" }}
-                            </time>
-                        </li>
-                    {{ end }}
-
-
-                    <!-- Tag -->
-                    {{ if .Params.tag }}
-                        <li>
-                            標籤:
-                            {{ .Params.tag }}
-                        </li>
-                    {{ end }}
-
-
-                    <!-- Tag -->
-                    {{ if .Params.Project }}
-                        <li>
-                            <a href="/tag">標籤：</a>
-                            <ul class="hidden sm:inline-block">
-                                {{ range $i, $e := .Params.project }}
-                                    <li class="inline-block">
-                                        <span class="inline-block">
-                                            {{ if $i }},{{ end }}
-                                        </span>
-                                        <a
-                                            class="inline-block p-2 -m-2 capitalize first-of-type:p-0 hover:bg-glass dark:hover:bg-glass-dark whitespace-nowrap"
-                                            href="{{ "project/" | relLangURL }}{{ . | urlize }}"
-                                            >{{- . -}}</a
-                                        >
-                                    </li>
-                                {{ end }}
-                            </ul>
-                        </li>
-                    {{ end }}
-
-
-                    <!-- Client -->
-                    {{ if .Params.client }}
-                        <li>
-                            客戶:
-                            {{ .Params.client }}
-                        </li>
-                    {{ end }}
-
-                    {{ if .Params.credit }}
-                        <div class="mt-8">
-                            {{ range .Params.credit }}
-                                {{ .title }}
-                                -
-                                {{ .person }}
-                                <br />
-                            {{ end }}
-                        </div>
-                    {{ end }}
-                </ul>
+        <!-- Right content -->
+        <div class="pb-8 border-0 lg:border-l">
+            <div class="p-8 leading-relaxed border-b border-stone-200 ">
+                <h2 class="text-2xl leading-snug tracking-wide">
+                    {{ .Params.description }}
+                </h2>
             </div>
+
             <div
-                style="top: calc(var(--navbarMainHeight) + 2rem)"
-                class="sticky prose"
+                class="prose prose-h2:top-0 lg:prose-h2:top-14 border-stone-200 max-w-none"
             >
                 {{ .Content }}
+            </div>
+
+            <div class="p-8 leading-relaxed border-t border-stone-200">
+                {{ if .Params.credit }}
+                    <div class="mt-8">
+                        {{ range .Params.credit }}
+                            {{ .title }}
+                            -
+                            {{ .person }}
+                            <br />
+                        {{ end }}
+                    </div>
+                {{ end }}
             </div>
         </div>
     </div>
