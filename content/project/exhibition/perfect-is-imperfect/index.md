@@ -1,5 +1,6 @@
 ---
 draft: false
+thumbnail: https://ucarecdn.com/5006fcd3-a6fd-44ec-9b83-986ae7cd55c3/-/scale_crop/1200x630/smart/
 cover:
   - https://ucarecdn.com/e2f81adb-d247-481f-a465-906a4fb912a7/半個展-海報視覺.jpg
   - https://ucarecdn.com/920c3fac-4773-4165-9e86-03465f13556a/半個展-小型周邊.jpg

@@ -1,5 +1,6 @@
 ---
 draft: false
+thumbnail: https://ucarecdn.com/b4fb5cf8-e03c-48e6-959b-2e5fca877633/-/scale_crop/1200x630/smart/
 cover:
   - https://ucarecdn.com/cfc19b0c-3db8-4f75-99c6-4367b53db06a/01-克比提護髮素與洗髮精.webp
   - https://ucarecdn.com/553a4695-9bc6-40a8-9ded-bf192669b51d/02-克比提護髮素與洗髮精瓶身主圖動畫.webp

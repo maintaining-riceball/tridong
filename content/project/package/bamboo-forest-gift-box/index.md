@@ -1,5 +1,6 @@
 ---
 draft: false
+thumbnail: https://ucarecdn.com/a096b638-63c5-4a3f-9afc-c0649a316b2f/-/scale_crop/1200x630/smart/
 cover:
   - https://ucarecdn.com/a096b638-63c5-4a3f-9afc-c0649a316b2f/01-竹林茶境-封面.webp
   - https://ucarecdn.com/ef47a5da-1a95-4308-a63e-0824a6cc301e/02-竹林茶境-品牌介紹.jpg
