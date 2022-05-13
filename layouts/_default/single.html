@@ -66,27 +66,26 @@
                 {{ end }}
 
 
-                <div class="px-8 text-right border-l border-stone-200">
-                    <div>
-                        <!-- Time -->
-                        {{ if .Params.date }}
-                            <time>
-                                {{ .Params.date.Format "2006/01" }}
-                            </time>
-                        {{ end }}
+                <div class="px-8 text-left border-l lg:text-right border-stone-200">
+                    <!-- Time -->
+                    {{ if .Params.date }}
+                        <time>
+                            {{ .Params.date.Format "2006/01" }}
+                        </time>
+                        <span>．</span>
+                    {{ end }}
 
-                    </div>
-                    <div>
-                        {{ if .Params.category }}
-                            <a href="/category/{{ .Params.category }}">
-                                {{ .Params.category }}
-                            </a>
-                        {{ end }}
+                    {{ if .Params.categroy }}
+                        <div>
+                            {{ if .Params.category }}
+                                <a href="/category/{{ .Params.category }}">
+                                    {{ .Params.category }}
+                                </a>
+                                -
+                            {{ end }}
 
 
-                        <!-- Tag -->
-                        {{ if .Params.tag }}
-                            -
+                            <!-- Tag -->
                             <ul class="inline-block">
                                 {{ range $i, $e := .Params.tag }}
                                     <li class="inline-block">
@@ -102,26 +101,20 @@
                                     </li>
                                 {{ end }}
                             </ul>
-                        {{ end }}
-                    </div>
+                        </div>
+                    {{ end }}
+
 
                     <!-- Tag -->
-                    {{ if .Params.Project }}
-                        -
-                        <ul class="sm:inline-block">
+                    {{ if .Params.project }}
                             {{ range $i, $e := .Params.project }}
-                                <li class="inline-block">
-                                    <span class="inline-block">
-                                        {{ if $i }},{{ end }}
-                                    </span>
                                     <a
-                                        class="inline-block p-2 -m-2 capitalize first-of-type:p-0 hover:bg-glass dark:hover:bg-glass-dark whitespace-nowrap"
+                                        class=""
                                         href="{{ "project/" | relLangURL }}{{ . | urlize }}"
                                         >{{- . -}}</a
                                     >
                                 </li>
                             {{ end }}
-                        </ul>
                     {{ end }}
                 </div>
             </div>
@@ -175,7 +168,7 @@
             </div>
 
             <div
-                class="prose prose-h2:top-0 lg:prose-h2:top-14 border-stone-200 max-w-none"
+                class="pb-8 prose prose-h2:top-0 lg:prose-h2:top-14 border-stone-200 max-w-none"
             >
                 {{ .Content }}
             </div>

@@ -26,17 +26,12 @@ credit:
     person: 展場規劃設計
 ---
 
-## 完美與不完美，<br>是每個創作者心中都存在的掙扎。
-畢業製作是審視自己學習成果的一項重大挑戰，展覽中我們鼓勵每一位畢業生除了展現自己完美的一面外，也接納不完美的另一面，以輕鬆自信的態度去呈現辛苦的結晶。一起來《半個展》！ 
+## 完美不完美？不完美完美！
+於這次中科大畢業製作模擬展覽中，思考「創作者對於自身作品匠人般的狂熱執著，永遠對於現況的不滿」這樣的態度是是唯一的嗎？相信很多事情還是在以簡馭繁，不追求完美主義、不使用非無即有的安排中才是最完美的，畢業製作是審視自己學習成果的一項重大挑戰，展覽中我們鼓勵每一位畢業生除了展現自己完美的一面外，也接納不完美的另一面，以輕鬆自信的態度去呈現辛苦的結晶。一起來《半個展》！ 
 
-## 正因不完美，<br>所以才創造完美。
+## 設計策略
 創作者的想法在「完美」與「不完美」的舞台間打轉，碰撞中擦出火花，並接納與之共存，創造出最契合的結果，以此為出發點，作為視覺設計的核心價值。
 
-## Struggles that creator encounters
-“Perfectly Imperfect” is the core idea of this exhibition. Feeling imposter syndrome at work is a problem every creator encounters every day. We Encourage every graduate to know that being imperfect is perfectly fine.
-
-## Perfect is Perfect
-The creator's idea spins between “perfection” and “imperfection”, sparks are created in the process, and they accept and coexist with each other to create the most suitable results. This is the starting point serves as the core value of “Perfect Imperfect” exhibition. 
 
 <div class="flex w-full">
   <video class="w-full" autoplay mute loop>

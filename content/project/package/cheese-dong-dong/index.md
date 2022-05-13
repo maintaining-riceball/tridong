@@ -15,15 +15,15 @@ title: Cheese Dong Dong
 titletc: 乳酪東東
 description: |-
   「乳酪東東」是東京烘焙坊最暢銷的乳酪蛋糕獨立品牌，總共有10種口味供消費者挑選。
-  設計師藉由親切手感的插畫推廣廣受各年齡層喜愛的乳酪蛋糕，使其不僅口感豐富，在視覺上也可以充滿驚喜感。
+  設計師藉由親切手感的插畫推廣廣受各年齡層喜愛的乳酪蛋糕，使其不僅口感豐富，在視覺上也可以充滿驚喜。
 project:
   - 包裝
 date: 2021-05-10T01:51:12.333Z
 client: 東京時尚烘焙坊
 credit:
-  - title: 包裝設計
+  - title: 包裝
     person: 陳奕杉、陳郁馨
-  - title: 插畫製作
+  - title: 插畫
     person: 陳奕杉、陳郁馨
   - title: 文案
     person: 王耀輝
@@ -36,9 +36,9 @@ credit:
 
 ## 現況問題
 原先使用市面上常見的公版包裝，由於是使用現有的盒子，因此無法凸顯每款口味差異與特色，打消了消費者對不同口味的好奇心，因為「每一款看起來都差不多」。
+## 設計目標
+協助針對乳酪蛋糕產品旗下10種口味，使用親切手感的插圖開發一套連貫的視覺，並設計禮盒方便用於贈禮與攜帶。使客戶更愛去品嘗不同口味當中的驚喜感，10款味道中總有一款是你所愛的！
 
-## 設計成果
-協助針對乳酪蛋糕產品旗下10種口味，使用親切手感的插圖開發一套連貫的視覺，並設計禮盒方便用於贈禮與攜帶。
 ## 產品介紹
 
 * 黑櫻桃
@@ -52,3 +52,8 @@ credit:
 * 優格
 * 蔓越莓
 
+## 參訪照片
+<div class="flex flex-col justify-center lg:flex-row">
+<img class="w-full m-0" src="https://ucarecdn.com/0316c81c-9901-45f1-b93e-c4f1a9846d99/-/resize/300x/-/format/webp/-/brightness/40/-/quality/smart/" alt="">
+<img class="w-full m-0" src="https://ucarecdn.com/ce6d5265-f33d-4b4c-865e-04093c9c1a58/-/resize/300x/-/format/webp/-/brightness/40/-/quality/smart/" alt="">
+</div>

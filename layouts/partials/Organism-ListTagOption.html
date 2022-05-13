@@ -32,11 +32,12 @@
                 {{ $tagCount := len $taxonomy.Pages }}
                 {{ if not (eq $name $currentTitle) }}
                     <a
-                        class="relative inline-block p-4 py-1 text-2xl capitalize"
+                        class="relative inline-block p-4 py-1 text-2xl capitalize group"
                         href="{{ "/tag/" | relURL }}{{ $name | urlize }}"
                     >
                         {{- $name -}}
-                        <sup class="absolute top-0 right-0 text-sm"
+                        <sup
+                            class="absolute top-0 right-0 text-sm group-focus:opacity-0"
                             >{{- $tagCount -}}</sup
                         >
                     </a>

@@ -8,9 +8,20 @@
 }
 
 .navbarMainHeight{
-    height: var(--navbarMainHeight)
+    height: var(--navbarMainHeight);
 }
 
 .top-navbarMainHeight{
-    top: var(--navbarMainHeight)
+    top: var(--navbarMainHeight);
 }
+
+::selection {
+    @apply bg-stone-300;
+}
+
+*:focus {
+    transition:background-color .3s;
+    @apply ring-2 ring-transparent focus:ring-stone-300 z-50 relative;
+}
+
+
