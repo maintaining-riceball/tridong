@@ -30,7 +30,10 @@ collections:
       這個區域存放部落格文章。
     folder: content/post
     create: true
-    nested: { depth: 100 }
+    nested:
+      depth: 100
+      summary: '{{titletc}}'
+    
     view_filters:
       - label: 草稿
         field: draft
@@ -93,7 +96,9 @@ collections:
       這個區域存放專案作品。
     folder: content/project
     create: true
-    nested: { depth: 100 }
+    nested:
+      depth: 100
+      summary: '{{titletc}}'
     view_filters:
       - label: 草稿
         field: draft
@@ -104,6 +109,14 @@ collections:
         pattern: \d{4}
     fields:
       - {label: "草稿", name: "draft", widget: "boolean", default: true}
+      - label: ""
+        name: "thumbnail"
+        widget: "image"
+        hint: 用於後台的圖片顯示與「分享」的時候顯示的那張大照片，必須是 1200 x 630 px 尺寸。 
+        media_library:
+          config:
+            multiple: false
+
       - label: "封面圖片"
         name: "cover"
         widget: "image"
@@ -114,8 +127,6 @@ collections:
             multiple: true
             imagesOnly: true
             publicKey: 5fa87fb5d63e84fccf01
-
-            
 
       - {label: "英文標題", name: "title", widget: "string", tagname: 'h1', hint: 整篇文章的英文，會用於 Google 搜尋上對於這個頁面的標題。文字介於 50 英文字元左右，可以少但不要太長。}
       - {label: "繁中標題", name: "titletc", widget: "string", hint: 整篇文章的繁中標題，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 15 中文字左右，可以少但不要太長。}

@@ -3,6 +3,8 @@
 brand = 'Triangle Dong Dong'
 brandtc = '三角東東'
 brandLogo = '◢◢◢'
+brandUrl = 'https://www.tridong.com/'
+brandUrlShort = 'tridong.com'
 brandEmail = 'triangledongdong@gmail.com'
 brandPhone = '09-3636-1996'
 brandLocation = 'No. 129, Section 3, Sanmin Rd, North District, Taichung City, 404'
