@@ -16,11 +16,13 @@
 
             <!-- Article Metas -->
             <div
-                class="flex items-center justify-between py-0 border-t border-b gsap-heading border-stone-200"
+                class="flex items-center py-0 border-t border-b lg:justify-between gsap-heading border-stone-200"
             >
                 <!-- Client -->
                 {{ if .Params.client }}
-                    <div class="px-8 py-8 pr-8 border-r border-stone-200">
+                    <div
+                        class="px-8 py-4 pr-8 border-0 lg:border-r border-stone-200"
+                    >
                         {{ .Params.client }}
                     </div>
                 {{ end }}
@@ -106,7 +108,7 @@
                     <!-- Tag -->
                     {{ if .Params.Project }}
                         -
-                        <ul class="hidden sm:inline-block">
+                        <ul class="sm:inline-block">
                             {{ range $i, $e := .Params.project }}
                                 <li class="inline-block">
                                     <span class="inline-block">

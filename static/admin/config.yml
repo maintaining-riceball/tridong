@@ -32,7 +32,7 @@ collections:
     create: true
     nested:
       depth: 100
-      summary: '{{titletc}}'
+      summary: '{{titletc}} - {{title}}'
     
     view_filters:
       - label: 草稿
@@ -42,8 +42,16 @@ collections:
       - label: 年分
         field: date
         pattern: \d{4}
+    summary: '{{titletc}}'
     fields:
       - { label: '草稿', name: 'draft', widget: 'boolean', default: false, hint: 草稿並不會真的顯現到網站上，但會在「後台」中顯示。}
+      - label: "主-封面圖片"
+        name: "thumbnail"
+        widget: "image"
+        hint: 用於後台的圖片顯示與「分享」的時候顯示的那張大照片，必須是 1200 x 630 px 尺寸，只能有一張。。 
+        media_library:
+          config:
+            multiple: false
       - label: "封面圖片"
         name: "cover"
         widget: "image"
@@ -86,6 +94,7 @@ collections:
           - { label: 圖片, name: image, widget: image, required: false} 
       - {label: "內文", name: "body", widget: "markdown"}
 
+
     meta: { path: { label: 文章存放位置, widget: parent, index_file: 'index' } }
 
   # Project Collection
@@ -98,7 +107,7 @@ collections:
     create: true
     nested:
       depth: 100
-      summary: '{{titletc}}'
+      summary: '{{titletc}} - {{title}}'
     view_filters:
       - label: 草稿
         field: draft
@@ -107,12 +116,13 @@ collections:
       - label: 年分
         field: date
         pattern: \d{4}
+    summary: '{{titletc}} - {{title}}'
     fields:
       - {label: "草稿", name: "draft", widget: "boolean", default: true}
-      - label: ""
+      - label: "主-封面圖片"
         name: "thumbnail"
         widget: "image"
-        hint: 用於後台的圖片顯示與「分享」的時候顯示的那張大照片，必須是 1200 x 630 px 尺寸。 
+        hint: 用於後台的圖片顯示與「分享」的時候顯示的那張大照片，必須是 1200 x 630 px 尺寸，只能有一張。。 
         media_library:
           config:
             multiple: false
