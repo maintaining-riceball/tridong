@@ -75,8 +75,9 @@
                         <span>．</span>
                     {{ end }}
 
-                    {{ if .Params.categroy }}
-                        <div>
+                    {{ if .Params.category }}
+
+                        <div class="inline-block">
                             {{ if .Params.category }}
                                 <a href="/category/{{ .Params.category }}">
                                     {{ .Params.category }}

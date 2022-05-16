@@ -1,64 +1,63 @@
-<h2 class="gsap-list">
-    <a class="block p-8 py-4 bg-stone-100" href="/project">
-        <svg
-            class="inline-block mr-4 md:hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            height="20"
-            width="20"
-        >
-            <path
-                d="M10 12.812 5 7.812 6.229 6.583 10 10.354 13.771 6.583 15 7.812Z"
-            />
-        </svg>
-        專案列表
-    </a>
-</h2>
-<ul
-    class="hidden grid-cols-5 p-8 py-4 border-t border-b border-stone-200 sm:grid gsap-list"
->
-    <li class="">年份</li>
-    <li class="col-span-2">專案名稱</li>
-    <li class="">標籤</li>
-    <li class="">客戶</li>
-</ul>
-{{ range where $.Site.RegularPages "Section" "project" }}
+<section class="overflow-hidden">
+    {{ partial "partials/Atom-sectionTitle.html" (dict "title" "專案列表") . }}
     <ul
-        class="grid items-center grid-cols-5 p-8 py-4 border-b border-stone-200 hover:bg-stone-100 transition-background gsap-list"
+        class="hidden grid-cols-5 p-8 py-4 border-t border-b border-stone-200 sm:grid gsap-list"
     >
-        <!-- Date -->
-        <li class="hidden sm:inline-block">
-            {{ .Params.date.Format "2006" }}
-        </li>
-
-        <!-- Title -->
-        <li class="col-span-2">
-            <a href="{{ .Permalink }}">
-                {{ .Params.titletc }}
-                <br />
-                {{ .Params.Title }}
-            </a>
-        </li>
-
-        <!-- Tags -->
-        <li>
-            <ul class="hidden sm:inline-block">
-                {{ range $i, $e := .Params.project }}
-                    <li class="inline-block">
-                        <span class="inline-block">
-                            {{ if $i }},{{ end }}
-                        </span>
-                        <a
-                            class="inline-block p-2 -m-2 capitalize first-of-type:p-0 hover:bg-glass dark:hover:bg-glass-dark whitespace-nowrap"
-                            href="{{ "project/" | relLangURL }}{{ . | urlize }}"
-                            >{{- . -}}</a
-                        >
-                    </li>
-                {{ end }}
-            </ul>
-        </li>
-
-        <li class="col-span-2 text-right sm:col-span-1 sm:text-left">
-            {{ .Params.client }}
-        </li>
+        <li class="">年份</li>
+        <li class="col-span-2">專案名稱</li>
+        <li class="">標籤</li>
+        <li class="">客戶</li>
     </ul>
-{{ end }}
+
+    {{ $smartProcess :=  "-/scale_crop/600x315/-/format/jpg/" }}
+    {{ range where $.Site.RegularPages "Section" "project" }}
+        {{ $thumbnailDir := path.Split .Params.thumbnail }}
+
+
+        <article
+            class="relative z-50 border-b border-stone-200 hover:bg-stone-100 transition-background gsap-list"
+        >
+            <a
+                href="{{ .Permalink }}"
+                class="grid items-center grid-cols-5 p-8 py-4 gsap-imageReveal"
+            >
+                <img
+                    class="absolute invisible opacity-0 pointer-events-none"
+                    width="600"
+                    height="315"
+                    src="{{ $thumbnailDir.Dir }}{{ $smartProcess }}{{ path.Base $.Params.thumbnail }}"
+                    alt="none"
+                    loading="lazy"
+                />
+
+                <!-- Date -->
+                <time pubdate class="hidden sm:inline-block">
+                    {{ .Params.date.Format "2006" }}
+                </time>
+
+                <!-- Title -->
+                <h3 class="col-span-2 pointer-events-none">
+                    {{ .Params.titletc }}
+                    <br />
+                    <span class="hidden opacity-80 md:inline">
+                        {{ .Params.Title }}
+                    </span>
+                </h3>
+
+                <!-- Project Tag -->
+                <p class="pointer-events-none">
+                    {{ range .Params.project }}
+                        {{ . }}
+                    {{ end }}
+                </p>
+
+                <p
+                    class="col-span-2 text-right pointer-events-none sm:col-span-1 sm:text-left"
+                >
+                    {{ .Params.client }}
+                </p>
+            </a>
+        </article>
+    {{ end }}
+
+</section>

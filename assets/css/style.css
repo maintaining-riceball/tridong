@@ -902,6 +902,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 0;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
 .fixed {
   position: fixed;
 }
@@ -941,6 +949,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .z-40 {
   z-index: 40;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .z-30 {
@@ -1129,6 +1141,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -1193,6 +1209,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 1rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1236,6 +1257,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-right {
   text-align: right;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
 }
 
 .text-2xl {
@@ -1287,6 +1313,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-stone-900 {
   --tw-text-opacity: 1;
   color: rgb(28 25 23 / var(--tw-text-opacity));
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-80 {
+  opacity: 0.8;
 }
 
 .transition-background {
@@ -1378,6 +1412,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:inline-block {
     display: inline-block;
+  }
+
+  .md\:inline {
+    display: inline;
   }
 
   .md\:hidden {

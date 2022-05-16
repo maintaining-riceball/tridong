@@ -64,22 +64,51 @@
 <meta name="description" content="{{ $pageDescription.Get "desc" }}" />
 
 <!-- Open Graph -->
+{{ $thumbnailDir := path.Split $.Params.thumbnail }}
+{{ $smartProcess :=  "-/scale_crop/1200x630/-/format/jpg/" }}
 <meta property="og:url" content="{{ .Site.Params.brandUrl }}" />
+<meta propert="og:locale" content="zh_TW" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ $title.Get `content` }}" />
 <meta property="og:description" content="{{ $pageDescription.Get "desc" }}" />
-<meta property="og:image" content="{{ $.Params.thumbnail }}" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:domain" content="{{ .Site.Params.brandUrlShort }}" />
 <meta name="twitter:title" content="{{ $title.Get `content` }}" />
 <meta name="twitter:description" content="{{ $pageDescription.Get "desc" }}" />
-<meta name="twitter:image" content="{{ $.Params.thumbnail }}" />
+
+{{ if $.Params.thumbnail }}
+    <meta
+        property="og:image"
+        content="{{ $thumbnailDir.Dir }}{{ $smartProcess }}{{ path.Base $.Params.thumbnail }}"
+    />
+    <meta property="og:image:alt" content="{{ $title.Get `content` }}" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+        name="twitter:image"
+        content="{{ $thumbnailDir.Dir }}{{ $smartProcess }}{{ path.Base $.Params.thumbnail }}"
+    />
+{{ end }}
+
 
 <!-- Analytics -->
-{{ template "_internal/google_analytics.html" . }}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-FS2XJ14995"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+        dataLayer.push(arguments)
+    }
+    gtag('js', new Date())
 
+    gtag('config', 'G-FS2XJ14995')
+</script>
 
 <!-- CSS -->
 {{ $styles := resources.Get "/css/style.css" | postCSS }}
@@ -114,10 +143,7 @@
 {{ end }}
 
 
-<script
-    defer
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
-></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 
 <script
     defer

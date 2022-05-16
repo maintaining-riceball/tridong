@@ -1,6 +1,6 @@
 ---
 draft: false
-thumbnail: https://ucarecdn.com/5a8c93b2-f951-4fd6-8d37-e139f232f0aa/-/scale_crop/1200x630/smart/
+thumbnail: https://ucarecdn.com/5a8c93b2-f951-4fd6-8d37-e139f232f0aa/乳酪東東.webp
 cover:
   - https://ucarecdn.com/5a8c93b2-f951-4fd6-8d37-e139f232f0aa/01-乳酪東東-各種口味盒子的展示.webp
   - https://ucarecdn.com/a3a2eecd-77d4-438e-b845-0226af1e75e5/02-乳酪東東-各種口味盒子的堆疊展示.webp

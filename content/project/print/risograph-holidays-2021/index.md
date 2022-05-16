@@ -1,6 +1,6 @@
 ---
 draft: false
-thumbnail: https://ucarecdn.com/a7bc04ee-e99d-4012-abda-e16b49674284/-/scale_crop/1200x630/smart/
+thumbnail: https://ucarecdn.com/a7bc04ee-e99d-4012-abda-e16b49674284/risoman.webp
 cover:
   - https://ucarecdn.com/a7bc04ee-e99d-4012-abda-e16b49674284/01-risoman-2021聖誕節卡片.webp
   - https://ucarecdn.com/6de84fe6-7de4-4800-8873-1dd6f6b32fe4/02-risoman-2021聖誕節卡片.webp
