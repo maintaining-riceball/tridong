@@ -1,9 +1,7 @@
 {{ define "main" }}
     <div class="grid grid-auto lg:grid-cols-2">
         <div class="border-r border-stone-200">
-            <h1 class="p-8 text-2xl leading-relaxed prose">
-                我們撰寫文章設計思考、軟體教學、實用工具……等文章，蒐集日常生活日常凝聚起來的靈感。
-            </h1>
+            <h1 class="p-8 text-2xl leading-relaxed prose">{{ .Content }}</h1>
             <div class="mx-8 mb-8">
                 <a href="#" class="inline-flex items-center text-xl"
                     >Youtube

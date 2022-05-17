@@ -22,6 +22,53 @@ media_library:
 
 # https://github.com/netlify/netlify-cms/blob/master/dev-test/config.yml
 collections:
+  - name: page
+    label: 頁面
+    label_singular: 頁面
+    description: >
+      這個區域存放整個網站的主要頁面。
+    folder: content
+    create: true
+    nested:
+      depth: 2
+      summary: '{{titletc}} - {{title}}'
+    
+    view_filters:
+      - label: 草稿
+        field: draft
+        pattern: true
+    view_groups:
+      - label: 年分
+        field: date
+        pattern: \d{4}
+    summary: '{{titletc}} - {{title}}'
+    fields:
+      # 主-封面圖片
+      - label: "主-封面圖片"
+        name: "thumbnail"
+        widget: "image"
+        hint: 用於後台的圖片顯示與「分享」的時候顯示的那張大照片，必須是 1200 x 630 px 尺寸，只能有一張。
+        default: [https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg]
+        media_library:
+          config:
+            multiple: false
+            imagesOnly: true
+            publicKey: a4aa462a3d83321a19bb
+
+      # 封面圖片
+      - label: "封面圖片"
+        name: "cover"
+        widget: "image"
+        hint: 用於文章的封面圖片，可以提交多張，圖片的檔名最好「務必」命名清楚，會用於讓機器人了解這是什麼樣的圖片，或是當圖片無法加載時的替代文字。例如：三角東東的周邊商品陳列於木頭桌上。圖片會被自動裁切優化至1200px的寬度。
+        default: [https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg]
+        required: false
+        media_library:
+          config:
+            multiple: true
+            imagesOnly: true
+            publicKey: a4aa462a3d83321a19bb
+      - {label: "內文", name: "body", widget: "markdown"}
+
   # Post Collection
   - name: post
     label: 文章
@@ -42,7 +89,7 @@ collections:
       - label: 年分
         field: date
         pattern: \d{4}
-    summary: '{{titletc}}'
+    summary: '{{titletc}} - {{title}}'
     fields:
       - { label: '草稿', name: 'draft', widget: 'boolean', default: false, hint: 草稿並不會真的顯現到網站上，但會在「後台」中顯示。}
       - label: "主-封面圖片"
@@ -55,7 +102,7 @@ collections:
       - label: "封面圖片"
         name: "cover"
         widget: "image"
-        hint: 用於文章的封面圖片，可以提交多張，圖片的檔名最好「務必」命名清楚，會用於讓機器人了解這是什麼樣的圖片，或是當圖片無法加載時的替代文字。例如：三角東東的周邊商品陳列於木頭桌上。圖片會被自動裁切優化至1200px的正方形。
+        hint: 用於文章的封面圖片，可以提交多張，圖片的檔名最好「務必」命名清楚，會用於讓機器人了解這是什麼樣的圖片，或是當圖片無法加載時的替代文字。例如：三角東東的周邊商品陳列於木頭桌上。圖片會被自動裁切優化至1200px的寬度。
         default: [https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg]
         required: false
         media_library:
@@ -131,7 +178,7 @@ collections:
         name: "cover"
         widget: "image"
         required: false
-        hint: 用於文章的封面圖片，可以提交多張，圖片的檔名最好「務必」命名清楚，會用於讓機器人了解這是什麼樣的圖片，或是當圖片無法加載時的替代文字。例如：三角東東的周邊商品陳列於木頭桌上。圖片會被自動裁切優化至1200px的正方形。
+        hint: 用於文章的封面圖片，可以提交多張，圖片的檔名最好「務必」命名清楚，會用於讓機器人了解這是什麼樣的圖片，或是當圖片無法加載時的替代文字。例如：三角東東的周邊商品陳列於木頭桌上。圖片會被自動裁切優化至1200px的寬度。
         media_library:
           config:
             multiple: true
