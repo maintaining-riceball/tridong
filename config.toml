@@ -65,8 +65,13 @@ imgProgress = '-/progressive/yes/'
   url = '/Project/'
   weight = 4
 
-# Taxonomy
+# Sitemap
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
 
+# Taxonomy
 [taxonomies]
   category = "category"
   tag = "tag"

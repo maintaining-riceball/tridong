@@ -18,6 +18,17 @@ module.exports = {
                 paddingLeft: theme('padding.8'),
                 paddingRight: theme('padding.8'),
                 fontWeight: 400,
+                fontSize: theme('fontSize.2xl'),
+                position: "sticky",
+                top: "var(--navbarMainHeight)",
+              },
+              h3: {
+                backgroundColor: theme('colors.stone.100'),
+                paddingTop: theme('padding.4'),
+                paddingBottom: theme('padding.4'),
+                paddingLeft: theme('padding.8'),
+                paddingRight: theme('padding.8'),
+                fontWeight: 400,
                 fontSize: theme('fontSize.lg'),
                 position: "sticky",
                 top: "var(--navbarMainHeight)",
@@ -31,6 +42,15 @@ module.exports = {
                 paddingLeft: theme('padding.8'),
                 paddingRight: theme('padding.8'),
                 listStylePosition: "inside",
+              },
+              ol: {
+                paddingLeft: theme('padding.8'),
+                paddingRight: theme('padding.8'),
+                listStylePosition: "inside",
+              },
+              em: {
+                fontStyle: "normal",
+                backgroundColor: theme('colors.stone.200')
               }
             },
           },

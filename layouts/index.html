@@ -18,20 +18,21 @@
                 {{ partial "partials/Atom-btn.html" (dict "content" "觀看作品" "url" "/project") . }}
             </div>
 
-            <div class="">
+            <div class="gsap-image">
                 <video
                     autoplay
                     loop
                     muted
                     playsinline
                     src="https://ucarecdn.com/54a6011f-7c87-45a0-a546-82646b95bac2/noroot.mp4"
-                    class="sticky top-0 w-full gsap-image"
+                    class="sticky top-0 w-full"
                 ></video>
             </div>
         </div>
         <div
             id="project"
-            class="sticky top-0 z-40 lg:max-h-screen h-max bg-stone-50"
+            class="sticky lg:max-h-screen h-max"
+            style="top: var(--navbarMainHeight)"
         >
             {{ partial "partials/Organism-ListProject-index.html" . }}
             {{ partial "partials/Organism-ListPost-index.html" . }}

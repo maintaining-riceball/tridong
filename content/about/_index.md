@@ -1,7 +1,7 @@
 ---
 title: about
 titletc: 關於我們
-thumbnail: https://ucarecdn.com/76e748b8-68ef-4043-81be-1f909601ed5f/-/format/auto/-/quality/smart/三角東東封面
+thumbnail: https://ucarecdn.com/76e748b8-68ef-4043-81be-1f909601ed5f/品牌展示封面
 cover:
 - 'https://ucarecdn.com/3aa162c9-bdf8-4339-a781-355d668ca24c/TTS.webp'
 - 'https://ucarecdn.com/e3f6cd0b-fb68-42d2-ba5d-65c7a6786e76/noroot.webp'

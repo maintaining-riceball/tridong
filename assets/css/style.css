@@ -494,7 +494,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .prose :where(ol):not(:where([class~="not-prose"] *)) {
   list-style-type: decimal;
-  padding-left: 1.625em;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  list-style-position: inside;
 }
 
 .prose :where(ol[type="A"]):not(:where([class~="not-prose"] *)) {
@@ -592,7 +594,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .prose :where(h2):not(:where([class~="not-prose"] *)) {
   color: var(--tw-prose-headings);
   font-weight: 400;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-size: [object Object];
   margin-top: 2em;
   margin-bottom: 1em;
@@ -613,11 +615,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .prose :where(h3):not(:where([class~="not-prose"] *)) {
   color: var(--tw-prose-headings);
-  font-weight: 600;
-  font-size: 1.25em;
+  font-weight: 400;
+  font-size: 1.125rem;
+  font-size: [object Object];
   margin-top: 1.6em;
   margin-bottom: 0.6em;
   line-height: 1.6;
+  background-color: #f5f5f4;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--navbarMainHeight);
 }
 
 .prose :where(h3 strong):not(:where([class~="not-prose"] *)) {
@@ -890,6 +901,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0;
 }
 
+.prose :where(em):not(:where([class~="not-prose"] *)) {
+  font-style: normal;
+  background-color: #e7e5e4;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -947,16 +963,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
-.z-40 {
-  z-index: 40;
-}
-
-.z-50 {
-  z-index: 50;
-}
-
 .z-30 {
   z-index: 30;
+}
+
+.-z-30 {
+  z-index: -30;
 }
 
 .col-span-4 {
@@ -965,6 +977,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .col-span-2 {
   grid-column: span 2 / span 2;
+}
+
+.col-span-3 {
+  grid-column: span 3 / span 3;
 }
 
 .-m-2 {
@@ -1384,6 +1400,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
+  .sm\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
   .sm\:col-span-2 {
     grid-column: span 2 / span 2;
   }
@@ -1491,6 +1511,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:prose-h2\:top-14 :is(:where(h2):not(:where([class~="not-prose"] *))) {
     top: 3.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .xl\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .xl\:inline-block {
+    display: inline-block;
+  }
+
+  .xl\:text-left {
+    text-align: left;
   }
 }
 

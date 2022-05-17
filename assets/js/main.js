@@ -15,11 +15,11 @@ imageReveal.forEach((el) => {
   const image = el.querySelector('img')
   
   el.addEventListener('mouseenter', (e) => {
-    gsap.to(image, { autoAlpha: 1, translateY: -50})
+    gsap.to(image, { autoAlpha: 1, translateY: -50,duration:.8 , ease: "power4.out"})
   })
   
    el.addEventListener('mouseleave', (e) => {
-    gsap.to(image, { autoAlpha: 0, translateY: 50, ease: "power4.out" })
+    gsap.to(image, { autoAlpha: 0, translateY: 50,duration:.8 , ease: "power4.out" })
   })
   
   el.addEventListener('mousemove', (e) => {
