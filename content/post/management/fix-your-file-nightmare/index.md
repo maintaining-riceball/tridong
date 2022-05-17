@@ -1,7 +1,10 @@
 ---
 draft: false
+thumbnail: https://ucarecdn.com/540838a7-8f8d-4eca-9385-1a2bd60f42df/01-整理檔案-封面.webp
 cover:
-  - https://ucarecdn.com/8a2c5749-f12c-42a4-89f2-1027fd1947e1/noroot.png
+  - https://ucarecdn.com/5df4ecd8-9696-4de1-8d43-39f5195e632f/01-整理檔案-封面.png
+  - https://ucarecdn.com/09feff87-1c2c-4e1c-a2d9-f1ea75aebb27/02-整理檔案-個別檔案整理方式.png
+  - https://ucarecdn.com/0bfddb3b-70bd-40e4-83a5-c85e2bc86948/03-整理檔案-資料夾整理方式.png
 title: Fix Your File Nightmare
 titletc: 分類好頭疼！如何擺脫檔案整理惡夢？
 description: 我們每天都會囤積大量的文件、筆記、素材、累積下來就像亂糟糟的房間一樣需要整理，如果你也同樣在困擾這樣的問題，這篇文章是為你準備的。
@@ -15,7 +18,6 @@ author:
   - name: 黃宗瑋
     title: 設計師
     image: https://ucarecdn.com/688d34cc-afec-4c25-b229-b2740e03e665/黃宗瑋-頭像.jpg
-    
 ---
 ##  為什麼需要管理檔案？
 
@@ -76,7 +78,7 @@ author:
 
 備份是最常被忽略的一步驟，備份並不一定意味著要坐在電腦前手動搬移一些檔案，費時費力又很容易忘記！我選擇 [Google Drive Desktop](https://www.google.com/drive/download/) 來自動化每一個檔案備份的工作，同時也能無縫接軌的和同事們共同合作一個專案。
 
-如果不清楚 Google 雲端原來也有軟體可以自動化同步的話，可以看看這一篇文章：[把你的檔案都丟上雲端，Google Drive Desktop]()
+如果不清楚 Google 雲端原來也有軟體可以自動化同步的話，可以看看這一篇文章：[把你的檔案都丟上雲端，Google Drive Desktop](/post/management/put-your-files-on-cloud-google-drive-desktop/)
 
 當然除了土方法(用手一個一個拖拉檔案上雲端)外，可能比較專業一點可以架設[NAS](https://zh.wikipedia.org/wiki/%E7%BD%91%E7%BB%9C%E9%99%84%E6%8E%A5%E5%AD%98%E5%82%A8)來保證更快的檔案同步速度和自主性，不過使用雲端是一個對大眾來說更熟悉、入門的方式，有獨自的主題，就不在這篇文章的範疇內。
 
@@ -145,7 +147,7 @@ v1、v2、v3 → v30
 當然版本標註太多層會很混亂，盡量三層以內就好。
 
 ## 參考資料
-
+* [关键素材被删！找不到素材？影视飓风是如何摆脱丢数据噩梦的](https://www.youtube.com/watch?v=RTqNZEFp0o4)
 * [How to keep your design files neat and tidy](https://99designs.com/blog/tips/how-to-keep-your-design-files-neat-and-tidy/)
 * [What technical reasons exist for not using space characters in file names?](https://superuser.com/questions/29111/what-technical-reasons-exist-for-not-using-space-characters-in-file-names)
 * [Is it problematic to include spaces in file names?](https://qanda.digipres.org/1053/is-it-problematic-to-include-spaces-in-file-names)

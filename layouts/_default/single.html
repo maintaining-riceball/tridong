@@ -171,6 +171,9 @@
             <div
                 class="pb-8 prose prose-h2:top-0 lg:prose-h2:top-14 border-stone-200 max-w-none"
             >
+                {{ if .Params.toc }}
+                {{ .TableOfContents }}
+                {{ end }}
                 {{ .Content }}
             </div>
 
