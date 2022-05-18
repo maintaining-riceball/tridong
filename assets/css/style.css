@@ -963,6 +963,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
 .z-30 {
   z-index: 30;
 }
@@ -1072,14 +1080,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-max {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-}
-
-.h-20 {
-  height: 5rem;
 }
 
 .h-full {
@@ -1151,10 +1159,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .whitespace-nowrap {
