@@ -147,6 +147,7 @@ v1、v2、v3 → v30
 當然版本標註太多層會很混亂，盡量三層以內就好。
 
 ## 參考資料
+* [專業人士的設計流程-專案啟動與設置](https://thecosignstudio.github.io/process/chapters/01-project-introduction-and-setup.html)
 * [关键素材被删！找不到素材？影视飓风是如何摆脱丢数据噩梦的](https://www.youtube.com/watch?v=RTqNZEFp0o4)
 * [How to keep your design files neat and tidy](https://99designs.com/blog/tips/how-to-keep-your-design-files-neat-and-tidy/)
 * [What technical reasons exist for not using space characters in file names?](https://superuser.com/questions/29111/what-technical-reasons-exist-for-not-using-space-characters-in-file-names)
