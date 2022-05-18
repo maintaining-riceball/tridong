@@ -188,7 +188,7 @@ collections:
       - {label: "英文標題", name: "title", widget: "string", tagname: 'h1', hint: 整篇文章的英文，會用於 Google 搜尋上對於這個頁面的標題。文字介於 50 英文字元左右，可以少但不要太長。}
       - {label: "繁中標題", name: "titletc", widget: "string", hint: 整篇文章的繁中標題，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 15 中文字左右，可以少但不要太長。}
       - {label: "簡介", name: "description", widget: "text", hint: 整篇文章的精華描述，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 65~80 個中文字。}
-      - {label: "專案標籤", name: "project", widget: "list", default: ["包裝設計"]}
+      - {label: "專案標籤", name: "project", widget: "list", default: ["包裝"]}
       - {
         label: '發布日期',
         name: 'date',
@@ -199,7 +199,7 @@ collections:
         name: "credit" 
         widget: "list"
         fields:
-          - { label: 職位名稱, name: title, widget: string, default: 包裝設計} 
+          - { label: 職位名稱, name: title, widget: string, default: 包裝} 
           - { label: 提名, name: person, widget: string, default: 王小明}
           
       - {label: "內文", name: "body", widget: "markdown"}
