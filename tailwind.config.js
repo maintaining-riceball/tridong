@@ -1,3 +1,5 @@
+const { red } = require('tailwindcss/colors');
+
 module.exports = {
   content: ['./layouts/**/*.html', './content/**/*.md'],
   theme: {
@@ -51,7 +53,13 @@ module.exports = {
               em: {
                 fontStyle: "normal",
                 backgroundColor: theme('colors.stone.200')
+              },
+              table: {
+                paddingLeft: theme('padding.8'),
+                paddingRight: theme('padding.8'),
+                display: "inline-block",
               }
+
             },
           },
         }),
