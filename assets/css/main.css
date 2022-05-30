@@ -5,6 +5,7 @@
 
 :root {
     --navbarMainHeight: 3.5rem;
+    --highlight: theme('colors.yellow.300');
 }
 
 .navbarMainHeight{
@@ -16,12 +17,14 @@
 }
 
 ::selection {
-    @apply bg-stone-300;
+    @apply bg-stone-200;
 }
 
 *:focus {
     transition:background-color .3s;
     @apply ring-2 ring-transparent focus:ring-stone-300 z-50 relative;
 }
+
+
 
 

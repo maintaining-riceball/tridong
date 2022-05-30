@@ -52,12 +52,19 @@ module.exports = {
               },
               em: {
                 fontStyle: "normal",
-                backgroundColor: theme('colors.stone.200')
+                backgroundColor: "var(--highlight)"
               },
               table: {
                 paddingLeft: theme('padding.8'),
                 paddingRight: theme('padding.8'),
                 display: "inline-block",
+              },
+              iframe: { 
+                paddingLeft: theme('padding.8'),
+                paddingRight: theme('padding.8'),
+              },
+              blockquote: {
+                fontStyle: "normal"
               }
 
             },
