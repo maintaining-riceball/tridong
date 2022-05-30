@@ -62,6 +62,8 @@ module.exports = {
               iframe: { 
                 paddingLeft: theme('padding.8'),
                 paddingRight: theme('padding.8'),
+                width: "100%",
+                maxWidth: theme('maxWidth.prose')
               },
               blockquote: {
                 fontStyle: "normal"

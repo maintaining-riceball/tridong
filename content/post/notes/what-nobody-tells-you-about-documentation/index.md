@@ -2,7 +2,7 @@
 draft: false
 thumbnail: https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg
 cover:
-  - https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg
+  - https://ucarecdn.com/ce72dc9c-ed03-4810-8206-ae239b0bad6c/014.png
 title: 4 types of documentation nobody tells you about 
 titletc: 四種文檔的種類，以及為什麼需要了解它們
 description: 好的文檔可以幫助人們更快、更有自信的去上手某一項技術。本篇統整心得，幫助你理解文檔可以被拆分為 4 個種類，並且如何更好的整理、傳遞你的知識和想法。
@@ -23,7 +23,7 @@ author:
 > 一個壞的教學，讓新的客群遠離使用你的產品<br>
 > 好的文檔應該能更容易的被撰寫、更簡單去維護
 
-什麼是文檔(documentation)？狹義來說多指與程式有關的說明性文本，但其實生活中大大小小的事都能是文檔。常見到的技術教學文章是一種文檔，煮飯菜時的食譜也是一種文檔，基本上就是指*技術性的攻略、參考文件*，掌握文檔的撰寫方式，就是掌握如何更好的將知識散布，被人所理解使用。
+什麼是文檔(documentation)？狹義來說多指與程式有關的說明性文本，但其實生活中大大小小的事都能是文檔。常見到的技術教學是一種文檔，煮飯菜時的食譜也是一種文檔，基本上就是指*技術性的攻略、參考文件*，掌握文檔的撰寫方式，就是掌握如何更好的將知識散布，被人所理解使用。
 
 
 
@@ -48,6 +48,9 @@ author:
 * 解釋 - 理解思考脈絡為重
 
 ### 教學 Tutorial
+
+<img height="600" loading="lazy" src="https://ucarecdn.com/2506bfc1-00c3-44f4-970f-f4dc28b2ccd5/-/quality/smart/教學文檔的總結.png" alt="教學文檔的總結">
+
 教學，讓讀者能夠快速的開始，了解藉由教學能達成一些具有*成就感*、*有意義*的事情，舉例來說：教導一個人如何烘焙。
 
 最終，教會那個人什麼並不重要，重要的是這份教學是讓人受鼓舞的、感興趣的、想再去嘗試的、是良好的體驗，就是好的教學。
@@ -61,6 +64,7 @@ author:
 * 提供最低限度完成教學的解釋 (其餘的都會增加分心與困惑)
 
 ### 操作 How-To Guide
+<img loading="lazy" src="https://ucarecdn.com/4f731ff6-9e35-4468-921f-7a1d91f06941/034.png" alt="教學文檔的總結">
 
 操作，展示解決特定問題的流程做法，了解藉由閱讀就能解決某個問題，或達成某種目的，舉例來說：杯子蛋糕的食譜。
 如果說教學是給初心者的入門指南，那麼操作就是給具有一定知識背景的人所提問的解答。就好比有一定基礎的甜點師傅，可以依循食譜去製作杯子蛋糕。
@@ -76,6 +80,8 @@ author:
 
 
 ### 參考 Refence
+<img loading="lazy" src="https://ucarecdn.com/ecdbf94f-b124-4fbf-8d70-f8522c69a557/044.png" alt="教學文檔的總結">
+
 參考，描述事情的功能性、互動方式，讓讀者了解到藉由閱讀就能從中獲取想要的資訊，舉例來說：維基百科。
 過程應以描述細節資訊為導向，因此擁有高度的一致性、語調和文法精確的描述是重要的，嚴肅且直擊重點。
 
@@ -83,6 +89,8 @@ author:
 * 清晰的描述 (解釋、討論、操作、猜測、意見都只會分散注意力)
 
 ### 解釋 Explanation
+<img loading="lazy" src="https://ucarecdn.com/f1cbddca-b8cf-480b-bea5-e4d0d5ebe087/054.png" alt="教學文檔的總結">
+
 解釋，闡明、分析、明朗化特定的主題，擴張對於某個主題的範圍，從不同的角度。舉例來說：一本討論烹飪史的書。使用多種面向去面對一個問題，退後一步去更廣闊的了解事情的全貌。解釋對於某個主題的看法，供讀者通常在閒暇之餘去擴充某的主題的知識。
 
 過程應充分給予前後文(Context)並省去步驟與技術細節，並採用多重的範例與假設替代的做法。
@@ -109,7 +117,7 @@ author:
 ## 資料來源
 
 
-<iframe width="600" height="300" src="https://www.youtube.com/embed/t4vKPhjcMZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe  height="300" src="https://www.youtube.com/embed/t4vKPhjcMZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 * [The four kinds of documentation, and why you need to understand what they are](https://www.writethedocs.org/videos/eu/2017/the-four-kinds-of-documentation-and-why-you-need-to-understand-what-they-are-daniele-procida/)
 * [The documentation system](https://documentation.divio.com/)

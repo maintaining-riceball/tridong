@@ -22,7 +22,7 @@
 
 *:focus {
     transition:background-color .3s;
-    @apply ring-2 ring-transparent focus:ring-stone-300 z-50 relative;
+    @apply ring-2 ring-transparent ring-stone-300 z-50 relative;
 }
 
 

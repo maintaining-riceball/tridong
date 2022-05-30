@@ -47,7 +47,8 @@ author:
 * 操作說明：[在 Creative Cloud 應用程式中使用 Adobe Fonts](https://helpx.adobe.com/tw/creative-cloud/help/add-fonts.html)
 * 網站連結：[Adobe Font](https://fonts.adobe.com/)
 
-
+## 字嗨
+* [字嗨](https://zi-hi.com/%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E5%85%8D%E8%B2%BB%E5%AD%97%E5%9E%8B%E5%88%97%E8%A1%A8)
 
 
 ## Free Japanese Font - 大量日文字體
