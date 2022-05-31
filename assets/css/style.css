@@ -957,6 +957,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 0px;
 }
 
+.left-0 {
+  left: 0px;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -969,10 +973,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: auto;
 }
 
-.left-0 {
-  left: 0px;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -983,6 +983,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .z-30 {
   z-index: 30;
+}
+
+.-z-10 {
+  z-index: -10;
 }
 
 .col-span-4 {
@@ -1169,6 +1173,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .whitespace-nowrap {

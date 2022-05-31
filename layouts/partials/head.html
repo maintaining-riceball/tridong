@@ -94,22 +94,6 @@
 {{ end }}
 
 
-<!-- Analytics -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-FS2XJ14995"
-></script>
-<script>
-    window.dataLayer = window.dataLayer || []
-    function gtag() {
-        dataLayer.push(arguments)
-    }
-    gtag('js', new Date())
-
-    gtag('config', 'G-FS2XJ14995')
-</script>
-
 <!-- CSS -->
 {{ $styles := resources.Get "/css/style.css" | postCSS }}
 {{ if .Site.IsServer }}
@@ -143,17 +127,20 @@
 {{ end }}
 
 
-<script
-    defer
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
-    integrity="sha256-G3ZbDL2VOR9tsLVlmI7rcOpoqne7n498iogNlkdMKqg="
-    crossorigin="anonymous"
-></script>
-
-<script
-    defer
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
-    integrity="sha256-Du6grldiaoCsoVNIEoXGe/UfLUUdS4oEvH2vLiCfDzE="
-    crossorigin="anonymous"
-></script>
 <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+
+<!-- Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-FS2XJ14995"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+        dataLayer.push(arguments)
+    }
+    gtag('js', new Date())
+
+    gtag('config', 'G-FS2XJ14995')
+</script>

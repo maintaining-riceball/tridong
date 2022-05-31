@@ -1,23 +1,19 @@
 {{ define "main" }}
     <div class="grid grid-auto lg:grid-cols-2">
-        <div class="border-r border-stone-200">
-            <h1 class="p-8 text-2xl leading-relaxed prose">{{ .Content }}</h1>
-            <div class="flex gap-12 mx-8 mb-8">
-                {{ partial "partials/Atom-btn.html" (dict "content" "關於我們" "url" "/about") . }}
-                {{ partial "partials/Atom-btn.html" (dict "content" "觀看作品" "url" "/project") . }}
+        <div class="overflow-hidden border-r border-stone-200">
+            <div class="relative z-10">
+                <h1 class="p-8 text-2xl leading-relaxed prose">
+                    {{ .Content }}
+                </h1>
+                <div class="flex gap-12 mx-8 mb-8">
+                    {{ partial "partials/Atom-btn.html" (dict "content" "關於我們" "url" "/about") . }}
+                    {{ partial "partials/Atom-btn.html" (dict "content" "觀看作品" "url" "/project") . }}
+                </div>
             </div>
 
-            <div class="gsap-image">
-                <video
-                    autoplay
-                    loop
-                    muted
-                    playsinline
-                    src="https://ucarecdn.com/54a6011f-7c87-45a0-a546-82646b95bac2/noroot.mp4"
-                    class="sticky top-0 w-full"
-                ></video>
-            </div>
+            <canvas class="absolute top-0 left-0" id="world"></canvas>
         </div>
+
         <div>
             {{ partial "partials/Organism-ListProject-index.html" . }}
             {{ partial "partials/Organism-ListPost-index.html" . }}
