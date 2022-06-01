@@ -3,13 +3,15 @@
     <head>
         {{ partial "head.html" . }}
     </head>
-    <body class="text-stone-900 bg-stone-50">
+    <body data-barba="wrapper" class="text-stone-900 bg-stone-50">
         {{ partial "partials/Organism-NavbarMain.html" . }}
         <div class="lg:mt-14 lg:mb-0 mb-14">
             <!-- {{ partial "partials/XDebug.html" . }} -->
-            {{ block "main" . }}
-            {{ end }}
-            {{ partial "partials/Organism-FooterMain.html" . }}
+            <div data-barba="container" data-barba-namespace="{{ .Title }}">
+                {{ block "main" . }}
+                {{ end }}
+            </div>
         </div>
+        {{ partial "partials/Organism-FooterMain.html" . }}
     </body>
 </html>

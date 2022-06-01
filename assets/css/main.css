@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.navbarMain--active{
+    @apply bg-stone-100
+}
+
 :root {
     --navbarMainHeight: 3.5rem;
     --highlight: theme('colors.yellow.300');
