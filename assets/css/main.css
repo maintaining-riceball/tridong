@@ -7,6 +7,10 @@
     @apply bg-stone-100
 }
 
+img, video{
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)
+}
+
 :root {
     --navbarMainHeight: 3.5rem;
     --highlight: theme('colors.yellow.300');

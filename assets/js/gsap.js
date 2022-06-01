@@ -3,7 +3,8 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-// const image = gsap.timeline();
+
+
 // const text = gsap.timeline();
 // const list = gsap.timeline();
 // const cta = gsap.timeline();
@@ -11,24 +12,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-// const imageReveal = document.querySelectorAll('.gsap-imageReveal')
 
-// imageReveal.forEach((el) => {
-//   const image = el.querySelector('img')
-  
-//   el.addEventListener('mouseenter', (e) => {
-//     gsap.to(image, { autoAlpha: 1, translateY: -50,duration:.8 , ease: "power4.out"})
-//   })
-  
-//    el.addEventListener('mouseleave', (e) => {
-//     gsap.to(image, { autoAlpha: 0, translateY: 50,duration:.8 , ease: "power4.out" })
-//   })
-  
-//   el.addEventListener('mousemove', (e) => {
-//     gsap.set(image, { x: e.offsetX - 100, ease: "power4.out" })
-//     gsap.set(image, { y: e.offsetY - 100, ease: "power4.out" })
-//   })
-// })
+
 
 
 

@@ -966,6 +966,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   pointer-events: none;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -1017,6 +1021,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .z-30 {
   z-index: 30;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .col-span-4 {
@@ -1221,6 +1229,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 0px;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-r {
   border-right-width: 1px;
 }
@@ -1396,6 +1408,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .navbarMain--active {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 244 / var(--tw-bg-opacity));
+}
+
+img, video{
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)
 }
 
 :root {

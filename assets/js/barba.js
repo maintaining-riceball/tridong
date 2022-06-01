@@ -1,43 +1,100 @@
 import barba from '@barba/core';
 import barbaPrefetch from '@barba/prefetch';
 
-// tell Barba to use the prefetch plugin
 barba.use(barbaPrefetch);
+
+function leave() {
+    console.log('leave')
+    var tl = gsap.timeline();
+    tl.to('.barba-loading', { display: "block", opacity: 1, duration: 1, ease: "power4.out" })
+    tl.to('.barba-loading', { display: "none",opacity: 0, duration: 1, ease: "power4.out" })
+}
+
+function enter() {
+    console.log('enter')
+    const text = gsap.timeline();
+    text.from(".gsap-heading", {opacity: 0,translateY: 100, duration: .8, stagger: .1, ease: "power4.out"});
+
+    const list = gsap.timeline();
+    list.from(".gsap-list", {opacity: 0,translateY: 30, duration: .8, stagger: .1, ease: "power4.out"});
+
+    const cta = gsap.timeline();
+    cta.from(".gsap-cta", {opacity: 0, duration: 1,delay: .4, stagger: .5, ease: "power4.out"});
+
+    const img = gsap.timeline();
+    img.to('img', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", stagger: .5, ease: "power4.out"})
+
+
+
+    // const loading = gsap.timeline();
+    // loading.to(".barba-loading", { opacity: 0, duration: 0.75});
+
+}
+
+function once() {
+
+    const text = gsap.timeline();
+    text.from(".gsap-heading", {opacity: 0,translateY: 100, duration: .8, stagger: .1, ease: "power4.out"});
+
+    const list = gsap.timeline();
+    list.from(".gsap-list", {opacity: 0,translateY: 30, duration: .8, stagger: .1, ease: "power4.out"});
+
+    const cta = gsap.timeline();
+    cta.from(".gsap-cta", {opacity: 0, duration: 1,delay: .4, stagger: .5, ease: "power4.out"});
+
+    const img = gsap.timeline();
+    img.to('img', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,translateY: 30 ,ease: "power4.out"})
+
+    img.to('video', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,translateY: 30, stagger: .1 ,ease: "power4.out"})
+
+
+}
+
+function delay(n) {
+    n = n || 2000;
+    return new Promise(done => {
+        setTimeout(() => {
+            done();
+        }, n);
+    });
+}
+
 barba.init({
+    sync: true,
     transitions: [{
-      Sync: true, 
-      name: 'opacity-transition',
+        async leave(data) {
+            const done = this.async();
+            leave();
+            done();
+        },
 
-      before: ({ current, next, trigger }) => {
-        let menu = document.querySelector('#navlistMain');
-        // select the menu item depending on the next URL (you can do that in many ways)
-        console.log(menu)
-        console.log(next)
-        let nextItem = menu.querySelector(`a[href="${next.url.path}"]`);
+        async enter(data) {
+            const done = this.async();
+            await delay(1000);
+            enter();
+            done();
+        },
 
-        // reset the active menu item and set the next item as "active" (if there is one)
-        if (nextItem !== null) {
-            menu.querySelector('.navbarMain--active').classList.remove('navbarMain--active');
-            nextItem.classList.add('navbarMain--active');
-      }
-      },
+        async once(data) {
+            once();
+            done();
+        },
 
-      leave(data) {
-        return gsap.to(data.current.container, {
-          opacity: 0,
-          duration: 1,
-          display: "none",
-          ease: "power4.out"
-        });
-      },
-      enter(data) {
-        return gsap.from(data.next.container, {
-          opacity: 0,
-          duration: 1,
-          ease: "power4.out"
+        before: ({ current, next, trigger }) => {
+            let menu = document.querySelector('#navlistMain');
+            // select the menu item depending on the next URL (you can do that in many ways)
+            console.log(menu)
+            console.log(next)
+            let nextItem = menu.querySelector(`a[href="${next.url.path}"]`);
+    
+            // reset the active menu item and set the next item as "active" (if there is one)
+            if (nextItem !== null) {
+                menu.querySelector('.navbarMain--active').classList.remove('navbarMain--active');
+                nextItem.classList.add('navbarMain--active');
+            }
+          },
 
-        });
-      }
+
     }]
   });
 

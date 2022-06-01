@@ -5,12 +5,17 @@
     </head>
     <body data-barba="wrapper" class="text-stone-900 bg-stone-50">
         {{ partial "partials/Organism-NavbarMain.html" . }}
+
+
         <div class="lg:mt-14 lg:mb-0 mb-14">
             <!-- {{ partial "partials/XDebug.html" . }} -->
             <div data-barba="container" data-barba-namespace="{{ .Title }}">
                 {{ block "main" . }}
                 {{ end }}
             </div>
+
+            {{ partial "partials/Organism-transitionPage.html" . }}
+
         </div>
         {{ partial "partials/Organism-FooterMain.html" . }}
     </body>
