@@ -3,7 +3,7 @@ draft: false
 thumbnail: https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg
 cover:
   - https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg
-title: The emoji is the birth of a new type of language
+title: New type of language - Emoji
 titletc: 😃顏文字是一種全新的語言形式
 description: |
   圖像一直是全人類全球性的通用語言與文化，這樣的風潮其實可以回溯到非常古老以前，其實人們依舊還是視覺動物，擅長使用圖像去溝通。
