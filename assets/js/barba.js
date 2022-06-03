@@ -7,20 +7,19 @@ function leave() {
     var leave = gsap.timeline();
     console.log('leave')
     leave.to('body', {overflow:"hidden"}, 0)
-         .to('.barba-loading', {opacity: 1, duration: 0.75, ease: "power4.out"}, 0)
-
+         .to('.barba-loading', {display: "flex",opacity: 1, duration: 0.75, ease: "power4.out"}, 0)
 }
 
 function enter() {
     const enter = gsap.timeline();
     console.log('enter')
     enter.to("body", {overflow: "auto"}, 0)
-         .to('.barba-loading', {display: 'none', opacity: 0, duration: 0.75}, 0)
+         .to('.barba-loading', {display: "none", opacity: 0, duration: 0.75}, 0)
 
          .from(".gsap-heading", {opacity: 0,translateY: 100, duration: .8, stagger: .1, ease: "power4.out"}, 0)
          .from(".gsap-cta", {opacity: 0, duration: 1,delay: .4, stagger: .5, ease: "power4.out"}, 0)
          .from(".gsap-list", {opacity: 0,translateY: 30, duration: .8, stagger: .1, ease: "power4.out"}, "-1.2")
-         .to('img', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,translateY: 30 ,ease: "power4.out"}, 0)
+         .to('img', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,ease: "power4.out"}, 0)
          .to('video', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,translateY: 30, stagger: .1 ,ease: "power4.out"}, 0)
 }
 
@@ -29,7 +28,7 @@ function once() {
     once.from(".gsap-heading", {opacity: 0,translateY: 100, duration: .8, stagger: .1, ease: "power4.out"}, 0)
         .from(".gsap-list", {opacity: 0,translateY: 30, duration: .8, stagger: .1, ease: "power4.out"}, 0)
         .from(".gsap-cta", {opacity: 0, duration: 1,delay: .4, stagger: .5, ease: "power4.out"}, 0)
-        .to('img', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,translateY: 30 ,ease: "power4.out"}, 0)
+        .to('img', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8, ease: "power4.out"}, 0)
         .to('video', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,translateY: 30, stagger: .1 ,ease: "power4.out"}, 0)
 }
 
@@ -45,12 +44,9 @@ function delay(n) {
 barba.init({
     sync: true,
     transitions: [{
+        name: 'default-transition',
         leave(data) {
             leave();
-        },
-
-        enter(data) {
-            enter();
         },
 
         async enter(data) {
@@ -81,8 +77,6 @@ barba.init({
                 nextItem.classList.add('navbarMain--active');
             }
           },
-
-
     }]
   });
 
