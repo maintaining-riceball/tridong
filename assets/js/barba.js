@@ -4,50 +4,33 @@ import barbaPrefetch from '@barba/prefetch';
 barba.use(barbaPrefetch);
 
 function leave() {
+    var leave = gsap.timeline();
     console.log('leave')
-    var tl = gsap.timeline();
-    tl.to('.barba-loading', { display: "block", opacity: 1, duration: 1, ease: "power4.out" })
-    tl.to('.barba-loading', { display: "none",opacity: 0, duration: 1, ease: "power4.out" })
+    leave.to('body', {overflow:"hidden"}, 0)
+         .to('.barba-loading', {opacity: 1, duration: 0.75, ease: "power4.out"}, 0)
+
 }
 
 function enter() {
+    const enter = gsap.timeline();
     console.log('enter')
-    const text = gsap.timeline();
-    text.from(".gsap-heading", {opacity: 0,translateY: 100, duration: .8, stagger: .1, ease: "power4.out"});
+    enter.to("body", {overflow: "auto"}, 0)
+         .to('.barba-loading', {display: 'none', opacity: 0, duration: 0.75}, 0)
 
-    const list = gsap.timeline();
-    list.from(".gsap-list", {opacity: 0,translateY: 30, duration: .8, stagger: .1, ease: "power4.out"});
-
-    const cta = gsap.timeline();
-    cta.from(".gsap-cta", {opacity: 0, duration: 1,delay: .4, stagger: .5, ease: "power4.out"});
-
-    const img = gsap.timeline();
-    img.to('img', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", stagger: .5, ease: "power4.out"})
-
-
-
-    // const loading = gsap.timeline();
-    // loading.to(".barba-loading", { opacity: 0, duration: 0.75});
-
+         .from(".gsap-heading", {opacity: 0,translateY: 100, duration: .8, stagger: .1, ease: "power4.out"}, 0)
+         .from(".gsap-cta", {opacity: 0, duration: 1,delay: .4, stagger: .5, ease: "power4.out"}, 0)
+         .from(".gsap-list", {opacity: 0,translateY: 30, duration: .8, stagger: .1, ease: "power4.out"}, "-1.2")
+         .to('img', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,translateY: 30 ,ease: "power4.out"}, 0)
+         .to('video', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,translateY: 30, stagger: .1 ,ease: "power4.out"}, 0)
 }
 
 function once() {
-
-    const text = gsap.timeline();
-    text.from(".gsap-heading", {opacity: 0,translateY: 100, duration: .8, stagger: .1, ease: "power4.out"});
-
-    const list = gsap.timeline();
-    list.from(".gsap-list", {opacity: 0,translateY: 30, duration: .8, stagger: .1, ease: "power4.out"});
-
-    const cta = gsap.timeline();
-    cta.from(".gsap-cta", {opacity: 0, duration: 1,delay: .4, stagger: .5, ease: "power4.out"});
-
-    const img = gsap.timeline();
-    img.to('img', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,translateY: 30 ,ease: "power4.out"})
-
-    img.to('video', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,translateY: 30, stagger: .1 ,ease: "power4.out"})
-
-
+    const once = gsap.timeline();
+    once.from(".gsap-heading", {opacity: 0,translateY: 100, duration: .8, stagger: .1, ease: "power4.out"}, 0)
+        .from(".gsap-list", {opacity: 0,translateY: 30, duration: .8, stagger: .1, ease: "power4.out"}, 0)
+        .from(".gsap-cta", {opacity: 0, duration: 1,delay: .4, stagger: .5, ease: "power4.out"}, 0)
+        .to('img', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,translateY: 30 ,ease: "power4.out"}, 0)
+        .to('video', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,translateY: 30, stagger: .1 ,ease: "power4.out"}, 0)
 }
 
 function delay(n) {
@@ -62,26 +45,31 @@ function delay(n) {
 barba.init({
     sync: true,
     transitions: [{
-        async leave(data) {
-            const done = this.async();
+        leave(data) {
             leave();
-            done();
+        },
+
+        enter(data) {
+            enter();
         },
 
         async enter(data) {
             const done = this.async();
-            await delay(1000);
+            await delay(1500);
             enter();
             done();
         },
 
-        async once(data) {
+        once(data) {
             once();
-            done();
         },
-
+        
         before: ({ current, next, trigger }) => {
+            // 
+            // Reset active on navbar
+            // 
             let menu = document.querySelector('#navlistMain');
+
             // select the menu item depending on the next URL (you can do that in many ways)
             console.log(menu)
             console.log(next)

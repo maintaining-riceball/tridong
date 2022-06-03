@@ -3,8 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.navbarMain--active{
+.navbarMain--active {
     @apply bg-stone-100
+}
+
+.barba-loading {
+
 }
 
 img, video{
