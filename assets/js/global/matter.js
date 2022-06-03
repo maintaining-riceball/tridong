@@ -1,8 +1,7 @@
 import Matter from "matter-js"
 
-
-
-
+matter()
+function matter() {
 var Engine = Matter.Engine,
     Render = Matter.Render,
     Events = Matter.Events,
@@ -49,9 +48,7 @@ var border = 2
 var radius = 20
 
 // create objects
-
 // MY
-
 var dongA = Bodies.trapezoid(100, 100, 200, 200, 2, { 
     chamfer: { radius: [10, 10, 10] }
 });
@@ -153,4 +150,4 @@ Engine.run(engine);
 Render.run(render);
 
 
-
+}

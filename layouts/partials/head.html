@@ -116,16 +116,15 @@
 <!-- Javascript -->
 <!-- !Javascript Bundling -->
 <!-- Path -->
-{{ $js := resources.Match "js/**.js" }}
+{{ $js := resources.Match "js/global/**.js" }}
 <!-- Options -->
-{{ $js = $js | resources.Concat "temp.js" | resources.ExecuteAsTemplate "global.js" . }}
+{{ $js = $js | resources.Concat "tempGlobal.js" | resources.ExecuteAsTemplate "global.js" . }}
 <!-- Build -->
 {{ $js = $js | js.Build }}
 <!-- If is in Production -->
 {{ if hugo.IsProduction }}
     {{ $js = $js | js.Build | minify | resources.Fingerprint "sha256" }}
 {{ end }}
-
 
 <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 

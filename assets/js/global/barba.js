@@ -1,6 +1,7 @@
 import barba from '@barba/core';
 import barbaPrefetch from '@barba/prefetch';
 
+
 barba.use(barbaPrefetch);
 
 function leave() {
@@ -53,6 +54,7 @@ barba.init({
             const done = this.async();
             await delay(1500);
             enter();
+            matter();
             done();
         },
 
