@@ -1,24 +1,12 @@
-/* assets */ 
+/* Tailwind */ 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.navbarMain--active {
-    @apply bg-stone-100
-}
-
-.highlight {
-    margin: 0 2rem;
-}
-
-img, video{
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    background-color: red
-}
-
+/* Variable */
 :root {
     --navbarMainHeight: 3.5rem;
-    --highlight: theme('colors.yellow.300');
+    --highlight: theme('colors.stone.50');
 }
 
 .navbarMainHeight{
@@ -29,6 +17,13 @@ img, video{
     top: var(--navbarMainHeight);
 }
 
+
+/* Reset */
+img, video{
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    background-color: red
+}
+
 ::selection {
     @apply bg-stone-200;
 }
@@ -37,6 +32,21 @@ img, video{
     transition:background-color .3s;
     @apply ring-2 ring-transparent ring-stone-300 z-50 relative;
 }
+
+/* Main */
+
+.navbarMain--active {
+    @apply bg-stone-100
+}
+
+.highlight {
+    margin: 0 2rem;
+}
+
+
+
+
+
 
 
 

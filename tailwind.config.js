@@ -40,12 +40,15 @@ module.exports = {
               p: {
                 paddingLeft: theme('padding.8'),
                 paddingRight: theme('padding.8'),
-                maxWidth: theme('maxWidth.prose')
+                fontSize: theme('fontSize.lg'),
+                maxWidth: theme('maxWidth.prose'),
               },
               ul: {
                 paddingLeft: theme('padding.8'),
                 paddingRight: theme('padding.8'),
                 listStylePosition: "inside",
+                fontWeight: "500",
+                letterSpacing: ".1rem"
               },
               ol: {
                 paddingLeft: theme('padding.8'),
@@ -54,7 +57,12 @@ module.exports = {
               },
               em: {
                 fontStyle: "normal",
-                backgroundColor: "var(--highlight)"
+                backgroundColor: "var(--highlight)",
+                textDecoration: "underline",
+                textDecorationThickness: "2px",
+                textDecorationStyle: "dotted",
+                textDecorationColor: theme('colors.stone.400'),
+                textUnderlineOffset:"6px",
               },
               table: {
                 paddingLeft: theme('padding.8'),
