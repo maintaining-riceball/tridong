@@ -8,7 +8,7 @@ thumbnail:
   alt: 封面圖片替代文字(請填寫我)
 description: 整篇文章的精華描述，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 65~80 個中文字。
 project:
-  - 包裝
+  - 平面
 date: 2022-06-07T06:31:49.712Z
 client: 三櫻國際髮藝
 credit:

@@ -62,7 +62,6 @@ module.exports = {
                 display: "inline-block",
               },
               pre: {
-
                 fontSize: theme('fontSize.lg'),
 
               },

@@ -87,6 +87,21 @@ languageCode = 'en-us'
 # Markup Engine
 enableEmoji = true
 [markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'dracula'
+    tabWidth = 4
+
+
   [markup.tableOfContents]
     endLevel = 4
   [markup.goldmark]
