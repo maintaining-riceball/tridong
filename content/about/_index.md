@@ -1,17 +1,14 @@
 ---
-title: about
-titletc: 關於我們
-thumbnail: https://ucarecdn.com/76e748b8-68ef-4043-81be-1f909601ed5f/品牌展示封面
+title: About
+titletc: 關於
+thumbnail:
+  src:
+    - https://res.cloudinary.com/tridong/image/upload/q_auto,f_auto,dpr_auto/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+  alt: 三角東東主視覺
 cover:
-  - https://ucarecdn.com/3aa162c9-bdf8-4339-a781-355d668ca24c/TTS.webp
-  - https://ucarecdn.com/e3f6cd0b-fb68-42d2-ba5d-65c7a6786e76/noroot.webp
-  - https://ucarecdn.com/4537d840-9038-456f-98d6-3f3505975296/noroot.webp
-  - https://ucarecdn.com/d47b13d8-db49-494b-a202-ea1652076b86/noroot.webp
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654469943/about/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-TTS%E9%A0%98%E7%8D%8E.webp
+    alt: Taiwan Top Star 領獎現場三角東東成員合照
 ---
 <div class="gsap-heading">
-「未來、創新與效率」為三要點，連成三角形且像是洶湧的後浪，表示三角東東隨著時代潮流不斷前行演進。
-</div>
-<br />
-<div class="gsap-heading">
-我們創作趣味性十足跳脫平庸的作品，站在專業的角度有趣的玩設計。
+設計，是一場溝通的長程馬拉松。相信親切直擊需求的設計勝過千言萬語。我們的工作就是搭建溝通的橋樑，拉近您與客戶的距離。
 </div>

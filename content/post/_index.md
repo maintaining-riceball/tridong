@@ -1,9 +1,19 @@
 ---
-title: post
+draft: false
+thumbnail:
+  src:
+    - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+  alt: 封面圖片替代文字(請填寫我)
+cover: []
+title: Post
 titletc: 文章
-descriptiontc: 三角東東的文章頁面。
-thumbnail: https://ucarecdn.com/76e748b8-68ef-4043-81be-1f909601ed5f/品牌展示封面
+description: 文章簡介
+date: 2022-06-06T19:28:32.920Z
+lastUpdateDate: 2022-06-07 03:28
+category: ""
+tag: []
+author: []
 ---
 <div class="gsap-heading">
-我們撰寫文章設計思考、軟體教學、實用工具……等文章，蒐集日常生活日常凝聚起來的靈感。 
+紀錄設計路途上的想法與經驗。另外，我們也用影片紀錄，嘗試不同的可能性，歡迎分享彼此的想法。
 </div>

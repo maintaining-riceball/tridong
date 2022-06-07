@@ -6,44 +6,45 @@
                     {{ .Content }}
                 </h1>
             </div>
+            <div class="flex gap-12 mx-8 mb-8">
+                {{ partial "partials/Atom-btn.html" (dict "content" "聯絡我們" "url" "/") . }}
+                {{ partial "partials/Atom-btn.html" (dict "content" "觀看作品" "url" "/project") . }}
+            </div>
 
-            <div class="">
+            <div>
                 <div class="gsap-image">
                     <video
                         autoplay
                         loop
                         muted
                         playsinline
-                        src="https://ucarecdn.com/54a6011f-7c87-45a0-a546-82646b95bac2/noroot.mp4"
                         class="sticky top-0 w-full"
-                    ></video>
+                    >
+                        <source
+                            src="https://res.cloudinary.com/tridong/video/upload/v1654469283/about/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1%E5%B0%81%E9%9D%A2%E5%BD%B1%E7%89%87.webm"
+                            type="video/webm"
+                        />
+                        <source
+                            src="https://res.cloudinary.com/tridong/video/upload/v1654469283/about/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1%E5%B0%81%E9%9D%A2%E5%BD%B1%E7%89%87.mp4"
+                            type="video/mp4"
+                        />
+                    </video>
                 </div>
 
-                {{ $lazy := newScratch }}
-
-                {{ range $index, $element := .Params.cover }}
-                    {{ $img := . }}
-                    {{ $dirFile := path.Split $img }}
-
-                    {{ if eq $index 0 }}
-                        {{ $lazy.Set "lazy" "" }}
-                    {{ else }}
-                        {{ $lazy.Set "lazy" "lazy" }}
-                    {{ end }}
-
-                    {{ $smartProcess :=  "/-/quality/smart_retina/-/format/auto/-" }}
+                {{ range .Params.cover }}
+                    {{ $img := .src }}
                     <img
                         class="sticky top-0 w-full"
-                        src="{{ $dirFile.Dir }}{{ $smartProcess }}{{ path.Base $img }}"
+                        src="{{ $.Site.Params.cloudinaryImg }}/dpr_auto,f_auto/about/{{ path.Base $img }}"
                         srcset="
-                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/300x/{{ path.Base $img }}   300w,
-                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/600x/{{ path.Base $img }}   600w,
-                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/900x/{{ path.Base $img }}   900w,
-                            {{ $dirFile.Dir }}{{ $smartProcess }}/resize/1200x/{{ path.Base $img }} 1200w
+                            {{ $.Site.Params.cloudinaryImg }}/w_300,dpr_auto,f_auto,q_auto/about/{{ path.Base $img }}   300w,
+                            {{ $.Site.Params.cloudinaryImg }}/w_600,dpr_auto,f_auto,q_auto/about/{{ path.Base $img }}   600w,
+                            {{ $.Site.Params.cloudinaryImg }}/w_900,dpr_auto,f_auto,q_auto/about/{{ path.Base $img }}   900w,
+                            {{ $.Site.Params.cloudinaryImg }}/w_1200,dpr_auto,f_auto,q_auto/about/{{ path.Base $img }} 1200w
                         "
                         sizes="(min-width: 1040px) 50vw, 100vw"
-                        alt="{{ path.Base $img }}"
-                        loading="{{ $lazy.Get "lazy" }}"
+                        alt="{{ .alt }}"
+                        loading="lazy"
                     />
                 {{ end }}
             </div>
@@ -67,7 +68,10 @@
                 </h2>
                 <div class="py-8 prose gsap-list">
                     <p>
-                        三角東東團隊是一群由平面設計、企劃研究、網頁設計、包裝設計、商業設計、資料整合…等專業人士共同組成；我們追求的是在設計過程中，不只是考慮視覺上的美感，而是更深入思考背後的問題，讓設計發揮最大的效益，給予使用者最佳的生活體驗！
+                        三角東東團隊是4位橫跨平面設計、企劃研究、網頁設計、包裝設計、商業設計的專業人士共同組成的一個團隊。
+                        <br />
+                        <br />
+                        我們追求的是在設計過程中，不只是考慮視覺上的美感，而是更深入思考背後的問題，讓設計發揮最大的效益，給予使用者最佳的生活體驗！
                     </p>
                 </div>
             </section>

@@ -1,23 +1,26 @@
 ---
 draft: false
-thumbnail: https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg
-cover:
-  - https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg
 title: New type of language - Emoji
 titletc: 顏文字，一種全新的語言形式
-description: |
-  圖像一直是全人類全球性的通用語言與文化，這樣的風潮其實可以回溯到非常古老以前。人們依舊還是視覺動物，擅長使用圖像去溝通。
-toc: false
-date: 2022-05-30T03:05:25.923Z
-lastUpdateDate: 2022-05-30 11:05
+thumbnail:
+  src:
+    - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+  alt: 封面圖片替代文字(請填寫我)
+cover:
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+    alt: 圖片01
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+    alt: 圖片02
+description: 圖像一直是全人類全球性的通用語言與文化，這樣的風潮其實可以回溯到非常古老以前。人們依舊還是視覺動物，擅長使用圖像去溝通。
+date: 2022-06-06T19:47:37.248Z
+lastUpdateDate: 2022-06-07 03:47
 category: 筆記
 tag:
   - 文字
   - 設計
 author:
   - name: 黃宗瑋
-    title: 設計師
-    image: https://ucarecdn.com/688d34cc-afec-4c25-b229-b2740e03e665/黃宗瑋-頭像.jpg
+    image: https://res.cloudinary.com/tridong/image/upload/v1654503496/global/%E9%BB%83%E5%AE%97%E7%91%8B-%E9%A0%AD%E5%83%8F.jpg
 ---
 ## 前言
 顏文字 (Emoji) 只是一種的年輕族群的風潮嗎？事實上它並不是想像中這麼的「年輕」，故事可以回溯到前互聯網時代、電腦人們使用打字機撰寫文章，甚至更早！

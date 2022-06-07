@@ -37,6 +37,9 @@ imgAuto = '-/format/auto/'
 
 imgProgress = '-/progressive/yes/'
 
+cloudinaryImg = "https://res.cloudinary.com/tridong/image/upload"
+cloudinaryVideo = ""
+
 # Navbar
 [menu]
 [[menu.main]]

@@ -1,14 +1,11 @@
 ---
 title: Home
 titletc: 首頁
-thumbnail: https://ucarecdn.com/76e748b8-68ef-4043-81be-1f909601ed5f/品牌展示封面
+thumbnail:
+  src:
+    - https://res.cloudinary.com/tridong/image/upload/q_auto,f_auto,dpr_auto/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+  alt: 三角東東主視覺
+cover: []
 ---
-
-<div class="gsap-heading">
-站在專業的角度有趣的玩設計，我們是三角東東。
+<div class="gsap-heading">三角東東創立於2020年，一間專注於品牌設計的新創設計公司。我們相信美感與功能性的平衡，用輕鬆但不失專業的角度與你一同創造一段有趣的東東。
 </div>
-<br>
-<div class="gsap-heading">
-創立於2020年，一個專注於品牌設計的新創設計公司，用輕鬆的方式與你一同傳述一段有趣的故事。
-</div>
-

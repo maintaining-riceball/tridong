@@ -1,24 +1,22 @@
 ---
 draft: false
-thumbnail: https://ucarecdn.com/76e748b8-68ef-4043-81be-1f909601ed5f/-/format/auto/-/quality/smart/三角東東封面
-cover:
-  - https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg
 title: Where to find awesome fonts?
 titletc: 授權透明、實用的字體哪裡找？
+thumbnail:
+  src:
+    - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+  alt: 封面圖片替代文字(請填寫我)
+cover: []
 description: 字體是排版的靈魂，好的字體可以更好的表達文詞間的情緒與情境，本篇文章蒐集了一些實用且來源可靠、授權清楚的字體！字體使用時必定要注意授權上的範圍。
-toc: false
-date: 2022-05-18T12:42:57.604Z
-lastUpdateDate: 2022-05-18 20:42
+date: 2022-06-06T19:36:10.548Z
+lastUpdateDate: 2022-06-07 03:36
 category: 資源
 tag:
   - 字體
 author:
   - name: 黃宗瑋
-    title: 設計師
-    url: ""
-    image: https://ucarecdn.com/688d34cc-afec-4c25-b229-b2740e03e665/黃宗瑋-頭像.jpg
+    image: https://res.cloudinary.com/tridong/image/upload/v1654503496/global/%E9%BB%83%E5%AE%97%E7%91%8B-%E9%A0%AD%E5%83%8F.jpg
 ---
-
 ## 前言
 
 本篇文章旨在蒐集各式中文字體資源平台，詳細請注意授權上的需求。

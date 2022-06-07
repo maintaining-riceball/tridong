@@ -12,16 +12,19 @@ display_url: https://tridong.com
 logo_url: https://ucarecdn.com/d9d6fe9d-4e7c-493f-baa1-7237a2b08df3/triangledongdong.svg
 locale: 'zh_Hant'
 
-
 media_library:
-  name: uploadcare
+  name: cloudinary
+  output_filename_only: false
   config:
-    publicKey: 5fa87fb5d63e84fccf01
-  settings:
-    autoFilename: true
+    cloud_name: tridong
+    api_key: 961459636554714
+
 
 # https://github.com/netlify/netlify-cms/blob/master/dev-test/config.yml
 collections:
+  # 
+  # PAGE 
+  # 
   - name: page
     label: 頁面
     label_singular: 頁面
@@ -32,7 +35,6 @@ collections:
     nested:
       depth: 2
       summary: '{{titletc}} - {{title}}'
-    
     view_filters:
       - label: 草稿
         field: draft
@@ -43,33 +45,41 @@ collections:
         pattern: \d{4}
     summary: '{{titletc}} - {{title}}'
     fields:
-      # 主-封面圖片
-      - label: "主-封面圖片"
-        name: "thumbnail"
-        widget: "image"
-        hint: 用於後台的圖片顯示與「分享」的時候顯示的那張大照片，必須是 1200 x 630 px 尺寸，只能有一張。
-        default: [https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg]
-        media_library:
-          config:
-            multiple: false
-            imagesOnly: true
-            publicKey: a4aa462a3d83321a19bb
+      # Title
+      - {label: "英文標題", name: "title", widget: "string", tagname: 'h1', default: Title for this post (Fill Me), hint: 整篇文章的英文，會用於 Google 搜尋上對於這個頁面的標題。文字介於 50 英文字元左右，可以少但不要太長。}
+      # Titletc 
+      - {label: "繁中標題", name: "titletc", widget: "string", default: 文章的中文標題(請填寫我), hint: 整篇文章的繁中標題，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 15 中文字左右，可以少但不要太長。}
+      # Thumbnail
+      - label: 封面圖片
+        name: thumbnail
+        widget: object
+        collapsed: true
+        hint: 代表了整個頁面，最重要的一張圖。
+        fields:
+          - label: 圖片
+            name: src
+            widget: image
+            default: ["https://res.cloudinary.com/tridong/image/upload/q_auto,f_auto,dpr_auto/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png"]
+            hint: "必要尺寸：1200 x 630(px)，一張"
+            required: true
+            allow_multiple: false
 
-      # 封面圖片
-      - label: "封面圖片"
-        name: "cover"
-        widget: "image"
-        hint: 用於文章的封面圖片，可以提交多張，圖片的檔名最好「務必」命名清楚，會用於讓機器人了解這是什麼樣的圖片，或是當圖片無法加載時的替代文字。例如：三角東東的周邊商品陳列於木頭桌上。圖片會被自動裁切優化至1200px的寬度。
-        default: [https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg]
-        required: false
-        media_library:
-          config:
-            multiple: true
-            imagesOnly: true
-            publicKey: a4aa462a3d83321a19bb
-      - {label: "內文", name: "body", widget: "markdown"}
-
-  # Post Collection
+          - {name: alt, label: 替代文字(Alt), widget: string, default: "三角東東主視覺", hint: "當圖片顯示不出來時會顯示的文字，同時讓機器人了解這是一張怎麼樣的圖片。",required: true}
+      # Cover
+      - label: 重點圖片
+        name: cover
+        widget: "list"
+        fields:
+          - {label: "圖片", name: "src", widget: "image"}
+          - {label: "替代文字(Alt)", name: "alt", widget: "string"}
+          - {label: "高度", name: "height", widget: "number", hint: "圖片的像素高度，強烈建議要標註，為了網頁的性能和瀏覽體驗", required: false}
+          - {label: "寬度", name: "width", widget: "number", hint: "圖片的像素寬度，強烈建議要標註，為了網頁的性能和瀏覽體驗", required: false}
+      # Body
+      - {label: "內文", name: "body",default: "這裡是文章內容。", widget: "markdown"}
+    meta: { path: { label: 文章存放位置, widget: parent, index_file: '_index' } }
+  # 
+  # Post
+  # 
   - name: post
     label: 文章
     label_singular: 文章
@@ -80,7 +90,6 @@ collections:
     nested:
       depth: 100
       summary: '{{titletc}} - {{title}}'
-    
     view_filters:
       - label: 草稿
         field: draft
@@ -91,36 +100,39 @@ collections:
         pattern: \d{4}
     summary: '{{titletc}} - {{title}}'
     fields:
-      - { label: '草稿', name: 'draft', widget: 'boolean', default: false, hint: 草稿並不會真的顯現到網站上，但會在「後台」中顯示。}
-      - label: "主-封面圖片"
-        name: "thumbnail"
-        widget: "image"
-        hint: 用於後台的圖片顯示與「分享」的時候顯示的那張大照片，必須是 1200 x 630 px 尺寸，只能有一張。。 
-        media_library:
-          config:
-            multiple: false
-      - label: "封面圖片"
-        name: "cover"
-        widget: "image"
-        hint: 用於文章的封面圖片，可以提交多張，圖片的檔名最好「務必」命名清楚，會用於讓機器人了解這是什麼樣的圖片，或是當圖片無法加載時的替代文字。例如：三角東東的周邊商品陳列於木頭桌上。圖片會被自動裁切優化至1200px的寬度。
-        default: [https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg]
-        required: false
-        media_library:
-          config:
-            multiple: true
-            imagesOnly: true
-            publicKey: 3c44e0c4ee3e0eeabf65
-
-
-      - {label: "英文標題", name: "title", widget: "string", tagname: 'h1', hint: 整篇文章的英文，會用於 Google 搜尋上對於這個頁面的標題。文字介於 50 英文字元左右，可以少但不要太長。}
-      - {label: "繁中標題", name: "titletc", widget: "string", hint: 整篇文章的繁中標題，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 15 中文字左右，可以少但不要太長。}
-      - {label: "簡介", name: "description", widget: "text", hint: 整篇文章的精華描述，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 65~80 個中文字。}
-      - {label: "顯示目錄", name: "toc", widget: "boolean", default: false, hint: 決定要不要生成目錄，在很長的文章中可以使用。}
+      # Draft
+      - { label: '草稿', name: 'draft', widget: 'boolean', default: false, hint: 草稿並不會真的顯現到網站上，但會在後台中顯示。}
+      # Title
+      - {label: "英文標題", name: "title", widget: "string", tagname: 'h1', default: Title for this post (Fill Me), hint: 整篇文章的英文，會用於 Google 搜尋上對於這個頁面的標題。文字介於 50 英文字元左右，可以少但不要太長。}
+      # Titletc 
+      - {label: "繁中標題", name: "titletc", widget: "string", default: 文章的中文標題(請填寫我), hint: 整篇文章的繁中標題，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 15 中文字左右，可以少但不要太長。}
+      # Thumbnail
+      - label: 封面圖片
+        name: thumbnail
+        widget: object
+        collapsed: true
+        hint: 代表了整個頁面，最重要的一張圖。
+        fields:
+          - {name: src, label: 圖片, widget: image, default: [https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png],hint: "建議尺寸：1200 x 630px，只能有一張" ,required: true, allow_multiple: false}
+          - {name: alt, label: 替代文字(Alt), widget: string, default: "封面圖片替代文字(請填寫我)", hint: "當圖片顯示不出來時會顯示的文字，同時讓機器人了解這是一張怎麼樣的圖片。",required: true}
+      # Cover
+      - label: 重點圖片
+        name: cover
+        widget: "list"
+        fields:
+          - {label: "圖片", name: "src", widget: "image"}
+          - {label: "替代文字(Alt)", name: "alt", widget: "string"}
+          - {label: "高度", name: "height", widget: "number", hint: "圖片的像素高度，強烈建議要標註，為了網頁的性能和瀏覽體驗", required: false}
+          - {label: "寬度", name: "width", widget: "number", hint: "圖片的像素寬度，強烈建議要標註，為了網頁的性能和瀏覽體驗", required: false}
+      # Description
+      - {label: "簡介", name: "description", widget: "text", default: 整篇文章的精華描述，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 65~80 個中文字。, hint: 整篇文章的精華描述，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 65~80 個中文字。}
+      # Date
       - {
         label: '發布日期',
         name: 'date',
         widget: 'datetime',
       }
+      # Last Update Date
       - {
         label: '最後更改日期',
         name: 'lastUpdateDate',
@@ -129,22 +141,26 @@ collections:
         time_format: 'HH:mm',
         format: 'YYYY-MM-DD HH:mm',
       }
-      - {label: "類別", name: "category", widget: string, default: ["未分類"], hint: 類別只能有一個，是一個大分類，例如：教學、設計、包裝}
+      # Category
+      - {label: "類別", name: "category", widget: string, default: "未分類", hint: 類別只能有一個，是一個大分類，例如：教學、設計、包裝, required: false}
+      # Tag
       - {label: "標籤", name: "tag", widget: "list", default: [標籤一,標籤二], hint: 標籤是更細節的分類，例如：印刷、某工具}
+      # Author
       - label: "作者"
         name: "author" 
         widget: "list"
         fields:
           - { label: 名稱, name: name, widget: string, default: 王小明}
-          - { label: 稱呼, name: title, widget: string, default: 資深前端設計師} 
+          - { label: 稱呼, name: title, widget: string, required: false} 
           - { label: 連結, name: url, widget: string, required: false} 
           - { label: 圖片, name: image, widget: image, required: false} 
-      - {label: "內文", name: "body", widget: "markdown"}
-
-
+      # Body
+      - {label: "內文", name: "body",default: "這裡是文章內容。", widget: "markdown"}
     meta: { path: { label: 文章存放位置, widget: parent, index_file: 'index' } }
 
-  # Project Collection
+  # 
+  # Project
+  # 
   - name: project
     label: 專案
     label_singular: 專案
@@ -165,42 +181,49 @@ collections:
         pattern: \d{4}
     summary: '{{titletc}} - {{title}}'
     fields:
-      - {label: "草稿", name: "draft", widget: "boolean", default: true}
-      - label: "主-封面圖片"
-        name: "thumbnail"
-        widget: "image"
-        hint: 用於後台的圖片顯示與「分享」的時候顯示的那張大照片，必須是 1200 x 630 px 尺寸，只能有一張。。 
-        media_library:
-          config:
-            multiple: false
-
-      - label: "封面圖片"
-        name: "cover"
-        widget: "image"
-        required: false
-        hint: 用於文章的封面圖片，可以提交多張，圖片的檔名最好「務必」命名清楚，會用於讓機器人了解這是什麼樣的圖片，或是當圖片無法加載時的替代文字。例如：三角東東的周邊商品陳列於木頭桌上。圖片會被自動裁切優化至1200px的寬度。
-        media_library:
-          config:
-            multiple: true
-            imagesOnly: true
-            publicKey: 5fa87fb5d63e84fccf01
-
-      - {label: "英文標題", name: "title", widget: "string", tagname: 'h1', hint: 整篇文章的英文，會用於 Google 搜尋上對於這個頁面的標題。文字介於 50 英文字元左右，可以少但不要太長。}
-      - {label: "繁中標題", name: "titletc", widget: "string", hint: 整篇文章的繁中標題，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 15 中文字左右，可以少但不要太長。}
-      - {label: "簡介", name: "description", widget: "text", hint: 整篇文章的精華描述，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 65~80 個中文字。}
+      # Title
+      - {label: "英文標題", name: "title", widget: "string", tagname: 'h1', default: Title for this post (Fill Me), hint: 整篇文章的英文，會用於 Google 搜尋上對於這個頁面的標題。文字介於 50 英文字元左右，可以少但不要太長。}
+      # Titletc 
+      - {label: "繁中標題", name: "titletc", widget: "string", default: 文章的中文標題(請填寫我), hint: 整篇文章的繁中標題，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 15 中文字左右，可以少但不要太長。}
+      # Draft
+      - {label: "草稿", name: "draft", widget: "boolean", default: false}
+      # Thumbnail
+      - label: 封面圖片
+        name: thumbnail
+        widget: object
+        collapsed: true
+        hint: 代表了整個頁面，最重要的一張圖。
+        fields:
+          - {name: src, label: 圖片, widget: image, default: [https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png],hint: "建議尺寸：1200 x 630px，只能有一張" ,required: true, allow_multiple: false}
+          - {name: alt, label: 替代文字(Alt), widget: string, default: "封面圖片替代文字(請填寫我)", hint: "當圖片顯示不出來時會顯示的文字，同時讓機器人了解這是一張怎麼樣的圖片。",required: true}
+      # Cover
+      - label: 重點圖片
+        name: cover
+        widget: "list"
+        fields:
+          - {label: "圖片", name: "src", widget: "image"}
+          - {label: "替代文字(Alt)", name: "alt", widget: "string"}
+          - {label: "高度", name: "height", widget: "number", hint: "圖片的像素高度，強烈建議要標註，為了網頁的性能和瀏覽體驗", required: false}
+          - {label: "寬度", name: "width", widget: "number", hint: "圖片的像素寬度，強烈建議要標註，為了網頁的性能和瀏覽體驗", required: false}
+      # Description
+      - {label: "簡介", name: "description", widget: "text", default: 整篇文章的精華描述，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 65~80 個中文字。, hint: 整篇文章的精華描述，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 65~80 個中文字。}
+      # Project
       - {label: "專案標籤", name: "project", widget: "list", default: ["包裝"]}
+      # Date
       - {
         label: '發布日期',
         name: 'date',
         widget: 'datetime',
       }
+      # Client
       - {label: "客戶", name: "client", widget: "string",default: 客戶名稱, required: false}
+      # Credit
       - label: "提名"
         name: "credit" 
         widget: "list"
         fields:
           - { label: 職位名稱, name: title, widget: string, default: 包裝} 
           - { label: 提名, name: person, widget: string, default: 王小明}
-          
+      # Body
       - {label: "內文", name: "body", widget: "markdown"}
     meta: { path: { label: 文章存放位置, widget: parent, index_file: 'index' } }

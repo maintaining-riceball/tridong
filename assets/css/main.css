@@ -7,9 +7,12 @@
     @apply bg-stone-100
 }
 
+.highlight {
+    margin: 0 2rem;
+}
 
 img, video{
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 :root {

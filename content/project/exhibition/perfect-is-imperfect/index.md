@@ -1,37 +1,49 @@
 ---
-draft: false
-thumbnail: https://ucarecdn.com/5006fcd3-a6fd-44ec-9b83-986ae7cd55c3/半個展.jpg
-cover:
-  - https://ucarecdn.com/e2f81adb-d247-481f-a465-906a4fb912a7/半個展-海報視覺.jpg
-  - https://ucarecdn.com/920c3fac-4773-4165-9e86-03465f13556a/半個展-小型周邊.jpg
-  - https://ucarecdn.com/40d7105b-3047-4716-bf51-65f044449486/半個展-卡片.png
-  - https://ucarecdn.com/55265e55-9bb2-4919-9e62-653b95846db5/半個展-小型周邊.png
-  - https://ucarecdn.com/b2a27fdc-3da9-454d-9ead-52700aba0302/半個展-獎狀與感謝狀.png
-  - https://ucarecdn.com/5006fcd3-a6fd-44ec-9b83-986ae7cd55c3/半個展-周邊綜合.png
-  - https://ucarecdn.com/09eb1611-ea98-4d99-a55f-a3bb8ff2a31f/半個展-基本系統.jpg
 title: Perfect Is Imperfect
 titletc: 半個展
-description: 半個展的介紹
+draft: false
+thumbnail:
+  src:
+    - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+  alt: 封面圖片替代文字(請填寫我)
+cover:
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654484361/project/perfect-is-imperfect/01-%E5%8D%8A%E5%80%8B%E5%B1%95-%E6%B5%B7%E5%A0%B1%E8%A6%96%E8%A6%BA.jpg
+    alt: "1"
+    height: 1201
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654484363/project/perfect-is-imperfect/%E5%8D%8A%E5%80%8B%E5%B1%95-%E8%AD%98%E5%88%A5%E8%AD%89.png
+    alt: "2"
+    height: 541
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654484366/project/perfect-is-imperfect/02-%E5%8D%8A%E5%80%8B%E5%B1%95-%E5%B0%8F%E5%9E%8B%E5%91%A8%E9%82%8A.png
+    alt: "3"
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654484360/project/perfect-is-imperfect/03-%E5%8D%8A%E5%80%8B%E5%B1%95-%E5%8D%A1%E7%89%87.png
+    alt: "4"
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654484358/project/perfect-is-imperfect/04-%E5%8D%8A%E5%80%8B%E5%B1%95-%E5%B0%8F%E5%9E%8B%E5%91%A8%E9%82%8A.jpg
+    alt: "5"
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654484360/project/perfect-is-imperfect/05-%E5%8D%8A%E5%80%8B%E5%B1%95-%E7%8D%8E%E7%8B%80%E8%88%87%E6%84%9F%E8%AC%9D%E7%8B%80.png
+    alt: "6"
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654484362/project/perfect-is-imperfect/06-%E5%8D%8A%E5%80%8B%E5%B1%95-%E5%91%A8%E9%82%8A%E7%B6%9C%E5%90%88.png
+    alt: "7"
+description: >
+  於這次中科大畢業製作模擬展覽中，思考「創作者對於自身作品匠人般的狂熱執著，永遠對於現況的不滿」這樣的態度是是唯一的嗎？相信很多事情還是在以簡馭繁，不追求完美主義、不使用非無即有的安排中才是最完美的，畢業製作是審視自己學習成果的一項重大挑戰，展覽中我們鼓勵每一位畢業生除了展現自己完美的一面外，也接納不完美的另一面，以輕鬆自信的態度去呈現辛苦的結晶。一起來《半個展》！ 
 project:
-  - 活動
-date: 2021-11-30T22:19:00.000Z
-client: 國立臺中科技大學模擬
+  - 包裝
+date: 2022-06-07T06:12:47.114Z
+client: 客戶名稱
 credit:
-  - name: 王小明
-    title: 黃宗瑋
-    person: 視覺設計
-  - title: 王耀輝
-    person: 文案企劃
-  - title: 陳奕杉
-    person: 展場規劃設計
+  - title: 視覺設計
+    person: 黃宗瑋
+  - title: 文案企劃
+    person: 王耀輝
+  - title: 展場規劃
+    person: 陳奕杉
 ---
-
 ## 完美不完美？不完美完美！
+
 於這次中科大畢業製作模擬展覽中，思考「創作者對於自身作品匠人般的狂熱執著，永遠對於現況的不滿」這樣的態度是是唯一的嗎？相信很多事情還是在以簡馭繁，不追求完美主義、不使用非無即有的安排中才是最完美的，畢業製作是審視自己學習成果的一項重大挑戰，展覽中我們鼓勵每一位畢業生除了展現自己完美的一面外，也接納不完美的另一面，以輕鬆自信的態度去呈現辛苦的結晶。一起來《半個展》！ 
 
 ## 設計策略
-創作者的想法在「完美」與「不完美」的舞台間打轉，碰撞中擦出火花，並接納與之共存，創造出最契合的結果，以此為出發點，作為視覺設計的核心價值。
 
+創作者的想法在「完美」與「不完美」的舞台間打轉，碰撞中擦出火花，並接納與之共存，創造出最契合的結果，以此為出發點，作為視覺設計的核心價值。
 
 <div class="flex w-full">
   <video class="w-full" autoplay mute loop>

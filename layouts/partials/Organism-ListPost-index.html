@@ -55,14 +55,19 @@
                 {{ with .Params.author }}
                     {{ range . }}
                         <div class="flex items-center gap-4">
-                            {{ if .image }}
-                                {{ $img := .image }}
+                            {{ with .image }}
+
+                                {{ $img := . }}
                                 {{ $dirFile := path.Split $img }}
-                                {{ $smartProcess :=  "/-/preview/50x50/-/quality/smart_retina/-/format/auto/-" }}
+
+
+                                <!-- Trim Image Extention -->
+                                {{ $imgHasExtention := path.Base $img }}
+                                {{ $imgNoExtention := $imgHasExtention | strings.TrimSuffix (path.Ext $imgHasExtention ) }}
                                 <img
                                     class="rounded-full"
-                                    src="{{ $dirFile.Dir }}{{ $smartProcess }}"
-                                    alt="{{ path.Base .image }}"
+                                    src="{{ $.Site.Params.cloudinaryImg }}/w_50,dpr_auto,f_auto/global/{{ path.Base $img }}"
+                                    alt="{{ $imgNoExtention }}"
                                     loading="lazy"
                                 />
                             {{ else }}

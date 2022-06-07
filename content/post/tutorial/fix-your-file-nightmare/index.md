@@ -1,23 +1,27 @@
 ---
 draft: false
-thumbnail: https://ucarecdn.com/540838a7-8f8d-4eca-9385-1a2bd60f42df/01-整理檔案-封面.webp
-cover:
-  - https://ucarecdn.com/5df4ecd8-9696-4de1-8d43-39f5195e632f/01-整理檔案-封面.png
-  - https://ucarecdn.com/09feff87-1c2c-4e1c-a2d9-f1ea75aebb27/02-整理檔案-個別檔案整理方式.png
-  - https://ucarecdn.com/0bfddb3b-70bd-40e4-83a5-c85e2bc86948/03-整理檔案-資料夾整理方式.png
 title: Fix Your File Nightmare
 titletc: 分類好頭疼！如何擺脫檔案整理惡夢？
+thumbnail:
+  src:
+    - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+  alt: 封面圖片替代文字(請填寫我)
+cover:
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654485326/post/fix-your-file-nightmare/01-%E6%95%B4%E7%90%86%E6%AA%94%E6%A1%88-%E5%B0%81%E9%9D%A2.webp
+    alt: 整理檔案，視覺封面
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654485326/post/fix-your-file-nightmare/02-%E6%95%B4%E7%90%86%E6%AA%94%E6%A1%88-%E5%80%8B%E5%88%A5%E6%AA%94%E6%A1%88%E6%95%B4%E7%90%86%E6%96%B9%E5%BC%8F.png
+    alt: 整理檔案命名方式
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654485326/post/fix-your-file-nightmare/03-%E6%95%B4%E7%90%86%E6%AA%94%E6%A1%88-%E8%B3%87%E6%96%99%E5%A4%BE%E6%95%B4%E7%90%86%E6%96%B9%E5%BC%8F.png
+    alt: 整理檔案資料夾整理方式
 description: 我們每天都會囤積大量的文件、筆記、素材、累積下來就像亂糟糟的房間一樣需要整理，如果你也同樣在困擾這樣的問題，這篇文章是為你準備的。
-toc: false
-date: 2021-08-11T11:26:35+08:00
-lastUpdateDate: 2022-05-09 03:12
+date: 2022-06-06T19:50:09.242Z
+lastUpdateDate: 2022-06-07 03:50
 category: 教學
 tag:
   - 檔案
 author:
   - name: 黃宗瑋
-    title: 設計師
-    image: https://ucarecdn.com/688d34cc-afec-4c25-b229-b2740e03e665/黃宗瑋-頭像.jpg
+    image: https://res.cloudinary.com/tridong/image/upload/v1654503496/global/%E9%BB%83%E5%AE%97%E7%91%8B-%E9%A0%AD%E5%83%8F.jpg
 ---
 ##  為什麼需要管理檔案？
 

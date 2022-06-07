@@ -13,11 +13,7 @@
         </ul>
     </header>
 
-    {{ $smartProcess :=  "-/scale_crop/600x315/-/format/jpg/" }}
     {{ range where $.Site.RegularPages "Section" "project" }}
-        {{ $thumbnailDir := path.Split .Params.thumbnail }}
-
-
         <article
             class="relative border-b border-stone-200 hover:bg-stone-100 transition-background gsap-list"
         >
@@ -25,15 +21,6 @@
                 href="{{ .Permalink }}"
                 class="grid items-center grid-cols-5 p-8 py-4 gsap-imageReveal"
             >
-                <img
-                    class="absolute invisible opacity-0 pointer-events-none "
-                    width="600"
-                    height="315"
-                    src="{{ $thumbnailDir.Dir }}{{ $smartProcess }}{{ path.Base $.Params.thumbnail }}"
-                    alt="none"
-                    loading="lazy"
-                />
-
                 <!-- Date -->
                 <time pubdate class="relative hidden sm:inline-block">
                     {{ .Params.date.Format "2006" }}

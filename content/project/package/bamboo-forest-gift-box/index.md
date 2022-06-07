@@ -1,17 +1,24 @@
 ---
-draft: false
-thumbnail: https://ucarecdn.com/a096b638-63c5-4a3f-9afc-c0649a316b2f/竹林茶境-封面.webp
-cover:
-  - https://ucarecdn.com/a096b638-63c5-4a3f-9afc-c0649a316b2f/01-竹林茶境-封面.webp
-  - https://ucarecdn.com/ef47a5da-1a95-4308-a63e-0824a6cc301e/02-竹林茶境-品牌介紹.jpg
-  - https://ucarecdn.com/1a978982-62db-41e2-9d24-f3e5c16d677c/02-竹林茶境-盒子加工介紹.jpg
-  - https://ucarecdn.com/2bb1c2a9-d5ad-4291-99dc-85ebb6c1dcfd/03-竹林茶境-3種不同角度的部件圖動畫.webp
 title: Bamboo Forest Gift Box
 titletc: 竹林茶境
-description: 竹林茶境
+draft: false
+thumbnail:
+  src:
+    - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+  alt: 封面圖片替代文字(請填寫我)
+cover:
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654484911/project/bamboo-forest-gift-box/01-%E7%AB%B9%E6%9E%97%E8%8C%B6%E5%A2%83-%E5%B0%81%E9%9D%A2.webp
+    alt: "1"
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654484911/project/bamboo-forest-gift-box/02-%E7%AB%B9%E6%9E%97%E8%8C%B6%E5%A2%83-%E5%93%81%E7%89%8C%E4%BB%8B%E7%B4%B9.jpg
+    alt: "3"
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654484913/project/bamboo-forest-gift-box/03-%E7%AB%B9%E6%9E%97%E8%8C%B6%E5%A2%83-3%E7%A8%AE%E4%B8%8D%E5%90%8C%E8%A7%92%E5%BA%A6%E7%9A%84%E9%83%A8%E4%BB%B6%E5%9C%96%E5%8B%95%E7%95%AB.webp
+    alt: "3"
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654484909/project/bamboo-forest-gift-box/04-%E7%AB%B9%E6%9E%97%E8%8C%B6%E5%A2%83-%E7%9B%92%E5%AD%90%E5%8A%A0%E5%B7%A5%E4%BB%8B%E7%B4%B9.jpg
+    alt: "3"
+description: 整篇文章的精華描述，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 65~80 個中文字。竹林茶境
 project:
   - 包裝
-date: 2021-09-30T20:17:00.615Z
+date: 2022-06-07T06:33:42.168Z
 client: 小半天休閒農業區USR計畫
 credit:
   - title: 包裝
@@ -21,18 +28,21 @@ credit:
   - title: 文案規劃
     person: 王耀輝
 ---
-
 ## 專案簡述
+
 在USR大學社會責任計畫期望下，設計精緻包裝並裝入指定內容物，贈送給長官與嘉賓。價格定位高級，長官嘉賓多為長輩階層。
 
-** 這裡多補充一點小半天的介紹 **
+ **這裡多補充一點小半天的介紹** 
 
 ## 現況問題
+
 指定內容物風格混亂、內容物易碎脆弱。
 與定義的高價位氣質有所落差，從頭設計一款大氣分量感充足的禮品包裝。
 
 ## 包裝說明
+
 內容物：
+
 * 竹炭花生豆(5包)
 * 手工陶瓷杯(1個)
 * 凍頂烏龍茶(四兩)

@@ -61,6 +61,11 @@ module.exports = {
                 paddingRight: theme('padding.8'),
                 display: "inline-block",
               },
+              pre: {
+
+                fontSize: theme('fontSize.lg'),
+
+              },
               iframe: { 
                 paddingLeft: theme('padding.8'),
                 paddingRight: theme('padding.8'),

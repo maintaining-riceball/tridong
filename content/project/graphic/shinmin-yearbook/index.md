@@ -1,17 +1,24 @@
 ---
-draft: false
-thumbnail: https://ucarecdn.com/8a9c9441-ad8f-45e2-804d-394f4c576e92/新民高中.webp
-cover:
-  - https://ucarecdn.com/938591c4-2a17-4a65-bec2-d744f8df2711/00-新民高中畢業紀念冊正反面展示封面圖.webp
-  - https://ucarecdn.com/b338eadc-ecaa-4a06-8ba1-a19a7001ce65/02-新民高中畢業紀念冊正反面動畫.webp
-  - https://ucarecdn.com/04225e08-4803-4dd4-ad54-16bc53b4636e/03-新民高中畢業紀念冊標準字.jpg
-  - https://ucarecdn.com/80449838-aef7-43bf-94fc-678aee3dfef9/04-新民高中畢業紀念冊展開圖.jpg
 title: Shinmin Yearbook
 titletc: 2019 新民高中畢業紀念冊
+draft: false
+thumbnail:
+  src:
+    - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+  alt: 封面圖片替代文字(請填寫我)
+cover:
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654485039/project/shinmin-yearbook/00-%E6%96%B0%E6%B0%91%E9%AB%98%E4%B8%AD%E7%95%A2%E6%A5%AD%E7%B4%80%E5%BF%B5%E5%86%8A%E6%AD%A3%E5%8F%8D%E9%9D%A2%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2%E5%9C%96.webp
+    alt: "1"
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654485038/project/shinmin-yearbook/02-%E6%96%B0%E6%B0%91%E9%AB%98%E4%B8%AD%E7%95%A2%E6%A5%AD%E7%B4%80%E5%BF%B5%E5%86%8A%E6%AD%A3%E5%8F%8D%E9%9D%A2%E5%8B%95%E7%95%AB.webp
+    alt: "2"
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654485038/project/shinmin-yearbook/03-%E6%96%B0%E6%B0%91%E9%AB%98%E4%B8%AD%E7%95%A2%E6%A5%AD%E7%B4%80%E5%BF%B5%E5%86%8A%E6%A8%99%E6%BA%96%E5%AD%97.jpg
+    alt: "3"
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654485039/project/shinmin-yearbook/04-%E6%96%B0%E6%B0%91%E9%AB%98%E4%B8%AD%E7%95%A2%E6%A5%AD%E7%B4%80%E5%BF%B5%E5%86%8A%E5%B1%95%E9%96%8B%E5%9C%96.jpg
+    alt: "4"
 description: 像積木一樣堆砌出校園亮麗的景觀。以最基礎的點線面、純幾何造型為核心構成，運用美的形式原理——反覆、均衡、節奏、漸層……等方式營造美感和氣氛。
 project:
-  - 平面
-date: 2021-09-24T20:06:32.802Z
+  - 包裝
+date: 2022-06-07T06:30:48.191Z
 client: 新民高中
 credit:
   - title: 設計
@@ -25,7 +32,6 @@ credit:
 * O. Optimism, Outstanding 樂觀
 * P. Politeness, Progress 進步
 * E. Enthusiasm, Efficiency 熱情
-
 
 ## 設計策略
 

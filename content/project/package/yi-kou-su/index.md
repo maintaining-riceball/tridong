@@ -1,19 +1,25 @@
 ---
-draft: false
-thumbnail: https://ucarecdn.com/3e7a30cc-3f38-4b73-a7f9-e854898fcfde/00_藝口酥_封面圖.webp
-cover:
-  - https://ucarecdn.com/3e7a30cc-3f38-4b73-a7f9-e854898fcfde/00_藝口酥_封面圖.webp
-  - https://ucarecdn.com/c7f62213-c228-4c83-a1f6-9d37bed1c487/01_藝口酥_綜合展示.webp
-  - https://ucarecdn.com/b9c8b78b-bf2d-4b5e-8f8e-2e659faa1419/02_藝口酥_內部卡片動畫.webp
 title: YI KOU SU
 titletc: 藝口酥(待補文案)
-description: 藝口酥藝口酥藝口酥藝口酥
+draft: false
+thumbnail:
+  src:
+    - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+  alt: 封面圖片替代文字(請填寫我)
+cover:
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654484129/project/yi-kou-su/00_%E8%97%9D%E5%8F%A3%E9%85%A5_%E5%B0%81%E9%9D%A2%E5%9C%96.webp
+    alt: "1"
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654484129/project/yi-kou-su/01_%E8%97%9D%E5%8F%A3%E9%85%A5_%E7%B6%9C%E5%90%88%E5%B1%95%E7%A4%BA.webp
+    alt: "2"
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654484129/project/yi-kou-su/02_%E8%97%9D%E5%8F%A3%E9%85%A5_%E5%85%A7%E9%83%A8%E5%8D%A1%E7%89%87%E5%8B%95%E7%95%AB.webp
+    alt: "3"
+description: 整篇文章的精華描述，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 65~80 個中文字。
 project:
   - 包裝
-date: 2021-10-01T00:21:23.694Z
-client: 待補文案
+date: 2022-06-07T06:51:08.473Z
+client: 客戶名稱
 credit:
-  - title: 包裝設計
+  - title: 包裝
     person: 等待填寫
 ---
 藝口酥藝口酥藝口酥藝口酥藝口酥

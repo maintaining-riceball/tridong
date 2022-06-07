@@ -1,22 +1,24 @@
 ---
 draft: false
-thumbnail: https://ucarecdn.com/a6c72d43-beba-4892-bcdf-b58a2b44dd60/Logo.jpg
-cover:
-  - https://ucarecdn.com/ce72dc9c-ed03-4810-8206-ae239b0bad6c/014.png
-title: 4 types of documentation nobody tells you about 
+title: 4 types of documentation nobody tells you about
 titletc: 四種文檔的種類，以及為什麼需要了解它們
+thumbnail:
+  src:
+    - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+  alt: 封面圖片替代文字(請填寫我)
+cover:
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654547364/post/4-types-of-documentation-nobody-tells-you-about/4%E7%A8%AE%E6%96%87%E6%AA%94%E8%B1%A1%E9%99%90%E5%9C%96.png
+    alt: 4種文檔象限圖
 description: 好的文檔可以幫助人們更快、更有自信的去上手某一項技術。本篇統整心得，幫助你理解文檔可以被拆分為 4 個種類，並且如何更好的整理、傳遞你的知識和想法。
-toc: false
-date: 2022-05-29T08:16:42.522Z
-lastUpdateDate: 2022-05-29 16:16
+date: 2022-06-06T19:45:28.086Z
+lastUpdateDate: 2022-06-07 03:45
 category: 筆記
 tag:
   - 寫作
   - 心得
 author:
   - name: 黃宗瑋
-    title: 設計師
-    image: https://ucarecdn.com/688d34cc-afec-4c25-b229-b2740e03e665/黃宗瑋-頭像.jpg
+    image: https://res.cloudinary.com/tridong/image/upload/v1654503496/global/%E9%BB%83%E5%AE%97%E7%91%8B-%E9%A0%AD%E5%83%8F.jpg
 ---
 ## 前言
 
