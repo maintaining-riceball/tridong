@@ -45,7 +45,7 @@
                             {{ $imgHasExtention := path.Base $img }}
                             {{ $imgNoExtention := $imgHasExtention | strings.TrimSuffix (path.Ext $imgHasExtention ) }}
                             <img
-                                class="rounded-full"
+                                class="rounded-full gsap-image"
                                 src="{{ $.Site.Params.cloudinaryImg }}/w_50,dpr_auto,f_auto/global/{{ path.Base $img }}"
                                 alt="{{ $imgNoExtention }}"
                                 width="50"
@@ -135,7 +135,7 @@
                 {{ range .Params.cover }}
                     {{ $img := .src }}
                     <img
-                        class="sticky top-0 w-full"
+                        class="sticky top-0 w-full gsap-image"
                         width="{{ .width }}"
                         height="{{ .height }}"
                         src="{{ $.Site.Params.cloudinaryImg }}/dpr_auto,f_auto/{{ $.Section }}/{{ $.File.ContentBaseName }}/{{ path.Base $img }}"

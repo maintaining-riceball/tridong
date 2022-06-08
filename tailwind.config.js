@@ -15,6 +15,8 @@ module.exports = {
             css: {
               "code::before": {content: ''},
               "code::after": {content: ''},
+              'blockquote p:first-of-type::before': { content: 'none' },
+              'blockquote p:first-of-type::after': { content: 'none' },
               h2: {
                 backgroundColor: theme('colors.stone.100'),
                 paddingTop: theme('padding.4'),
@@ -80,7 +82,16 @@ module.exports = {
                 maxWidth: theme('maxWidth.prose')
               },
               blockquote: {
-                fontStyle: "normal"
+                marginLeft: theme('padding.8'),
+                marginRight: theme('padding.8'),
+                borderRadius: theme('rounded.xl'),
+                fontStyle: "normal",
+                padding: "0",
+                borderLeftWidth: "0",
+                borderWidth: "2px",
+                borderStyle: "dotted",
+                borderColor: theme('colors.stone.300'),
+                backgroundColor: theme('colors.stone.100')
               }
 
             },

@@ -1,0 +1,30 @@
+<h2 class="gsap-list">
+    <a class="block p-8 py-4 bg-stone-100" href="/project"> 專案列表 </a>
+</h2>
+
+<ul class="grid grid-cols-2 gap-2 md:grid-cols-2">
+    {{ range  $index, $value := ((.Paginate .RegularPagesRecursive).Pages) }}
+    <li class="overflow-hidden ">
+        <a href="{{ .Permalink }}">
+            <!-- Image -->
+            {{ range .Params.thumbnail.src }}
+            <img
+                class=" gsap-image"
+                src="{{ . }}"
+                alt="alt"
+            />
+
+            
+        {{ end }}
+            <!-- Title -->
+            <div class="mt-2 mb-4 leading-tight">
+                {{ .Params.titletc }}
+                <br />
+                {{ .Params.Title }}
+            </div>
+                
+            {{ end }}
+        </a>
+    </li>
+
+</ul>
