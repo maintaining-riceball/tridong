@@ -41,6 +41,11 @@ function delay(n) {
     });
 }
 
+
+Barba.Dispatcher.on('newPageReady', function() {
+    window.scrollTo(0, 0);   
+  });
+
 barba.init({
     sync: true,
     transitions: [{
