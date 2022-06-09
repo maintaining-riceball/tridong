@@ -21,7 +21,7 @@ function enter() {
          .from(".gsap-list", {opacity: 0,translateY: 30, duration: .8, stagger: .1, ease: "power4.out"}, "-1.2")
 
          .to('.gsap-image', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .4, stagger: .5, ease: "power4.out"}, 0)
-         .to('video', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,translateY: 30, stagger: .1 ,ease: "power4.out"}, 0)
+         .to('video', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8, stagger: .1 ,ease: "power4.out"}, 0)
 }
 
 function once() {
@@ -30,7 +30,7 @@ function once() {
         .from(".gsap-list", {opacity: 0,translateY: 30, duration: .8, stagger: .1, ease: "power4.out"}, 0)
         .from(".gsap-cta", {opacity: 0, duration: 1,delay: .2, stagger: .5, ease: "power4.out"}, 0)
         .to('.gsap-image', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .4, stagger: .1, ease: "power4.out"}, 0)
-        .to('video', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8,translateY: 30, stagger: .1 ,ease: "power4.out"}, 0)
+        .to('video', { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: .8, stagger: .1 ,ease: "power4.out"}, 0)
 }
 
 function delay(n) {

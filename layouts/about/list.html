@@ -12,29 +12,27 @@
             </div>
 
             <div>
-                <div class="gsap-image">
-                    <video
-                        autoplay
-                        loop
-                        muted
-                        playsinline
-                        class="sticky top-0 w-full"
-                    >
-                        <source
-                            src="https://res.cloudinary.com/tridong/video/upload/v1654469283/about/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1%E5%B0%81%E9%9D%A2%E5%BD%B1%E7%89%87.webm"
-                            type="video/webm"
-                        />
-                        <source
-                            src="https://res.cloudinary.com/tridong/video/upload/v1654469283/about/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1%E5%B0%81%E9%9D%A2%E5%BD%B1%E7%89%87.mp4"
-                            type="video/mp4"
-                        />
-                    </video>
-                </div>
+                <video
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    class="sticky top-0 w-full"
+                >
+                    <source
+                        src="https://res.cloudinary.com/tridong/video/upload/v1654469283/about/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1%E5%B0%81%E9%9D%A2%E5%BD%B1%E7%89%87.webm"
+                        type="video/webm"
+                    />
+                    <source
+                        src="https://res.cloudinary.com/tridong/video/upload/v1654469283/about/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1%E5%B0%81%E9%9D%A2%E5%BD%B1%E7%89%87.mp4"
+                        type="video/mp4"
+                    />
+                </video>
 
                 {{ range .Params.cover }}
                     {{ $img := .src }}
                     <img
-                        class="sticky top-0 w-full"
+                        class="sticky top-0 w-full gsap-image"
                         src="{{ $.Site.Params.cloudinaryImg }}/dpr_auto,f_auto/about/{{ path.Base $img }}"
                         srcset="
                             {{ $.Site.Params.cloudinaryImg }}/w_300,dpr_auto,f_auto,q_auto/about/{{ path.Base $img }}   300w,
@@ -44,6 +42,8 @@
                         "
                         sizes="(min-width: 1040px) 50vw, 100vw"
                         alt="{{ .alt }}"
+                        width="{{ .height }}"
+                        height="{{ .width }}"
                         loading="lazy"
                     />
                 {{ end }}
