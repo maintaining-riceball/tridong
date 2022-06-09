@@ -112,6 +112,7 @@
 <!-- Javascript -->
 <!-- !Javascript Bundling -->
 <!-- Path -->
+
 {{ $js := resources.Match "js/global/**.js" }}
 <!-- Options -->
 {{ $js = $js | resources.Concat "tempGlobal.js" | resources.ExecuteAsTemplate "global.js" . }}

@@ -2,6 +2,17 @@ import Matter from "matter-js"
 
 matter()
 function matter() {
+
+// Window Resize
+window.addEventListener('resize', () => { 
+  render.bounds.max.x = window.innerWidth;
+  render.bounds.max.y = window.innerHeight;
+  render.options.width = window.innerWidth;
+  render.options.height = window.innerHeight;
+  render.canvas.width = window.innerWidth;
+  render.canvas.height = window.innerHeight;
+});
+
 var Engine = Matter.Engine,
     Render = Matter.Render,
     Events = Matter.Events,
@@ -14,30 +25,38 @@ var Engine = Matter.Engine,
 var engine = Engine.create(),
     world = engine.world;
 
-var myCanvas = document.getElementById('world');
+var renderHeight = window.innerHeight
+var renderWidth = window.innerWidth
+
+var myCanvas = document.getElementById('matterIndex');
 var render = Matter.Render.create({
   canvas: myCanvas,
   engine: engine,
   options: {
-    width: window.innerWidth / 2,
-    height: window.innerHeight,
+    width: renderWidth,
+    height: renderHeight,
     background: 'transparent',
     wireframes: false,
-    showAngleIndicator: false
+    showAngleIndicator: false,
   }
 });
 
+if (window.innerWidth > 800){
+  var divider = 2
+} else {
+  var divider = 1
+}
 
 // create bounds
 var ground = Bodies.rectangle(
-  (window.innerWidth / 2) + 160, window.innerHeight + 80, window.innerWidth + 320, 160,{render: { fillStyle: '#080808'}, isStatic: true });
+  (window.innerWidth / divider) + 160, window.innerHeight + 80, window.innerWidth + 320, 160,{render: { fillStyle: 'transparent'}, isStatic: true });
   
-var wallLeft = Bodies.rectangle( -80, window.innerHeight / 2, 160,   window.innerHeight, { isStatic: true });
+var wallLeft = Bodies.rectangle( -80, window.innerHeight / divider, 160,   window.innerHeight, { render: { fillStyle: 'transparent'},isStatic: true });
 
-var wallRight = Bodies.rectangle((window.innerWidth / 2) + 80, window.innerHeight / 2, 160, 1200, { isStatic: true })
+var wallRight = Bodies.rectangle((window.innerWidth / divider) + 80, window.innerHeight / 2, 160, 1200, { render: { fillStyle: 'transparent'},isStatic: true })
 
 var roof = Bodies.rectangle(
-  (window.innerWidth / 2) + 160, -80, window.innerWidth + 320, 160, { isStatic: true })
+  (window.innerWidth / divider) + 160, -80, window.innerWidth + 320, 160, { isStatic: true })
 
 // object colors & variables
 var arts = "#EDDC8C"
