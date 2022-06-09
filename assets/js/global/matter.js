@@ -4,7 +4,11 @@ import Matter from "matter-js"
 const FULLCONFIG = resolveConfig(tailwindConfig)
 const MEDIALG = parseInt(FULLCONFIG.theme.screens.lg, 10);
 const WALLTHICKNESS = 160
+const BODYFONTSIZE = parseInt(window.getComputedStyle(body).fontSize);
+const NAVBARHEIGHT = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--navbarMainHeight'), 10) * BODYFONTSIZE
 
+console.log(BODYFONTSIZE);
+console.log(NAVBARHEIGHT);
 
 matterIndex()
 
@@ -75,7 +79,7 @@ function setWall() {
   if (window.innerWidth < MEDIALG){
     const wallTop = Bodies.rectangle((window.innerWidth / 2) + 160, -80, window.innerWidth + 320, 160, { isStatic: true })
     // Bottom
-    const wallBottom = Bodies.rectangle(0, window.innerHeight + WALLTHICKNESS / 2 , window.innerWidth * 2, WALLTHICKNESS,{render: { fillStyle: 'transparent'}, isStatic: true })
+    const wallBottom = Bodies.rectangle(0, window.innerHeight + WALLTHICKNESS / 2 - NAVBARHEIGHT , window.innerWidth * 2, WALLTHICKNESS,{render: { fillStyle: 'transparent'}, isStatic: true })
     // Left
     const wallLeft = Bodies.rectangle( -WALLTHICKNESS / 2, window.innerHeight / 2, WALLTHICKNESS, window.innerHeight, { render: { fillStyle: 'transparent'},isStatic: true })
     // Right
