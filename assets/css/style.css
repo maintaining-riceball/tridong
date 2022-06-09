@@ -1571,10 +1571,6 @@ img {
 }
 
 @media (min-width: 640px) {
-  .sm\:top-\[var\(--navbarMainHeight\)\] {
-    top: var(--navbarMainHeight);
-  }
-
   .sm\:col-span-3 {
     grid-column: span 3 / span 3;
   }
@@ -1601,10 +1597,6 @@ img {
 }
 
 @media (min-width: 768px) {
-  .md\:top-\[var\(--navbarMainHeight\)\] {
-    top: var(--navbarMainHeight);
-  }
-
   .md\:block {
     display: block;
   }
