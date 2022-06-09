@@ -53,7 +53,7 @@ barba.init({
             const done = this.async();
             await delay(1500);
             enter();
-            matter();
+            matterIndex();
             done();
         },
 

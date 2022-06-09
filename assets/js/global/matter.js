@@ -1,35 +1,47 @@
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from './tailwind.config.js'
 import Matter from "matter-js"
+const FULLCONFIG = resolveConfig(tailwindConfig)
+const MEDIALG = parseInt(FULLCONFIG.theme.screens.lg, 10);
+const WALLTHICKNESS = 160
 
-matter()
-function matter() {
 
-// Window Resize
-window.addEventListener('resize', () => { 
+matterIndex()
+
+function matterIndex() {
+
+const Engine = Matter.Engine,
+      Render = Matter.Render,
+      Events = Matter.Events,
+      MouseConstraint = Matter.MouseConstraint,
+      Mouse = Matter.Mouse,
+      World = Matter.World,
+      Bodies = Matter.Bodies;
+
+const engine = Engine.create(),
+      world = engine.world;
+
+const myCanvas = document.getElementById('matterIndex');
+const renderHeight = window.innerHeight,
+      renderWidth = window.innerWidth
+
+// When Window Resize
+window.addEventListener('resize', () => {
+  // Change canvas size 
   render.bounds.max.x = window.innerWidth;
   render.bounds.max.y = window.innerHeight;
   render.options.width = window.innerWidth;
   render.options.height = window.innerHeight;
   render.canvas.width = window.innerWidth;
   render.canvas.height = window.innerHeight;
+  // Remove bodies in world
+  Matter.Composite.clear(engine.world);
+  setWall()
+  setBodies()
+
 });
 
-var Engine = Matter.Engine,
-    Render = Matter.Render,
-    Events = Matter.Events,
-    MouseConstraint = Matter.MouseConstraint,
-    Mouse = Matter.Mouse,
-    World = Matter.World,
-    Bodies = Matter.Bodies;
-
-// create an engine
-var engine = Engine.create(),
-    world = engine.world;
-
-var renderHeight = window.innerHeight
-var renderWidth = window.innerWidth
-
-var myCanvas = document.getElementById('matterIndex');
-var render = Matter.Render.create({
+const render = Matter.Render.create({
   canvas: myCanvas,
   engine: engine,
   options: {
@@ -40,23 +52,45 @@ var render = Matter.Render.create({
     showAngleIndicator: false,
   }
 });
+setWall()
+setBodies()
 
-if (window.innerWidth > 800){
-  var divider = 2
-} else {
-  var divider = 1
+
+function setWall() {
+  if (window.innerWidth >= MEDIALG){
+    const wallTop = Bodies.rectangle((window.innerWidth / 2) + 160, -80, window.innerWidth + 320, 160, { isStatic: true })
+    // Bottom
+    const wallBottom = Bodies.rectangle( 0, window.innerHeight + WALLTHICKNESS / 2, window.innerWidth, WALLTHICKNESS,{render: { fillStyle: 'transparent'}, isStatic: true })
+    // Left
+    const wallLeft = Bodies.rectangle( -WALLTHICKNESS / 2, window.innerHeight / 2, WALLTHICKNESS, window.innerHeight, { render: { fillStyle: 'transparent'},isStatic: true })
+    // Right
+    const wallRight = Bodies.rectangle((window.innerWidth / 2) + WALLTHICKNESS/2, window.innerHeight / 2, WALLTHICKNESS, window.innerHeight, { render: { fillStyle: 'transparent'},isStatic: true })
+    // Add Bodies
+    World.add(engine.world, [
+      wallTop, wallBottom, wallLeft, wallRight
+    ]);
+  }
+
+
+  if (window.innerWidth < MEDIALG){
+    const wallTop = Bodies.rectangle((window.innerWidth / 2) + 160, -80, window.innerWidth + 320, 160, { isStatic: true })
+    // Bottom
+    const wallBottom = Bodies.rectangle(0, window.innerHeight + WALLTHICKNESS / 2 , window.innerWidth * 2, WALLTHICKNESS,{render: { fillStyle: 'transparent'}, isStatic: true })
+    // Left
+    const wallLeft = Bodies.rectangle( -WALLTHICKNESS / 2, window.innerHeight / 2, WALLTHICKNESS, window.innerHeight, { render: { fillStyle: 'transparent'},isStatic: true })
+    // Right
+    const wallRight = Bodies.rectangle(window.innerWidth + WALLTHICKNESS/2, window.innerHeight, WALLTHICKNESS, window.innerHeight * 2, { render: { fillStyle: 'red'},isStatic: true })
+    // Add Bodies
+    World.add(engine.world, [
+      wallTop, wallBottom, wallLeft, wallRight
+    ]);
+  }
+
 }
 
-// create bounds
-var ground = Bodies.rectangle(
-  (window.innerWidth / divider) + 160, window.innerHeight + 80, window.innerWidth + 320, 160,{render: { fillStyle: 'transparent'}, isStatic: true });
-  
-var wallLeft = Bodies.rectangle( -80, window.innerHeight / divider, 160,   window.innerHeight, { render: { fillStyle: 'transparent'},isStatic: true });
+function setBodies(){
 
-var wallRight = Bodies.rectangle((window.innerWidth / divider) + 80, window.innerHeight / 2, 160, 1200, { render: { fillStyle: 'transparent'},isStatic: true })
 
-var roof = Bodies.rectangle(
-  (window.innerWidth / divider) + 160, -80, window.innerWidth + 320, 160, { isStatic: true })
 
 // object colors & variables
 var arts = "#EDDC8C"
@@ -106,7 +140,7 @@ var random = Bodies.rectangle(230, 180, 112, 40, {chamfer: {radius: radius}, ren
 
 // add all of the bodies to the world
 World.add(engine.world, [
-  ground, wallLeft, wallRight, roof, illustration, art, threeD, graphic, photo, documentary, animation, vintage, short, website, article, music, star, about, instagram, random, dongA, dongB, dongC
+  illustration, art, threeD, graphic, photo, documentary, animation, vintage, short, website, article, music, star, about, instagram, random, dongA, dongB, dongC
 ]);
 
 // add mouse control
@@ -161,7 +195,7 @@ Events.on(mouseConstraint, 'mouseup', function(event) {
     }
   }
 });
-
+}
 // run the engine
 Engine.run(engine);
 

@@ -1583,10 +1583,6 @@ img {
     display: grid;
   }
 
-  .sm\:h-auto {
-    height: auto;
-  }
-
   .sm\:text-left {
     text-align: left;
   }
