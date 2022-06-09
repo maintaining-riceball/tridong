@@ -7,14 +7,24 @@
     <li class="overflow-hidden ">
         <a href="{{ .Permalink }}">
             <!-- Image -->
-
+            {{ $img := .Params.thumbnail.src }}
             <img
-                class=" gsap-image"
-                src="{{ .Params.thumbnail.src }}"
-                alt="alt"
+                class="sticky top-0 w-full gsap-image"
+                width="1200"
+                height="630"
+                
+                src="{{ $.Site.Params.cloudinaryImg }}/dpr_auto,f_auto,q_auto/{{ $.Section }}/{{ .File.ContentBaseName }}/{{ path.Base $img }}"
+                srcset="
+                    {{ $.Site.Params.cloudinaryImg }}/w_300,dpr_auto,f_auto,q_auto/{{ $.Section }}/{{ .File.ContentBaseName }}/{{ path.Base $img }}   300w,
+                    {{ $.Site.Params.cloudinaryImg }}/w_600,dpr_auto,f_auto,q_auto/{{ $.Section }}/{{ .File.ContentBaseName }}/{{ path.Base $img }}   600w,
+                    {{ $.Site.Params.cloudinaryImg }}/w_900,dpr_auto,f_auto,q_auto/{{ $.Section }}/{{ .File.ContentBaseName }}/{{ path.Base $img }}   900w,
+                    {{ $.Site.Params.cloudinaryImg }}/w_1200,dpr_auto,f_auto,q_auto/{{ $.Section }}/{{ .File.ContentBaseName }}/{{ path.Base $img }} 1200w
+                "
+                sizes="(min-width: 1040px) 25vw, 50vw"
+                alt="{{ .Params.thumbnail.alt }}"
+                loading="lazy"
             />
-
-            
+   
 
             <!-- Title -->
             <div class="mt-2 mb-4 leading-tight">

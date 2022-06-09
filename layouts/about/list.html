@@ -146,39 +146,6 @@
 
             <section></section>
 
-            <!-- Contact -->
-            <section>
-                <!-- Contact -->
-                <h2 class=" gsap-list">
-                    <a class="block p-8 py-4 bg-stone-100" href="/post">
-                        <svg
-                            class="inline-block mr-4 md:hidden"
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="20"
-                            width="20"
-                        >
-                            <path
-                                d="M10 12.812 5 7.812 6.229 6.583 10 10.354 13.771 6.583 15 7.812Z"
-                            />
-                        </svg>
-                        聯絡我們
-                    </a>
-                </h2>
-                <div class="p-8 gsap-list">
-                    <p>
-                        電話：{{ .Site.Params.brandphone }}
-                    </p>
-                    <p>
-                        電子信箱：{{ .Site.Params.brandEmail }}
-                    </p>
-                    <br />
-                    <p>{{ .Site.Params.brandLocationtc }}</p>
-                    <p>{{ .Site.Params.brandLocation }}</p>
-                    <br />
-                    <p>{{ .Site.Params.brandWorktime }}</p>
-                </div>
-            </section>
-
             <!-- OurTeam -->
             <section>
                 <h2 class="gsap-list">
@@ -282,6 +249,39 @@
                         </div>
                     </li>
                 </ul>
+            </section>
+
+            <!-- Contact -->
+            <section>
+                <!-- Contact -->
+                <h2 class=" gsap-list">
+                    <a class="block p-8 py-4 bg-stone-100" href="/post">
+                        <svg
+                            class="inline-block mr-4 md:hidden"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20"
+                            width="20"
+                        >
+                            <path
+                                d="M10 12.812 5 7.812 6.229 6.583 10 10.354 13.771 6.583 15 7.812Z"
+                            />
+                        </svg>
+                        聯絡我們
+                    </a>
+                </h2>
+                <div class="p-8 gsap-list">
+                    <p>
+                        電話：{{ .Site.Params.brandphone }}
+                    </p>
+                    <p>
+                        電子信箱：{{ .Site.Params.brandEmail }}
+                    </p>
+                    <br />
+                    <p>{{ .Site.Params.brandLocationtc }}</p>
+                    <p>{{ .Site.Params.brandLocation }}</p>
+                    <br />
+                    <p>{{ .Site.Params.brandWorktime }}</p>
+                </div>
             </section>
 
             {{ partial "partials/Organism-contactSection.html" . }}
