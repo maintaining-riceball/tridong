@@ -1053,16 +1053,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0px;
 }
 
+.top-\[var\(--navbarMainHeight\)\] {
+  top: var(--navbarMainHeight);
+}
+
 .bottom-0 {
   bottom: 0px;
 }
 
 .top-auto {
   top: auto;
-}
-
-.top-\[var\(--navbarMainHeight\)\] {
-  top: var(--navbarMainHeight);
 }
 
 .z-10 {
@@ -1571,6 +1571,10 @@ img {
 }
 
 @media (min-width: 640px) {
+  .sm\:top-\[var\(--navbarMainHeight\)\] {
+    top: var(--navbarMainHeight);
+  }
+
   .sm\:col-span-3 {
     grid-column: span 3 / span 3;
   }
@@ -1629,6 +1633,10 @@ img {
 
   .lg\:top-0 {
     top: 0px;
+  }
+
+  .lg\:top-\[var\(--navbarMainHeight\)\] {
+    top: var(--navbarMainHeight);
   }
 
   .lg\:mt-14 {
