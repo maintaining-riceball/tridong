@@ -52,6 +52,7 @@ Emoji 是對文化與地域開放包容的，任何人都可以提交新的表�
 如今在網路上找到各式的圖示與圖片都是非常容易的，但在前互聯網時代，是一件困難重重的事情。像是更少獲取圖片的管道、存儲裝置有限、差勁的圖片品質……都是圖像字體誕生所瞄準解決的問題之一。
 
 打開電腦，依舊能在作業系統附贈的字體中見到牠們的身影，「Wingdings」就是這樣一款專門為了圖像而生的字體，對於這個主題有興趣可以看看 Vox 的 *[Why the Wingdings font exists](https://www.vox.com/2015/8/25/9200801/wingdings-font-history)*。
+<iframe  height="315" src="https://www.youtube-nocookie.com/embed/JdKV1L1DJHc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 綜合以上，事實上 Emoji 在 90 年代就有被人們創作為字體所使用的跡象，那麼更早以前呢？進入打字機時代。
 
@@ -77,7 +78,10 @@ Emoji 是對文化與地域開放包容的，任何人都可以提交新的表�
 文字是乘載人們溝通的橋樑，而表情符號絕對也是文字的一種，在極早以前，在文字發明以前，人們便熟悉以這樣的方式去溝通，Emoji 就像文字、字型一樣，可以更自由的帶給觀者不同次元的感受和體會。
 
 
-## Emoji日
+## 📅 世界 Emoji 日
+
+[世界 Emoji 日](https://worldemojiday.com/)訂於7/17
+<iframe  height="315" src="https://www.youtube-nocookie.com/embed/gqtCzJCK22I?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 參考資料
 * [A Brief History of Emoji - Collecteurs](https://www.collecteurs.com/article/a-brief-history-of-emoji)
