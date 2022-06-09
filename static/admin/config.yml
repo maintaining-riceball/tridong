@@ -194,7 +194,23 @@ collections:
         collapsed: true
         hint: 代表了整個頁面，最重要的一張圖。
         fields:
-          - {name: src, label: 圖片, widget: image, default: [https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png],hint: "建議尺寸：1200 x 630px，只能有一張" ,required: true, allow_multiple: false}
+          - name: src
+            label: 圖片
+            widget: image
+            hint: "建議尺寸：1200 x 630px，只能有一張"
+            required: true
+            allow_multiple: false
+            use_transformations: true
+            default: "https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png"
+            media_library:
+              config:
+                default_transformations:
+                  - - fetch_format: auto
+                      quality: auto
+                      crop: fill
+                      width: 1200
+                      height: 630
+
           - {name: alt, label: 替代文字(Alt), widget: string, default: "封面圖片替代文字(請填寫我)", hint: "當圖片顯示不出來時會顯示的文字，同時讓機器人了解這是一張怎麼樣的圖片。",required: true}
       # Cover
       - label: 重點圖片

@@ -1,8 +1,6 @@
 {{ define "main" }}
     <div class="grid grid-auto lg:grid-cols-2">
-        <div
-            class="h-screen overflow-hidden border-r xs:h-auto border-stone-200"
-        >
+        <div class="h-screen border-r width xs:h-auto border-stone-200">
             <div class="relative z-10">
                 <h1 class="p-8 text-2xl leading-relaxed prose">
                     {{ .Content }}
@@ -13,10 +11,7 @@
                 </div>
             </div>
 
-            <canvas
-                class="absolute top-0 left-0 max-w-screen"
-                id="matterIndex"
-            ></canvas>
+            <canvas class="absolute top-0 left-0" id="matterIndex"></canvas>
         </div>
 
         <div>

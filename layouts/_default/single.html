@@ -36,17 +36,13 @@
 
                             
                             {{ with .image }}
-
                             {{ $img := . }}
-                            {{ $dirFile := path.Split $img }}
-
-
                             <!-- Trim Image Extention -->
                             {{ $imgHasExtention := path.Base $img }}
                             {{ $imgNoExtention := $imgHasExtention | strings.TrimSuffix (path.Ext $imgHasExtention ) }}
                             <img
                                 class="rounded-full gsap-image"
-                                src="{{ $.Site.Params.cloudinaryImg }}/w_50,dpr_auto,f_auto/global/{{ path.Base $img }}"
+                                src="{{ $.Site.Params.cloudinaryImg }}/w_50,dpr_auto,f_auto/global/{{ $imgHasExtention }}"
                                 alt="{{ $imgNoExtention }}"
                                 width="50"
                                 height="50"
@@ -138,7 +134,7 @@
                         class="sticky top-0 w-full gsap-image"
                         width="{{ .width }}"
                         height="{{ .height }}"
-                        src="{{ $.Site.Params.cloudinaryImg }}/dpr_auto,f_auto/{{ $.Section }}/{{ $.File.ContentBaseName }}/{{ path.Base $img }}"
+                        src="{{ $.Site.Params.cloudinaryImg }}/dpr_auto,f_auto,q_auto/{{ $.Section }}/{{ $.File.ContentBaseName }}/{{ path.Base $img }}"
                         srcset="
                             {{ $.Site.Params.cloudinaryImg }}/w_300,dpr_auto,f_auto,q_auto/{{ $.Section }}/{{ $.File.ContentBaseName }}/{{ path.Base $img }}   300w,
                             {{ $.Site.Params.cloudinaryImg }}/w_600,dpr_auto,f_auto,q_auto/{{ $.Section }}/{{ $.File.ContentBaseName }}/{{ path.Base $img }}   600w,
@@ -175,6 +171,7 @@
                     <div class="mt-8">
                         {{ range .Params.credit }}
                             {{ .title }}
+               
                             -
                             {{ .person }}
                             <br />

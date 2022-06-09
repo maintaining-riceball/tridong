@@ -4,7 +4,7 @@ titletc: 藝口酥(待補文案)
 draft: false
 thumbnail:
   src:
-    - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+    https://res.cloudinary.com/tridong/image/upload/v1654484129/project/yi-kou-su/00_%E8%97%9D%E5%8F%A3%E9%85%A5_%E5%B0%81%E9%9D%A2%E5%9C%96.webp 
   alt: 封面圖片替代文字(請填寫我)
 cover:
   - src: https://res.cloudinary.com/tridong/image/upload/v1654484129/project/yi-kou-su/00_%E8%97%9D%E5%8F%A3%E9%85%A5_%E5%B0%81%E9%9D%A2%E5%9C%96.webp

@@ -3,8 +3,7 @@ title: Cheese Dong Dong
 titletc: 乳酪東東
 draft: false
 thumbnail:
-  src:
-    - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+  src: https://res.cloudinary.com/tridong/image/upload/c_fill,f_auto,h_630,q_auto,w_1200/v1654483148/project/cheese-dong-dong/02-%E4%B9%B3%E9%85%AA%E6%9D%B1%E6%9D%B1-%E5%90%84%E7%A8%AE%E5%8F%A3%E5%91%B3%E7%9B%92%E5%AD%90%E7%9A%84%E5%A0%86%E7%96%8A%E5%B1%95%E7%A4%BA.webp
   alt: 封面圖片替代文字(請填寫我)
 cover:
   - src: https://res.cloudinary.com/tridong/image/upload/v1654483144/project/cheese-dong-dong/01-%E4%B9%B3%E9%85%AA%E6%9D%B1%E6%9D%B1-%E5%90%84%E7%A8%AE%E5%8F%A3%E5%91%B3%E7%9B%92%E5%AD%90%E7%9A%84%E5%B1%95%E7%A4%BA.webp

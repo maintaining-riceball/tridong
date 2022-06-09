@@ -65,14 +65,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!-- Open Graph (Facebook) -->
-<meta property="og:url" content="{{ .Site.Params.brandUrl }}" />
+<meta property="og:url" content="{{ $.Site.Params.brandUrl }}" />
 <meta propert="og:locale" content="zh_TW" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ $title.Get `content` }}" />
 <meta property="og:description" content="{{ $pageDescription.Get "desc" }}" />
-{{ range .Params.thumbnail.src }}
-    <meta property="og:image" content="{{ . }}" />
-{{ end }}
 <meta property="og:image:alt" content="{{ .Params.thumbnail.alt }}" />
 <meta property="og:image:type" content="image/jpg" />
 <meta property="og:image:width" content="1200" />
@@ -83,12 +80,12 @@
 <meta property="twitter:domain" content="{{ .Site.Params.brandUrlShort }}" />
 <meta name="twitter:title" content="{{ $title.Get `content` }}" />
 <meta name="twitter:description" content="{{ $pageDescription.Get "desc" }}" />
-<meta
-    name="twitter:image"
-    {{ range .Params.thumbnail.src }}
-        content="{{ . }}"
-    {{ end }}
-/>
+
+<!-- Meta Image -->
+
+{{ $img := .Params.thumbnail.src }}
+<meta property="og:image" content="{{ $img }}" />
+<meta name="twitter:image" content="{{ $img }}" />
 
 <!-- CSS -->
 {{ $styles := resources.Get "/css/style.css" | postCSS }}

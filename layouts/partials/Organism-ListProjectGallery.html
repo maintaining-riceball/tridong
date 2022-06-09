@@ -7,15 +7,15 @@
     <li class="overflow-hidden ">
         <a href="{{ .Permalink }}">
             <!-- Image -->
-            {{ range .Params.thumbnail.src }}
+
             <img
                 class=" gsap-image"
-                src="{{ . }}"
+                src="{{ .Params.thumbnail.src }}"
                 alt="alt"
             />
 
             
-        {{ end }}
+
             <!-- Title -->
             <div class="mt-2 mb-4 leading-tight">
                 {{ .Params.titletc }}

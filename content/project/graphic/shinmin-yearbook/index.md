@@ -4,7 +4,7 @@ titletc: 2019 新民高中畢業紀念冊
 draft: false
 thumbnail:
   src:
-    - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
+    https://res.cloudinary.com/tridong/image/upload/v1654485039/project/shinmin-yearbook/00-%E6%96%B0%E6%B0%91%E9%AB%98%E4%B8%AD%E7%95%A2%E6%A5%AD%E7%B4%80%E5%BF%B5%E5%86%8A%E6%AD%A3%E5%8F%8D%E9%9D%A2%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2%E5%9C%96.webp  
   alt: 封面圖片替代文字(請填寫我)
 cover:
   - src: https://res.cloudinary.com/tridong/image/upload/v1654485039/project/shinmin-yearbook/00-%E6%96%B0%E6%B0%91%E9%AB%98%E4%B8%AD%E7%95%A2%E6%A5%AD%E7%B4%80%E5%BF%B5%E5%86%8A%E6%AD%A3%E5%8F%8D%E9%9D%A2%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2%E5%9C%96.webp
