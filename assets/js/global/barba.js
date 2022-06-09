@@ -53,6 +53,7 @@ barba.init({
             const done = this.async();
             await delay(1500);
             enter();
+            window.scrollTo(0, 0);
             matterIndex();
             done();
         },
@@ -80,10 +81,5 @@ barba.init({
           },
     }]
   });
-
-  barba.Dispatcher.on('newPageReady', function() {
-    window.scrollTo(0, 0);   
-  });
-
 
 
