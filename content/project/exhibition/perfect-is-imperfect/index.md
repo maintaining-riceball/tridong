@@ -47,30 +47,33 @@ credit:
 ## 完美不完美？不完美完美！
 
 於這次中科大畢業製作模擬展覽中，思考「創作者對於自身作品匠人般的狂熱執著，永遠對於現況的不滿」這樣的態度是是唯一的嗎？
-
 畢業製作是審視自己學習成果的一項重大挑戰，展覽中我們鼓勵每一位畢業生除了展現自己完美的一面外，也接納不完美的另一面，以輕鬆自信的態度去呈現辛苦的結晶。一起來《半個展》！ 
+
+  <div class="bg-[#f9d8cb] grid grid-cols-2 mx-8">
+    <video width="600" height="600" class="mx-auto" autoplay mute loop poster="https://res.cloudinary.com/tridong/image/upload/v1654871853/project/perfect-is-imperfect/%E5%8D%8A%E5%80%8B%E5%B1%95%E6%A8%99%E6%BA%96%E5%AD%97%E8%8B%B1%E6%96%87.jpg">
+      <source src="https://res.cloudinary.com/tridong/image/upload/v1654871853/project/perfect-is-imperfect/%E5%8D%8A%E5%80%8B%E5%B1%95%E6%A8%99%E6%BA%96%E5%AD%97%E8%8B%B1%E6%96%87.webm" type="video/webm" >
+      <source src="https://res.cloudinary.com/tridong/image/upload/v1654871853/project/perfect-is-imperfect/%E5%8D%8A%E5%80%8B%E5%B1%95%E6%A8%99%E6%BA%96%E5%AD%97%E8%8B%B1%E6%96%87.mp4" type="video/mp4" >
+    Your browser does not support HTML5 video tag. 您的瀏覽器並不支援 HTML5 影片標籤
+    <a href="https://res.cloudinary.com/tridong/image/upload/v1654871853/project/perfect-is-imperfect/%E5%8D%8A%E5%80%8B%E5%B1%95%E6%A8%99%E6%BA%96%E5%AD%97%E8%8B%B1%E6%96%87.gif">Click here to view original GIF 點擊這裡來觀看動圖</a> 
+    </video>
+    <video width="600" height="600" class="mx-auto" autoplay mute loop poster="https://res.cloudinary.com/tridong/image/upload/v1654871855/project/perfect-is-imperfect/%E5%8D%8A%E5%80%8B%E5%B1%95%E6%A8%99%E6%BA%96%E5%AD%97%E4%B8%AD%E6%96%87.jpg">
+      <source src="https://res.cloudinary.com/tridong/image/upload/v1654871855/project/perfect-is-imperfect/%E5%8D%8A%E5%80%8B%E5%B1%95%E6%A8%99%E6%BA%96%E5%AD%97%E4%B8%AD%E6%96%87.webm" type="video/webm" >
+      <source src="https://res.cloudinary.com/tridong/image/upload/v1654871855/project/perfect-is-imperfect/%E5%8D%8A%E5%80%8B%E5%B1%95%E6%A8%99%E6%BA%96%E5%AD%97%E4%B8%AD%E6%96%87.mp4" type="video/mp4" >
+    Your browser does not support HTML5 video tag. 您的瀏覽器並不支援 HTML5 影片標籤
+    <a href="https://res.cloudinary.com/tridong/image/upload/v1654871855/project/perfect-is-imperfect/%E5%8D%8A%E5%80%8B%E5%B1%95%E6%A8%99%E6%BA%96%E5%AD%97%E4%B8%AD%E6%96%87.gif">Click here to view original GIF 點擊這裡來觀看動圖</a> 
+    </video>
+  </div>
+
+
 
 ## 設計策略
 
 創作者的想法在「完美」與「不完美」的舞台間打轉，碰撞中擦出火花，並接納與之共存，創造出最契合的結果，以此為出發點，作為視覺設計的核心價值。
-
-<div class="flex w-full">
-  <video class="w-full" autoplay mute loop>
-    <source src="https://ucarecdn.com/533bb30a-78b9-44ec-a264-3de0bc5701b6/gif2video/-/format/webm/" type="video/webm" >
-    <source src="https://ucarecdn.com/533bb30a-78b9-44ec-a264-3de0bc5701b6/gif2video/-/format/mp4/" type="video/mp4" >
-    <img src="https://ucarecdn.com/533bb30a-78b9-44ec-a264-3de0bc5701b6/" alt="半個展-logomark動畫">
-  </video>
-
-  <video class="w-full" autoplay mute loop>
-    <source src="https://ucarecdn.com/ddcce76e-9509-4f58-9830-b3d54d0968f1/gif2video/-/format/webm/" type="video/webm" >
-    <source src="https://ucarecdn.com/ddcce76e-9509-4f58-9830-b3d54d0968f1/gif2video/-/format/mp4/" type="video/mp4" >
-    <img src="https://ucarecdn.com/ddcce76e-9509-4f58-9830-b3d54d0968f1/" alt="半個展-logomark動畫">
-  </video>
-</div>
-
-  <video class="w-full" autoplay mute loop>
-    <source src="https://ucarecdn.com/55fea5ac-b056-4f76-95cb-e650c8a5727a//gif2video/-/format/webm/" type="video/webm" >
-    <source src="https://ucarecdn.com/55fea5ac-b056-4f76-95cb-e650c8a5727a//gif2video/-/format/mp4/" type="video/mp4" >
-    <img src="https://ucarecdn.com/55fea5ac-b056-4f76-95cb-e650c8a5727a//" alt="半個展-logomark動畫">
-  </video>
-</div>
+  <div class="bg-[#f9d8cb]">
+    <video width="600" height="600" class="mx-auto" autoplay mute loop poster="https://res.cloudinary.com/tridong/image/upload/v1654871859/project/perfect-is-imperfect/%E5%8D%8A%E5%80%8B%E5%B1%95%E8%A7%92%E8%89%B2%E5%81%B4%E6%97%8B%E8%BD%89%E5%8B%95%E7%95%AB.jpg">
+      <source src="https://res.cloudinary.com/tridong/image/upload/v1654871859/project/perfect-is-imperfect/%E5%8D%8A%E5%80%8B%E5%B1%95%E8%A7%92%E8%89%B2%E5%81%B4%E6%97%8B%E8%BD%89%E5%8B%95%E7%95%AB.webm" type="video/webm" >
+      <source src="https://res.cloudinary.com/tridong/image/upload/v1654871859/project/perfect-is-imperfect/%E5%8D%8A%E5%80%8B%E5%B1%95%E8%A7%92%E8%89%B2%E5%81%B4%E6%97%8B%E8%BD%89%E5%8B%95%E7%95%AB.mp4" type="video/mp4" >
+    Your browser does not support HTML5 video tag. 您的瀏覽器並不支援 HTML5 影片標籤
+    <a href="https://res.cloudinary.com/tridong/image/upload/v1654871859/project/perfect-is-imperfect/%E5%8D%8A%E5%80%8B%E5%B1%95%E8%A7%92%E8%89%B2%E5%81%B4%E6%97%8B%E8%BD%89%E5%8B%95%E7%95%AB.gif">Click here to view original GIF 點擊這裡來觀看動圖</a> 
+    </video>
+  </div>
