@@ -269,18 +269,19 @@
                         聯絡我們
                     </a>
                 </h2>
-                <div class="p-8 gsap-list">
-                    <p>
-                        電話：{{ .Site.Params.brandphone }}
-                    </p>
-                    <p>
-                        電子信箱：{{ .Site.Params.brandEmail }}
-                    </p>
-                    <br />
-                    <p>{{ .Site.Params.brandLocationtc }}</p>
-                    <p>{{ .Site.Params.brandLocation }}</p>
-                    <br />
-                    <p>{{ .Site.Params.brandWorktime }}</p>
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="pt-8 pb-0 pl-8 pr-8 md:pb-8 gsap-list">
+                        <p>{{ .Site.Params.brandLocationtc }}</p>
+                        <p>{{ .Site.Params.brandLocation }}</p>
+                    </div>
+                    <div class="p-8 gsap-list">
+                        <p>
+                            T：{{ .Site.Params.brandphone }}
+                        </p>
+                        <p>
+                            E：{{ .Site.Params.brandEmail }}
+                        </p>
+                    </div>
                 </div>
             </section>
 

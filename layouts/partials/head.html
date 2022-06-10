@@ -106,21 +106,37 @@
 {{ end }}
 
 
+<!--  -->
 <!-- Javascript -->
-<!-- !Javascript Bundling -->
-<!-- Path -->
-
-{{ $js := resources.Match "js/global/**.js" }}
+<!-- Get -->
+{{ $global := resources.Match "js/global/**.js" }}
 <!-- Options -->
-{{ $js = $js | resources.Concat "tempGlobal.js" | resources.ExecuteAsTemplate "global.js" . }}
+{{ $global = $global | resources.Concat "tempGlobal.js" | resources.ExecuteAsTemplate "global.js" . }}
 <!-- Build -->
-{{ $js = $js | js.Build }}
+{{ $global = $global | js.Build }}
 <!-- If is in Production -->
 {{ if hugo.IsProduction }}
-    {{ $js = $js | js.Build | minify | resources.Fingerprint "sha256" }}
+    {{ $global = $global | js.Build | minify | resources.Fingerprint "sha256" }}
 {{ end }}
 
-<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+
+<!-- Get -->
+{{ $index := resources.Match "js/index/**.js" }}
+<!-- Options -->
+{{ $index = $index | resources.Concat "tempIndex.js" | resources.ExecuteAsTemplate "index.js" . }}
+{{ $index = slice $index $global | resources.Concat "js/index.js" }}
+{{ $index = $index | js.Build }}
+<!-- If is in Production -->
+{{ if hugo.IsProduction }}
+    {{ $index = $index | js.Build | minify | resources.Fingerprint "sha256" }}
+{{ end }}
+
+{{ if .IsHome }}
+    {{ $js := $index }}    <script defer type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ else }}
+    {{ $js := $global }}    <script defer type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ end }}
+
 
 <!-- Analytics -->
 <!-- Global site tag (gtag.js) - Google Analytics -->

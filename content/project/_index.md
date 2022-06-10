@@ -8,5 +8,8 @@ thumbnail:
 cover: []
 ---
 <div class="gsap-heading">
-看看我們最新出爐的專案，與我們合作！
+<div>
+(っ◔◡◔)っ ◢◢◢
+</div> 
+觀看三角東東最新出爐的專案，與我們合作一同創造有趣的東東。
 </div>

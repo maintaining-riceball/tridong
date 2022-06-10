@@ -1,7 +1,9 @@
 {{ define "main" }}
     <div class="grid grid-auto lg:grid-cols-2">
-        <div class="border-r border-stone-200">
-            <h1 class="p-8 text-2xl leading-relaxed prose">{{ .Content }}</h1>
+        <div class="border-r bg-stone-200 lg:bg-stone-50 border-stone-200">
+            <h1 class="p-8 text-2xl leading-relaxed prose text-current">
+                {{ .Content }}
+            </h1>
             <div class="flex gap-12 mx-8 mb-8">
                 {{ partial "partials/Atom-btn.html" (dict "content" "聯絡我們" "url" "/") . }}
             </div>

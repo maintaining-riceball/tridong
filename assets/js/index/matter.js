@@ -4,13 +4,15 @@ import Matter from "matter-js"
 const FULLCONFIG = resolveConfig(tailwindConfig)
 const MEDIALG = parseInt(FULLCONFIG.theme.screens.lg, 10);
 const WALLTHICKNESS = 160
-const BODYFONTSIZE = parseInt(window.getComputedStyle(body).fontSize);
+const BODYFONTSIZE = 16
 const NAVBARHEIGHT = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--navbarMainHeight'), 10) * BODYFONTSIZE
 
 console.log(BODYFONTSIZE);
 console.log(NAVBARHEIGHT);
 
 matterIndex()
+
+
 
 function matterIndex() {
 
@@ -176,29 +178,29 @@ document.addEventListener('mousemove', () => click = false);
 document.addEventListener('mouseup', () => console.log(click ? 'click' : 'drag'));
 
 // Create a On-Mouseup Event-Handler
-Events.on(mouseConstraint, 'mouseup', function(event) {
-  var mouseConstraint = event.source;
-  var bodies = engine.world.bodies;
-  if (!mouseConstraint.bodyB) {
-    for (i = 0; i < bodies.length; i++) { 
-      var body = bodies[i];
-      // Check if clicked or dragged
-      if (click === true) {
-      if (Matter.Bounds.contains(body.bounds, mouseConstraint.mouse.position)) {
-          var bodyUrl = body.url;
-          console.log("Body.Url >> " + bodyUrl);
-          // Hyperlinking feature
-          if (bodyUrl != undefined) {
-            //window.location.href = bodyUrl;
-            window.open(bodyUrl, '_blank');
-            console.log("Hyperlink was opened");
-          }
-          break;
-        }
-      }
-    }
-  }
-});
+// Events.on(mouseConstraint, 'mouseup', function(event) {
+//   var mouseConstraint = event.source;
+//   var bodies = engine.world.bodies;
+//   if (!mouseConstraint.bodyB) {
+//     for (i = 0; i < bodies.length; i++) { 
+//       var body = bodies[i];
+//       // Check if clicked or dragged
+//       if (click === true) {
+//       if (Matter.Bounds.contains(body.bounds, mouseConstraint.mouse.position)) {
+//           var bodyUrl = body.url;
+//           console.log("Body.Url >> " + bodyUrl);
+//           // Hyperlinking feature
+//           if (bodyUrl != undefined) {
+//             //window.location.href = bodyUrl;
+//             window.open(bodyUrl, '_blank');
+//             console.log("Hyperlink was opened");
+//           }
+//           break;
+//         }
+//       }
+//     }
+//   }
+// });
 }
 // run the engine
 Engine.run(engine);
