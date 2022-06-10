@@ -3,8 +3,8 @@ title: Perfect Is Imperfect
 titletc: 半個展
 draft: false
 thumbnail:
-  src: https://res.cloudinary.com/tridong/image/upload/v1654484361/project/perfect-is-imperfect/01-%E5%8D%8A%E5%80%8B%E5%B1%95-%E6%B5%B7%E5%A0%B1%E8%A6%96%E8%A6%BA.jpg
-  alt: 封面圖片替代文字(請填寫我)
+  src: https://res.cloudinary.com/tridong/image/upload/c_fill,f_auto,h_630,q_auto,w_1200/v1654484362/project/perfect-is-imperfect/06-%E5%8D%8A%E5%80%8B%E5%B1%95-%E5%91%A8%E9%82%8A%E7%B6%9C%E5%90%88.png
+  alt: 半個展周邊展示
 cover:
   - src: https://res.cloudinary.com/tridong/image/upload/v1654484361/project/perfect-is-imperfect/01-%E5%8D%8A%E5%80%8B%E5%B1%95-%E6%B5%B7%E5%A0%B1%E8%A6%96%E8%A6%BA.jpg
     alt: 半個展主視覺海報
@@ -30,7 +30,7 @@ cover:
     alt: 半個展周邊系統
     height: 900
     width: 1400
-description: >
+description: |
   於這次畢展模擬活動中，我們希望藉由挑戰「創作者內心不完美的掙扎」作為出發點，鼓勵所有人以輕鬆自信的態度去呈現辛苦的結晶。
 project:
   - 活動
@@ -47,6 +47,7 @@ credit:
 ## 完美不完美？不完美完美！
 
 於這次中科大畢業製作模擬展覽中，思考「創作者對於自身作品匠人般的狂熱執著，永遠對於現況的不滿」這樣的態度是是唯一的嗎？
+
 畢業製作是審視自己學習成果的一項重大挑戰，展覽中我們鼓勵每一位畢業生除了展現自己完美的一面外，也接納不完美的另一面，以輕鬆自信的態度去呈現辛苦的結晶。一起來《半個展》！ 
 
   <div class="bg-[#f9d8cb] grid grid-cols-2 mx-8">
