@@ -34,7 +34,7 @@
                 {{ with .Params.author }}
                     {{ range . }}
                         <div
-                            class="flex items-center gap-4 px-8 pr-8 border-r border-stone-200"
+                            class="flex items-center gap-4 px-8 pr-8 border-r border-stone-200 whitespace-nowrap"
                         >
                             <div class="flex rounded-full bg-stone-300" width="50" hieght="50">
 
@@ -106,7 +106,7 @@
                                         </span>
 
                                         <a
-                                            class="inline-block p-2 -m-2 capitalize first-of-type:p-0 hover:bg-glass dark:hover:bg-glass-dark whitespace-nowrap"
+                                            class="inline-block p-2 capitalize first-of-type:p-0 hover:bg-glass dark:hover:bg-glass-dark whitespace-nowrap"
                                             href="{{ "project/" | relLangURL }}{{ . | urlize }}"
                                             >{{- . -}}</a
                                         >

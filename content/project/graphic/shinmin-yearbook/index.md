@@ -1,17 +1,17 @@
 ---
 title: Shinmin Yearbook
-titletc: 2019 新民高中畢業紀念冊
+titletc: 新民高中畢業紀念冊
 draft: false
 thumbnail:
   src: https://res.cloudinary.com/tridong/image/upload/c_fill,f_auto,h_630,q_auto,w_1200/v1654485039/project/shinmin-yearbook/00-%E6%96%B0%E6%B0%91%E9%AB%98%E4%B8%AD%E7%95%A2%E6%A5%AD%E7%B4%80%E5%BF%B5%E5%86%8A%E6%AD%A3%E5%8F%8D%E9%9D%A2%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2%E5%9C%96.webp
-  alt: 2019 新民高中畢業紀念冊正反面展示
+  alt: 新民高中畢業紀念冊正反面展示
 cover:
   - src: https://res.cloudinary.com/tridong/image/upload/v1654485039/project/shinmin-yearbook/00-%E6%96%B0%E6%B0%91%E9%AB%98%E4%B8%AD%E7%95%A2%E6%A5%AD%E7%B4%80%E5%BF%B5%E5%86%8A%E6%AD%A3%E5%8F%8D%E9%9D%A2%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2%E5%9C%96.webp
-    alt: 2019 新民高中畢業紀念冊正反面展示
+    alt: 新民高中畢業紀念冊正反面展示
     height: 630
     width: 1200
   - src: https://res.cloudinary.com/tridong/image/upload/v1654485038/project/shinmin-yearbook/02-%E6%96%B0%E6%B0%91%E9%AB%98%E4%B8%AD%E7%95%A2%E6%A5%AD%E7%B4%80%E5%BF%B5%E5%86%8A%E6%AD%A3%E5%8F%8D%E9%9D%A2%E5%8B%95%E7%95%AB.webp
-    alt: 2019 新民高中畢業紀念冊正面展示
+    alt: 新民高中畢業紀念冊正面展示
     height: 686
     width: 1200
   - src: https://res.cloudinary.com/tridong/image/upload/v1654485038/project/shinmin-yearbook/03-%E6%96%B0%E6%B0%91%E9%AB%98%E4%B8%AD%E7%95%A2%E6%A5%AD%E7%B4%80%E5%BF%B5%E5%86%8A%E6%A8%99%E6%BA%96%E5%AD%97.jpg
@@ -19,13 +19,13 @@ cover:
     height: 600
     width: 1200
   - src: https://res.cloudinary.com/tridong/image/upload/v1654485039/project/shinmin-yearbook/04-%E6%96%B0%E6%B0%91%E9%AB%98%E4%B8%AD%E7%95%A2%E6%A5%AD%E7%B4%80%E5%BF%B5%E5%86%8A%E5%B1%95%E9%96%8B%E5%9C%96.jpg
-    alt: 2019 新民高中畢業紀念冊視覺展開
+    alt: 新民高中畢業紀念冊視覺展開
     height: 600
     width: 1401
 description: 像積木一樣堆砌出校園亮麗的景觀。以最基礎的點線面、純幾何造型為核心構成，運用美的形式原理——反覆、均衡、節奏、漸層……等方式營造美感和氣氛。
 project:
   - 平面
-date: 2022-06-07T06:30:48.191Z
+date: 2019-06-07T06:30:48.191Z
 client: 新民高中
 credit:
   - title: 設計

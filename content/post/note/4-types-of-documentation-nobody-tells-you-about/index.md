@@ -3,12 +3,13 @@ draft: false
 title: 4 types of documentation nobody tells you about
 titletc: 四種文檔的種類，以及為什麼需要了解它們
 thumbnail:
-  src:
-    - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
-  alt: 封面圖片替代文字(請填寫我)
+  src: https://res.cloudinary.com/tridong/image/upload/v1654885438/post/4-types-of-documentation-nobody-tells-you-about/%E5%9B%9B%E7%A8%AE%E6%96%87%E6%AA%94%E7%9A%84%E7%A8%AE%E9%A1%9E.png
+  alt: 4 種文檔象限圖
 cover:
-  - src: https://res.cloudinary.com/tridong/image/upload/v1654547364/post/4-types-of-documentation-nobody-tells-you-about/4%E7%A8%AE%E6%96%87%E6%AA%94%E8%B1%A1%E9%99%90%E5%9C%96.png
-    alt: 4種文檔象限圖
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654885438/post/4-types-of-documentation-nobody-tells-you-about/%E5%9B%9B%E7%A8%AE%E6%96%87%E6%AA%94%E7%9A%84%E7%A8%AE%E9%A1%9E.png
+    alt: 4 種文檔象限圖
+    height: 676
+    width: 1200
 description: 好的文檔可以幫助人們更快、更有自信的去上手某一項技術。本篇統整心得，幫助你理解文檔可以被拆分為 4 個種類，並且如何更好的整理、傳遞你的知識和想法。
 date: 2022-06-06T19:45:28.086Z
 lastUpdateDate: 2022-06-07 03:45
@@ -51,7 +52,8 @@ author:
 
 ### 教學 Tutorial
 
-<img height="600" loading="lazy" src="https://ucarecdn.com/2506bfc1-00c3-44f4-970f-f4dc28b2ccd5/-/quality/smart/教學文檔的總結.png" alt="教學文檔的總結">
+
+{{< image width="1200" height="676" src="https://res.cloudinary.com/tridong/image/upload/v1654885438/post/4-types-of-documentation-nobody-tells-you-about/%E5%9B%9B%E7%A8%AE%E6%96%87%E6%AA%94%E7%9A%84%E7%A8%AE%E9%A1%9E-%E6%95%99%E5%AD%B8%E9%A1%9E.png" alt="文檔說明-教學類" caption="教學文檔應是以引導與成就感為重" >}}
 
 教學，讓讀者能夠快速的開始，了解藉由教學能達成一些具有*成就感*、*有意義*的事情，舉例來說：教導一個人如何烘焙。
 
@@ -66,7 +68,8 @@ author:
 * 提供最低限度完成教學的解釋 (其餘的都會增加分心與困惑)
 
 ### 操作 How-To Guide
-<img loading="lazy" src="https://ucarecdn.com/4f731ff6-9e35-4468-921f-7a1d91f06941/034.png" alt="教學文檔的總結">
+
+{{< image width="1200" height="676" src="https://res.cloudinary.com/tridong/image/upload/v1654885438/post/4-types-of-documentation-nobody-tells-you-about/%E5%9B%9B%E7%A8%AE%E6%96%87%E6%AA%94%E7%9A%84%E7%A8%AE%E9%A1%9E-%E6%93%8D%E4%BD%9C%E9%A1%9E.png" alt="文檔說明-操作類" caption="操作文檔應以達成某種目的為重" >}}
 
 操作，展示解決特定問題的流程做法，了解藉由閱讀就能解決某個問題，或達成某種目的，舉例來說：杯子蛋糕的食譜。
 如果說教學是給初心者的入門指南，那麼操作就是給具有一定知識背景的人所提問的解答。就好比有一定基礎的甜點師傅，可以依循食譜去製作杯子蛋糕。
@@ -82,7 +85,7 @@ author:
 
 
 ### 參考 Refence
-<img loading="lazy" src="https://ucarecdn.com/ecdbf94f-b124-4fbf-8d70-f8522c69a557/044.png" alt="教學文檔的總結">
+{{< image width="1200" height="676" src="https://res.cloudinary.com/tridong/image/upload/v1654885438/post/4-types-of-documentation-nobody-tells-you-about/%E5%9B%9B%E7%A8%AE%E6%96%87%E6%AA%94%E7%9A%84%E7%A8%AE%E9%A1%9E-%E5%8F%83%E8%80%83%E9%A1%9E.png" alt="文檔說明-參考類" caption="參考文檔應以理解思考脈絡為重" >}}
 
 參考，描述事情的功能性、互動方式，讓讀者了解到藉由閱讀就能從中獲取想要的資訊，舉例來說：維基百科。
 過程應以描述細節資訊為導向，因此擁有高度的一致性、語調和文法精確的描述是重要的，嚴肅且直擊重點。
@@ -91,7 +94,7 @@ author:
 * 清晰的描述 (解釋、討論、操作、猜測、意見都只會分散注意力)
 
 ### 解釋 Explanation
-<img loading="lazy" src="https://ucarecdn.com/f1cbddca-b8cf-480b-bea5-e4d0d5ebe087/054.png" alt="教學文檔的總結">
+{{< image width="1200" height="676" src="https://res.cloudinary.com/tridong/image/upload/v1654885437/post/4-types-of-documentation-nobody-tells-you-about/%E5%9B%9B%E7%A8%AE%E6%96%87%E6%AA%94%E7%9A%84%E7%A8%AE%E9%A1%9E-%E8%A7%A3%E9%87%8B%E9%A1%9E.png" alt="文檔說明-解釋類" caption="解釋文檔應以資訊清晰完整為重" >}}
 
 解釋，闡明、分析、明朗化特定的主題，擴張對於某個主題的範圍，從不同的角度。舉例來說：一本討論烹飪史的書。使用多種面向去面對一個問題，退後一步去更廣闊的了解事情的全貌。解釋對於某個主題的看法，供讀者通常在閒暇之餘去擴充某的主題的知識。
 
@@ -119,7 +122,10 @@ author:
 ## 資料來源
 
 
-<iframe  height="300" src="https://www.youtube.com/embed/t4vKPhjcMZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+{{< youtube id="t4vKPhjcMZg" title="What nobody tells you about documentation" >}}
 
 * [The four kinds of documentation, and why you need to understand what they are](https://www.writethedocs.org/videos/eu/2017/the-four-kinds-of-documentation-and-why-you-need-to-understand-what-they-are-daniele-procida/)
 * [The documentation system](https://documentation.divio.com/)
