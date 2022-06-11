@@ -25,7 +25,7 @@ barba.init({
 
         const enter = gsap.timeline();
         enter.to("body", {overflow: "auto"}, 0)
-             .delay(1)
+             .delay(1.5)
              .to('.barba-loading', {display: "none", opacity: 0, duration: 0.75}, 0)
              .from(".gsap-heading", {opacity: 0,translateY: 100, duration: .8, stagger: .1, ease: "power4.out"}, 0)
              .from(".gsap-cta", {opacity: 0, duration: 1,delay: .2, stagger: .5, ease: "power4.out"}, 0)
@@ -52,12 +52,16 @@ barba.init({
         // select the menu item depending on the next URL (you can do that in many ways)
         let nextItem = menu.querySelector(`a[href="${next.url.path}"]`);
 
+        if (nextItem === null){
+            console.log(nextItem);
+        }
+
         // reset the active menu item and set the next item as "active" (if there is one)
         if (nextItem !== null) {
             menu.querySelector('.navbarMain--active').classList.remove('navbarMain--active');
             nextItem.classList.add('navbarMain--active');
         }
-      },
+      }
 
 
     }]

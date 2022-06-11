@@ -102,7 +102,8 @@
             "
             >
                 <a
-                    class="inline-block w-full p-4 text-center border-l text-stone-600 border-stone-200 hover:bg-stone-100{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+                    class="inline-block w-full p-4 text-center border-l text-stone-600 border-stone-200 hover:bg-stone-100
+                    {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
                         navbarMain--active
                     {{ end }}
                     "
