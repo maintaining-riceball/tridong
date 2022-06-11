@@ -58,7 +58,7 @@ barba.init({
         },
 
         once(data) {
-            once();
+            // once();
             console.log('Basic Once');
         },
         
