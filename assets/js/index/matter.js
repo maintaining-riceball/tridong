@@ -7,12 +7,7 @@ const WALLTHICKNESS = 160
 const BODYFONTSIZE = 16
 const NAVBARHEIGHT = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--navbarMainHeight'), 10) * BODYFONTSIZE
 
-console.log(BODYFONTSIZE);
-console.log(NAVBARHEIGHT);
-
 matterIndex()
-
-
 
 function matterIndex() {
 
