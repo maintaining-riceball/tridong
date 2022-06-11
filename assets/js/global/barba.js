@@ -48,14 +48,14 @@ barba.init({
         // Reset active on navbar
         // 
         let menu = document.querySelector('#navlistMain');
-
+        const menuActive = menu.querySelector('.navbarMain--active');
         // select the menu item depending on the next URL (you can do that in many ways)
         let nextItem = menu.querySelector(`a[href="${next.url.path}"]`);
 
         // reset the active menu item and set the next item as "active" (if there is one)
-        if (nextItem !== null) {
-            menu.querySelector('.navbarMain--active').classList.remove('navbarMain--active');
-            nextItem.classList.add('navbarMain--active');
+        if (nextItem !== null && menuActive !== null) {
+          menuActive.classList.remove('navbarMain--active');
+          nextItem.classList.add('navbarMain--active');
         }
       }
 
