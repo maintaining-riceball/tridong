@@ -41,7 +41,7 @@ function delay(n) {
 barba.init({
     sync: true,
     views: [{
-        namespace: 'home',
+        namespace: 'Home',
         beforeEnter() {
             alert('beforeEnter')
         },
