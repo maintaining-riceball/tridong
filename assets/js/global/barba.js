@@ -6,7 +6,6 @@ barba.init({
     views: [{
         namespace: 'Home',
         beforeEnter() {
-            console.log('Barba Home beforeEnter');
             matterIndex();
         }
     }],
@@ -24,7 +23,7 @@ barba.init({
         // console.log('Barba Enter');
         const enter = gsap.timeline();
         enter.set("body", {overflow: "auto"}, 0)
-             .delay(0.75)
+             .delay(0.85)
              .to('.barba-loading', {display: "none", opacity: 0, duration: 0.75}, 0)
              .from(".gsap-heading", {opacity: 0,translateY: 100, duration: .8, stagger: .1, ease: "power4.out"}, 0)
              .from(".gsap-cta", {opacity: 0, duration: 1,delay: .2, stagger: .5, ease: "power4.out"}, 0)
