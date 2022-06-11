@@ -5,14 +5,24 @@ barba.use(barbaPrefetch);
 barba.init({
     transitions: [{
       sync: true,
-      name: 'opacity-transition',
+      views: [{
+        namespace: 'Home',
+        beforeEnter() {
+            matterIndex();
+        }
+    }],
+      name: 'default-transition',
       leave(data) {
-          console.log('leave');
-
+        console.log('Barba Leave');
       },
       enter(data) {
-          console.log('enter');
-
+        console.log('Barba Enter');
+      },
+      once(data) {
+        console.log('Barba Once');
+        
       }
+
+
     }]
   });
