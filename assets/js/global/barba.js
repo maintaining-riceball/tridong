@@ -42,9 +42,9 @@ barba.init({
     sync: true,
     views: [{
         namespace: 'Home',
-        enter() {
+        beforeEnter() {
             matterIndex();
-
+            console.log('beforeEnter-matterIndex()');
         }
     }],
     transitions: [{
