@@ -1110,6 +1110,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 2rem;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1646,6 +1651,11 @@ img {
     display: grid;
   }
 
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .sm\:text-left {
     text-align: left;
   }
@@ -1670,6 +1680,11 @@ img {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .md\:pb-8 {
@@ -1741,6 +1756,11 @@ img {
   .lg\:bg-stone-50 {
     --tw-bg-opacity: 1;
     background-color: rgb(250 250 249 / var(--tw-bg-opacity));
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:text-right {
