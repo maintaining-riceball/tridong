@@ -46,6 +46,7 @@ barba.init({
             alert('beforeEnter')
         },
         afterEnter() {
+            matterIndex();
             alert('afterEnter')
         }
     }],
@@ -60,7 +61,6 @@ barba.init({
             await delay(1500);
             enter();
             window.scrollTo(0, 0);
-            matterIndex();
             done();
         },
 
