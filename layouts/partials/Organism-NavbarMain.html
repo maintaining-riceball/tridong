@@ -106,6 +106,9 @@
                     {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
                         navbarMain--active
                     {{ end }}
+                    {{ if eq $.Section .Identifier }}
+                        navbarMain--active
+                    {{ end }}
                     "
                     href="{{ .URL }}"
                     title="{{ .Title }}"

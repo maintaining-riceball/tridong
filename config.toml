@@ -46,13 +46,13 @@ cloudinaryVideo = ""
   # Identifier must match the section name
   identifier = 'home'
   name = '首頁'
-  title = '首頁'
+  title = '三角東東首頁'
   url = '/'
   weight = 1
 [[menu.main]]
   identifier = 'about'
   name = '關於'
-  title = '關於'
+  title = '關於三角東東'
   url = '/about/'
   weight = 2
 [[menu.main]]
@@ -64,7 +64,7 @@ cloudinaryVideo = ""
 [[menu.main]]
   identifier = 'project'
   name = '專案'
-  title = '查看作品'
+  title = '查看專案作品'
   url = '/Project/'
   weight = 4
 
