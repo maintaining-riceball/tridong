@@ -1282,6 +1282,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -1542,6 +1546,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-property: background;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.\[writing-mode\:vertical-lr\] {
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
 }
 
 /* Variable */
