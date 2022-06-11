@@ -40,7 +40,24 @@ barba.init({
             .from(".gsap-list", {opacity: 0,translateY: 30, duration: .8, stagger: .1, ease: "power4.out"}, 0)
             .from(".gsap-cta", {opacity: 0, duration: 1,delay: .2, stagger: .5, ease: "power4.out"}, 0)
         
-      }
+      },
+      
+
+      before: ({ current, next, trigger }) => {
+        // 
+        // Reset active on navbar
+        // 
+        let menu = document.querySelector('#navlistMain');
+
+        // select the menu item depending on the next URL (you can do that in many ways)
+        let nextItem = menu.querySelector(`a[href="${next.url.path}"]`);
+
+        // reset the active menu item and set the next item as "active" (if there is one)
+        if (nextItem !== null) {
+            menu.querySelector('.navbarMain--active').classList.remove('navbarMain--active');
+            nextItem.classList.add('navbarMain--active');
+        }
+      },
 
 
     }]
