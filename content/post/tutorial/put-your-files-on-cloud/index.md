@@ -9,13 +9,16 @@ thumbnail:
 cover:
   - src: https://res.cloudinary.com/tridong/image/upload/v1654545536/post/put-your-files-on-cloud/GoogleDrive%E4%BD%BF%E7%94%A8%E4%BB%8B%E9%9D%A2.webp
     alt: GoogleDrive使用介面
-    height: 576
+    height: 594
+    width: 1200
   - src: https://res.cloudinary.com/tridong/image/upload/v1654545537/post/put-your-files-on-cloud/GoogleDrive%E4%B8%8B%E8%BC%89.webp
     alt: GoogleDrive下載介面
-    height: 593
+    height: 594
+    width: 1200
   - src: https://res.cloudinary.com/tridong/image/upload/v1654545536/post/put-your-files-on-cloud/GoogleDrive%E8%88%87BackupandSync.webp
     alt: GoogleDrive與BackupandSync
-    height: 900
+    height: 750
+    width: 1200
 description: Google Drive是大家最熟悉的一款雲端服務，但你知道如何自動化的同步你的檔案到雲端上嗎？更快速的備份、分享你的檔案，使用官方提供的軟體就能達成。
 date: 2022-06-06T19:51:15.903Z
 lastUpdateDate: 2022-06-07 03:51

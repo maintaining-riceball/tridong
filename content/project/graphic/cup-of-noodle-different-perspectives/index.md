@@ -3,7 +3,7 @@ title: Cup of noodle different perspectives
 titletc: 不同角度的一桶麵
 draft: false
 thumbnail:
-  src: https://res.cloudinary.com/tridong/image/upload/c_fill,f_auto,h_630,q_auto,w_1200/v1654933941/project/cup-of-noodle-different-perspectives/%E4%B8%8D%E5%90%8C%E8%A7%92%E5%BA%A6%E7%9A%84%E4%B8%80%E6%A1%B6%E9%BA%B5-%E8%A6%96%E8%A6%BA%E5%9C%96.jpg
+  src: https://res.cloudinary.com/tridong/image/upload/c_fill,f_auto,h_630,q_auto,w_1200/v1654936573/project/cup-of-noodle-different-perspectives/%E4%B8%8D%E5%90%8C%E8%A7%92%E5%BA%A6%E7%9A%84%E4%B8%80%E6%A1%B6%E9%BA%B5-%E8%A6%96%E8%A6%BA%E5%9C%96%E8%A3%81%E5%88%87.png
   alt: 不同角度的一桶麵-視覺圖
 cover:
   - src: https://res.cloudinary.com/tridong/image/upload/c_fill,f_auto,h_630,q_auto,w_1200/v1654933941/project/cup-of-noodle-different-perspectives/%E4%B8%8D%E5%90%8C%E8%A7%92%E5%BA%A6%E7%9A%84%E4%B8%80%E6%A1%B6%E9%BA%B5-%E8%A6%96%E8%A6%BA%E5%9C%96.jpg
@@ -18,12 +18,9 @@ cover:
     alt: 不同角度的一桶麵-環境應用
     height: 849
     width: 1200
-description: 最後一桶，康師傅紅燒牛肉麵！你想到的是……
-
-            <br>
-            犒勞自己忙碌一整天的豐盛消夜？
-            等你回到家中與另一半分享的甜蜜時光？
-            還是泛黃記憶中父親笨拙但充滿愛心的料理？
+description: |-
+  最後一桶，康師傅紅燒牛肉麵！你想到的是……
+  <br> 犒勞自己忙碌一整天的豐盛消夜？ 等你回到家中與另一半分享的甜蜜時光？ 還是泛黃記憶中父親笨拙但充滿愛心的料理？
 project:
   - 廣告
 date: 2022-06-11T07:37:55.663Z
