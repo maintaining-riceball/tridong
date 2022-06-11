@@ -8,6 +8,7 @@ barba.init({
       views: [{
         namespace: 'Home',
         beforeEnter() {
+            console.log('Barba Home beforeEnter');
             matterIndex();
         }
     }],
