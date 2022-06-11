@@ -1548,11 +1548,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
-.\[writing-mode\:vertical-lr\] {
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
-}
-
 /* Variable */
 
 :root {
