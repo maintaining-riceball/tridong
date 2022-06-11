@@ -11,7 +11,10 @@
         {{ partial "partials/Organism-NavbarMain.html" . }}
         <div class="lg:mt-14 lg:mb-0 mb-14">
             <!-- {{ partial "partials/XDebug.html" . }} -->
-            <div data-barba="container" data-barba-namespace="{{ .Title }}">
+            <div
+                data-barba="container"
+                data-barba-namespace="{{ $.File.UniqueID }}"
+            >
                 {{ block "main" . }}
                 {{ end }}
             </div>
