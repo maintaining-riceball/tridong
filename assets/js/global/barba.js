@@ -43,25 +43,21 @@ barba.init({
       },
       
 
-    //   before: ({ current, next, trigger }) => {
-    //     // 
-    //     // Reset active on navbar
-    //     // 
-    //     let menu = document.querySelector('#navlistMain');
+      before: ({ current, next, trigger }) => {
+        // 
+        // Reset active on navbar
+        // 
+        let menu = document.querySelector('#navlistMain');
 
-    //     // select the menu item depending on the next URL (you can do that in many ways)
-    //     let nextItem = menu.querySelector(`a[href="${next.url.path}"]`);
+        // select the menu item depending on the next URL (you can do that in many ways)
+        let nextItem = menu.querySelector(`a[href="${next.url.path}"]`);
 
-    //     if (nextItem === null){
-    //         console.log(nextItem);
-    //     }
-
-    //     // reset the active menu item and set the next item as "active" (if there is one)
-    //     if (nextItem !== null) {
-    //         menu.querySelector('.navbarMain--active').classList.remove('navbarMain--active');
-    //         nextItem.classList.add('navbarMain--active');
-    //     }
-    //   }
+        // reset the active menu item and set the next item as "active" (if there is one)
+        if (nextItem !== null) {
+            menu.querySelector('.navbarMain--active').classList.remove('navbarMain--active');
+            nextItem.classList.add('navbarMain--active');
+        }
+      }
 
 
     }]
