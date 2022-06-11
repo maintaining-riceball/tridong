@@ -1,7 +1,5 @@
 import barba from '@barba/core';
 import barbaPrefetch from '@barba/prefetch';
-
-
 barba.use(barbaPrefetch);
 
 function leave() {
@@ -42,6 +40,15 @@ function delay(n) {
 
 barba.init({
     sync: true,
+    views: [{
+        namespace: 'home',
+        beforeEnter() {
+            alert('beforeEnter')
+        },
+        afterEnter() {
+            alert('afterEnter')
+        }
+    }],
     transitions: [{
         name: 'default-transition',
         leave(data) {
