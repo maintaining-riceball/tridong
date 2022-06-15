@@ -45,6 +45,13 @@ module.exports = {
                 fontSize: theme('fontSize.lg'),
                 maxWidth: theme('maxWidth.prose'),
               },
+              a: {
+                transition: "textDecorationThickness .3s",   
+                '&:hover':{
+                  textDecorationThickness: "2px",
+                }
+              },
+              
               ul: {
                 paddingLeft: theme('padding.8'),
                 paddingRight: theme('padding.8'),

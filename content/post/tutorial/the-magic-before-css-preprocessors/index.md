@@ -1,13 +1,13 @@
 ---
 draft: false
-title: Supercharge your CSS - Preprocessors
-titletc: 為你的 CSS 增添超能力 —— 預處理器
+title: The magic before CSS - Preprocessors
+titletc: 那些發生在 CSS 之「前」的魔法 —— 預處理器
 thumbnail:
   src:
     - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
   alt: 封面圖片替代文字(請填寫我)
 cover:
-  - src: https://res.cloudinary.com/tridong/image/upload/v1654863388/post/supercharge-your-css/01-%E9%A0%90%E8%99%95%E7%90%86%E5%99%A83D.png
+  - src: https://res.cloudinary.com/tridong/image/upload/v1654862443/post/the-magic-before-css-preprocessors/01-%E9%A0%90%E8%99%95%E7%90%86%E5%99%A8.png
     alt: less Sass stylus 立體圖片封面
     height: 1280
     width: 720
@@ -63,7 +63,7 @@ author:
 當然了，瀏覽器依舊還是只認得 CSS ，並不了解任何預處理器語言的語法。因此需要在使用時將預處理器的語法「預」處理為 CSS 來使用，儘管各種預處理器有自己定義的邏輯和語法，*最終*仍都是被轉譯為 CSS。
 
 ## Sass — Syntactically Awesome Style Sheets 廣受歡迎的預處理器
-Sass 是目前最多人使用的預處理器，同時也是最早出現的預處理器，原先撰寫於 Ruby 語言，現今[官方推薦使用全新的 Dart Sass](https://sass-lang.com/ruby-sass)。有著廣大的社群和學習資源，是一款成熟穩定、充滿威力的預處理器。
+Sass 是目前最多人使用的預處理器([State of CSS 2021](https://2021.stateofcss.com/en-US/technologies/pre-post-processors))，同時也是最早出現的預處理器。有著廣大的社群和學習資源，是一款成熟穩定、充滿威力的預處理器。原先撰寫於 Ruby 語言，現今[官方推薦使用全新的 Dart Sass](https://sass-lang.com/ruby-sass)。
 
 *撰寫 Sass 的方式有兩種 —— SASS 或 SCSS*，其中 SCSS 更貼近 CSS 的樣子，使用括弧與分號來嵌套語句，*和規的 CSS 也意味著是和規的 SCSS 語法*，是 CSS 的一種超集合 (superset)。
 

@@ -45,9 +45,10 @@ author:
 * 操作說明：[在 Creative Cloud 應用程式中使用 Adobe Fonts](https://helpx.adobe.com/tw/creative-cloud/help/add-fonts.html)
 * 網站連結：[Adobe Font](https://fonts.adobe.com/)
 
-## 字嗨
-* [字嗨](https://zi-hi.com/%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E5%85%8D%E8%B2%BB%E5%AD%97%E5%9E%8B%E5%88%97%E8%A1%A8)
+## 字嗨 - 繁體中文免費字型列表
+{{< image width="1200" height="600" src="https://res.cloudinary.com/tridong/image/upload/v1655306581/post/where-to-find-awesome-fonts/%E5%AD%97%E5%97%A8%E7%B6%B2%E7%AB%99.png" alt="字嗨網站截圖" caption="收錄了許多字體相關的知識，其中包括了版權清晰的免費字體" >}}
 
+[字嗨](https://zi-hi.com/%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E5%85%8D%E8%B2%BB%E5%AD%97%E5%9E%8B%E5%88%97%E8%A1%A8)，是一個網站由臉書同名社團所搭建的知識庫網站，整理各種字型相關資訊、技術知識。
 
 ## Free Japanese Font - 大量日文字體
 
