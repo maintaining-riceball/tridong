@@ -17,11 +17,17 @@
     top: var(--navbarMainHeight);
 }
 
-
 /* Reset */
+::selection {
+    @apply bg-stone-200;
+}
+
 img, video{
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     background-color: theme('colors.stone.200');
+}
+
+img {
+    object-fit: cover;
 }
 
 *:focus-visible {
@@ -38,28 +44,27 @@ img, video{
 
 :focus:not(:focus-visible) { outline: none }
 
-img {
-    object-fit: cover;
-}
-
-::selection {
-    @apply bg-stone-200;
-}
-
-*:focus {
-    transition:background-color .3s;
-    @apply ring-2 ring-transparent ring-stone-300 z-50 relative;
-}
-
 /* Main */
-
 .navbarMain--active {
     @apply bg-stone-100
 }
 
 .highlight {
-    margin: 0 2rem;
+    margin: 0;
 }
+
+@media screen(md){
+    .highlight{
+        margin: 0 2rem;
+    }
+
+    .highlight pre{
+        border-radius: .5rem;
+    }
+}
+
+
+
 
 
 

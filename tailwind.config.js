@@ -65,6 +65,10 @@ module.exports = {
                 textDecorationStyle: "dotted",
                 textDecorationColor: theme('colors.stone.400'),
                 textUnderlineOffset:"6px",
+                transition: ".3s",
+                '&:hover':{
+                  backgroundColor: theme('colors.yellow.300'),
+                }
               },
               table: {
                 paddingLeft: theme('padding.8'),
@@ -73,6 +77,7 @@ module.exports = {
               },
               pre: {
                 fontSize: theme('fontSize.lg'),
+                borderRadius: "unset",
 
               },
               iframe: { 

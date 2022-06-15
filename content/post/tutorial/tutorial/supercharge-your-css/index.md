@@ -72,7 +72,7 @@ Sass 是目前最多人使用的預處理器，同時也是最早出現的預處
 
 ### Nesting
 > 撰寫 CSS 是一件累人的事，要一遍又一遍的重複選取同樣的東西……
-<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+<div class="grid grid-cols-1 md:grid-cols-2">
 
 ``` css
 nav ul {
@@ -126,7 +126,7 @@ nav
 ### Mixins
 > 一群差不多外觀的組件要一直複製貼上……
 
-<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+<div class="grid grid-cols-1 md:grid-cols-2">
 
 ``` Sass
 @mixin theme($theme: gray)
