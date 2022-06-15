@@ -50,7 +50,8 @@ img {
 }
 
 .highlight {
-    margin: 0;
+    max-width: 95vw;
+    margin: 0 auto;
 }
 
 @media screen(md){

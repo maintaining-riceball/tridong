@@ -76,6 +76,7 @@ module.exports = {
                 display: "inline-block",
               },
               pre: {
+                width: "100%",
                 fontSize: theme('fontSize.lg'),
                 borderRadius: "unset",
 

@@ -68,7 +68,6 @@ BEM 堅持這樣的規則 —— 「不使用任何 Class 以外的選取器」�
 ### 模塊化網頁開發
 網頁可以被視為一塊塊的元件(Component)並不是一件新鮮的事情，主要還是回歸到 [DRY](https://zh.wikipedia.org/zh-tw/%E4%B8%80%E6%AC%A1%E4%B8%94%E4%BB%85%E4%B8%80%E6%AC%A1) 原則(Don't repeat yourself)，將*重複的代碼整理並重複運用*是開發任何軟體時的基本常識。在網頁中設計與開發使用者介面更是如此。
 
-
 ## 區塊 Block
 
 > 可以被重複使用的原件，就是 Block
@@ -110,43 +109,3 @@ BEM 堅持這樣的規則 —— 「不使用任何 Class 以外的選取器」�
 * Element 永遠隸屬於某個區塊中，無法被單獨使用。
 * Element 可以被嵌套在一塊，多少層次都是可行的。
 * Element 無法被雙重疊加，舉例：```block__elem1__elem2```
-
-## 修飾符 Modifier
-
-> 描述區塊或元素附加的的外表樣式、狀態與行為。
-
-舉例來說，一張卡片它的外貌特徵(Size / Theme)，或是狀態(disabled / Focused)，反應的行為(top-left)都可以被 Modifier 所附註上去。
-
-* Modifier 需加上兩個連接號(--)來表示
-* Modifier 僅描述區塊或元素被附加的樣式，無法被單獨使用。
-
-``` html
-<!-- 是 `focused` 狀態的 `searchForm` 區塊 -->
-<form class="searchForm searchForm--focused">
-    <input class="searchForm__input">
-    <!-- 是 `disabled` 狀態的 `searchForm__button` -->
-    <button class="searchForm__button searchForm__button--disabled">Search</button> 
-</form>
-```
-
-## BEM 常見的問題
-
-### 好像每個人的 BEM 都長得不太一樣？
-BEM 的核心概念，便是 Block/Element/Modifier 至於要怎麼撰寫與區分它們，就依照個人或開發團隊喜好去改變了。本篇文章所有範例都添加了筆者的個人偏好(2 Dashes style + CamelCase)，可以參考[BEM Naming convention](https://en.bem.info/methodology/naming-convention/)來去了解各種範例。
-
-### 應該使用區塊還是元素？
-先創建區塊，再於裡面創建元素。
-
-## 你可能不需要 BEM
-讀完整篇文章，學會了使用 BEM 來命名 CSS，現在讓我們來推翻它。
-它的缺點同時也是它的優點，造就了穩定好預測，可維護性高的代碼；而BEM 最被為人詬病的一點，就是過長過複雜的 class 名稱，以及失去使用各種選取器的便捷性。
-
-> 如果專案並沒有這麼大，只是隨手寫個 CSS 那麼可能並不需要 BEM。
-
-或是你是其它種類，比如說 Utility-First CSS 優先的開發模式的話，那麼從根本上你根本不需要 BEM ，不過這又是另一個篇章的話題了。
-
-
-## 參考資料
-* [BEM](https://en.bem.info/methodology/)
-* [BEM 方法論](http://bem.webclown.net/quick-start/#%E4%BB%8B%E7%BB%8D)
-* [BEM — The way you get maintainable CSS code](https://medium.com/@alexkoenig/bem-the-way-you-get-maintainable-css-code-8fb043e49f60)
