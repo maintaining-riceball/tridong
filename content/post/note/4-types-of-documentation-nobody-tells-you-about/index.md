@@ -24,7 +24,7 @@ author:
 ## 前言
 
 {{< hint type="info" cite="What nobody tells you about documentation" citeSrc="https://www.youtube.com/watch?v=t4vKPhjcMZg" >}}
-好的文檔應更容易的被撰寫、更簡單去維護
+好的文檔應更容易的被撰寫，更簡單去維護
 {{< /hint >}}
 
 
