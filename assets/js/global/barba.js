@@ -12,7 +12,7 @@ barba.init({
             fetch("{{ if .Site.IsServer }}./{{ else }}{{ $.Site.Params.brandUrl }}{{ end }}{{ $index.RelPermalink }}", {method: 'POST', redirect: 'follow'})
             .then(response => response.text())
             .then(txt => eval(txt))
-            .catch(error => console.log('error ${error}'))
+            .catch(error => console.error('There was an error!', error);)
         },
     }],
     transitions: [{
