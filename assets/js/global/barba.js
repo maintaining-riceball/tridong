@@ -6,10 +6,14 @@ barba.init({
     views: [{
         namespace: 'Home',
         beforeEnter() {
-            matterIndex();
-            // console.log('matterindex')
+            {{ $index := resources.Match "js/index/**.js" }}
+            {{ $index = $index | resources.Concat "tempIndex.js" | resources.ExecuteAsTemplate "index.js" . }}
+            {{ $index = $index | js.Build }}
+            fetch("{{ if .Site.IsServer }}./{{ else }}{{ $.Site.Params.brandUrl }}{{ end }}{{ $index.RelPermalink }}", {method: 'POST', redirect: 'follow'})
+            .then(response => response.text())
+            .then(txt => eval(txt))
+            .catch(error => console.log('error ${error}'))
         },
-
     }],
     transitions: [{
       sync: false,

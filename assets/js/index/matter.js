@@ -7,9 +7,6 @@ const WALLTHICKNESS = 160
 const BODYFONTSIZE = 16
 const NAVBARHEIGHT = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--navbarMainHeight'), 10) * BODYFONTSIZE
 
-matterIndex()
-
-function matterIndex() {
 
 const Engine = Matter.Engine,
       Render = Matter.Render,
@@ -203,5 +200,3 @@ Engine.run(engine);
 // run the renderer
 Render.run(render);
 
-
-}

@@ -118,25 +118,7 @@
     {{ $global = $global | js.Build | minify | resources.Fingerprint "sha256" }}
 {{ end }}
 
-
-<!-- Get -->
-{{ $index := resources.Match "js/index/**.js" }}
-<!-- Options -->
-{{ $index = $index | resources.Concat "tempIndex.js" | resources.ExecuteAsTemplate "index.js" . }}
-
-{{ $index = $index | js.Build }}
-<!-- If is in Production -->
-{{ if hugo.IsProduction }}
-    {{ $index = $index | js.Build | minify | resources.Fingerprint "sha256" }}
-{{ end }}
-
-{{ if .IsHome }}
-    {{ $js := $index }}    <script defer type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
-    {{ $js := $global }}    <script defer type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
-{{ else }}
-    {{ $js := $global }}    <script defer type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
-{{ end }}
-
+{{ $js := $global }}    <script defer type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 
 <!-- Analytics -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
