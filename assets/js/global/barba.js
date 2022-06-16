@@ -6,19 +6,6 @@ barba.init({
     views: [{
         namespace: 'Home',
         beforeEnter() {
-
-
-            {{ $index := resources.Match "js/index/**.js" }}
-
-            {{ $index = $index | resources.Concat "tempIndex.js" | resources.ExecuteAsTemplate "index.js" . }}
-
-            {{ $index = $index | js.Build }}
-
-            console.log(fetch("{{ $.Site.Params.brandUrl }}{{$index.RelPermalink}}", {
-
-            }))
-
-
             matterIndex();
             // console.log('matterindex')
         },

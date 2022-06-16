@@ -107,3 +107,18 @@ enableEmoji = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+
+
+
+
+[server]
+[[server.headers]]
+  for = '/*'
+  [server.headers.values]
+    Content-Security-Policy = '*'
+    Access-Control-Allow-Origin = '*'
+    Referrer-Policy = 'strict-origin-when-cross-origin'
+    X-Content-Type-Options = 'nosniff'
+    X-Frame-Options = 'DENY'
+    X-XSS-Protection = '1; mode=block'
