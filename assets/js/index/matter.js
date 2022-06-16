@@ -163,11 +163,11 @@ mouse.element.removeEventListener("mousewheel", mouse.mousewheel);
 mouse.element.removeEventListener("DOMMouseScroll", mouse.mousewheel);
 
 // Detect clicks vs. drags
-let click = false;
+// let click = false;
 
-document.addEventListener('mousedown', () => click = true);
-document.addEventListener('mousemove', () => click = false);
-document.addEventListener('mouseup', () => console.log(click ? 'click' : 'drag'));
+// document.addEventListener('mousedown', () => click = true);
+// document.addEventListener('mousemove', () => click = false);
+// document.addEventListener('mouseup', () => console.log(click ? 'click' : 'drag'));
 
 // Create a On-Mouseup Event-Handler
 // Events.on(mouseConstraint, 'mouseup', function(event) {
@@ -195,8 +195,7 @@ document.addEventListener('mouseup', () => console.log(click ? 'click' : 'drag')
 // });
 }
 // run the engine
-Engine.run(engine);
-
+Matter.Runner.run(engine)
 // run the renderer
 Render.run(render);
 
