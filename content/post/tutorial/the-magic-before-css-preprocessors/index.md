@@ -26,8 +26,8 @@ author:
 
 ## 前言
 
-{{<hint warning>}}
-閱讀本篇文章需要有基礎程度的 CSS 知識。
+{{<hint type="warning" >}}
+了解 CSS 預處理器，需在閱讀文章前須先對 CSS 具有基本的認識。
 {{</hint>}}
 
 在前端開發領域，常常會聽見的一些預處理器(Pre-processor)，像是 Sass、LESS、Stylus，是什麼？為什麼存在？這篇文章主要會經過過幾個重點 (附帶範例)：

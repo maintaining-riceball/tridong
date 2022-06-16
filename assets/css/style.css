@@ -1289,6 +1289,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction: column;
 }
 
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
 .items-center {
   align-items: center;
 }
@@ -1339,6 +1343,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 9999px;
 }
 
+.border-4 {
+  border-width: 4px;
+}
+
 .border-0 {
   border-width: 0px;
 }
@@ -1368,6 +1376,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(231 229 228 / var(--tw-border-opacity));
 }
 
+.border-green-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(134 239 172 / var(--tw-border-opacity));
+}
+
+.border-yellow-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(253 224 71 / var(--tw-border-opacity));
+}
+
+.border-red-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(252 165 165 / var(--tw-border-opacity));
+}
+
+.border-blue-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(147 197 253 / var(--tw-border-opacity));
+}
+
 .bg-stone-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 244 / var(--tw-bg-opacity));
@@ -1383,9 +1411,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
-.bg-green-300 {
+.bg-green-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(134 239 172 / var(--tw-bg-opacity));
+  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
 }
 
 .bg-green-50 {
@@ -1393,9 +1421,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(240 253 244 / var(--tw-bg-opacity));
 }
 
-.bg-yellow-300 {
+.bg-yellow-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
 }
 
 .bg-yellow-50 {
@@ -1403,14 +1431,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
 }
 
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+
 .bg-red-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 242 242 / var(--tw-bg-opacity));
 }
 
-.bg-blue-300 {
+.bg-blue-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
 }
 
 .bg-blue-50 {
@@ -1515,7 +1548,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .font-serif {
-  font-family: Noto Serif TC, Noto Serif CJK TC, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-family: ui-serif, Noto Serif TC, Noto Serif CJK TC, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 .font-sans {
@@ -1622,6 +1655,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 /* Variable */
 
 :root {
@@ -1696,6 +1735,11 @@ img {
   }
 }
 
+.after\:content-\[\'-\'\]::after {
+  --tw-content: '-';
+  content: var(--tw-content);
+}
+
 .first-of-type\:p-0:first-of-type {
   padding: 0px;
 }
@@ -1703,6 +1747,10 @@ img {
 .hover\:bg-stone-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 244 / var(--tw-bg-opacity));
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
 }
 
 .group:focus .group-focus\:opacity-0 {

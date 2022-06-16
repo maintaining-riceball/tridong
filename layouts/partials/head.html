@@ -82,7 +82,6 @@
 <meta name="twitter:description" content="{{ $pageDescription.Get "desc" }}" />
 
 <!-- Meta Image -->
-
 {{ $img := .Params.thumbnail.src }}
 <meta property="og:image" content="{{ $img }}" />
 <meta name="twitter:image" content="{{ $img }}" />
@@ -124,7 +123,7 @@
 {{ $index := resources.Match "js/index/**.js" }}
 <!-- Options -->
 {{ $index = $index | resources.Concat "tempIndex.js" | resources.ExecuteAsTemplate "index.js" . }}
-{{ $index = slice $index $global | resources.Concat "js/index.js" }}
+
 {{ $index = $index | js.Build }}
 <!-- If is in Production -->
 {{ if hugo.IsProduction }}
@@ -133,6 +132,7 @@
 
 {{ if .IsHome }}
     {{ $js := $index }}    <script defer type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+    {{ $js := $global }}    <script defer type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 {{ else }}
     {{ $js := $global }}    <script defer type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 {{ end }}

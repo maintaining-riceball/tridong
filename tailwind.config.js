@@ -3,7 +3,7 @@ module.exports = {
   content: ['./layouts/**/*.html', './content/**/*.md'],
   theme: {
     fontFamily: {
-      'serif': ["Noto Serif TC", "Noto Serif CJK TC", "serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
+      'serif': ["ui-serif", "Noto Serif TC", "Noto Serif CJK TC", "serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
       'sans': ["ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans TC", "Noto Sans CJK TC", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"]
     },
     extend: {

@@ -124,10 +124,8 @@ author:
 ## 資料來源
 
 
-
-
-
 {{< youtube id="t4vKPhjcMZg" title="What nobody tells you about documentation" >}}
+
 
 * [The four kinds of documentation, and why you need to understand what they are](https://www.writethedocs.org/videos/eu/2017/the-four-kinds-of-documentation-and-why-you-need-to-understand-what-they-are-daniele-procida/)
 * [The documentation system](https://documentation.divio.com/)

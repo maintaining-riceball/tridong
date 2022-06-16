@@ -1,0 +1,4 @@
+<!-- {{ if .IsHome }}
+    {{ $path := "./js/inline/index.js" }}
+    {{ $js := resources.Get $path | resources.ExecuteAsTemplate $path . | minify }}    <script>{{ $js.Content | safeJS }}</script>
+{{ end }} -->

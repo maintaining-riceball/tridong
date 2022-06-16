@@ -3,7 +3,7 @@
         style="min-height: calc(100vh - var(--navbarMainHeight) * 2 + 2rem)"
         class="grid grid-auto lg:grid-cols-2"
     >
-        <div>
+        <div class="flex flex-col-reverse md:block">
             <!-- Article Heading -->
             <div class="flex items-center min-h-[10rem]">
                 <h1 class="p-8 text-2xl md:text-3xl">
@@ -88,10 +88,10 @@
 
                         <div class="inline-block">
                             {{ if .Params.category }}
-                                <a href="/category/{{ .Params.category }}">
+                                <a class="after:content-['-']" href="/category/{{ .Params.category }}">
                                     {{ .Params.category }}
                                 </a>
-                                -
+                                
                             {{ end }}
 
 
