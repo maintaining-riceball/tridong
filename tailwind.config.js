@@ -3,6 +3,8 @@ module.exports = {
   content: ['./layouts/**/*.html', './content/**/*.md'],
   theme: {
     fontFamily: {
+      'mono': ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+
       'serif': ["ui-serif", "Noto Serif TC", "Noto Serif CJK TC", "serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
       'sans': ["ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans TC", "Noto Sans CJK TC", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"]
     },
@@ -84,6 +86,7 @@ module.exports = {
                 display: "inline-block",
               },
               pre: {
+                maxWidth: "100vw",
                 width: "100%",
                 fontSize: theme('fontSize.lg'),
                 borderRadius: "unset",

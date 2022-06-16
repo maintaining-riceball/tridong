@@ -18,9 +18,10 @@ author:
     image: https://res.cloudinary.com/tridong/image/upload/v1654503496/global/%E9%BB%83%E5%AE%97%E7%91%8B-%E9%A0%AD%E5%83%8F.jpg
 ---
 這裡是文章內容。
-```goat
+
+{{<diagram>}}
 .---------------.       .-----.       .----------------.
 | Pre-processor +------>| CSS |------>| Post-processor |
 '---------------'       '-----'       '----------------'
+{{</diagram>}}
 
-```

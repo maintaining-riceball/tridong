@@ -1,0 +1,9 @@
+<!-- {{ $remote := resources.GetRemote "https://res.cloudinary.com/tridong/image/upload/w_50,dpr_auto,f_auto/global/%E9%BB%83%E5%AE%97%E7%91%8B-%E9%A0%AD%E5%83%8F.jpg" }}
+
+
+{{ with $remote.Err }}
+    {{ $remote.Err }}
+{{ else }}
+    {{ $remote.Width }}
+    {{ $remote.Height }}
+{{ end }} -->
