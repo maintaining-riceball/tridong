@@ -31,11 +31,11 @@
     /><!-- Closing img tag -->
     {{- if .Get "link" }}</a>{{ end -}}
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
-        <figcaption class="inline-block float-right mx-8">
+        <figcaption class="inline-block float-none w-full text-center sm:text-right sm:float-right ">
             {{ with (.Get "title") -}}
                 {{ . }}
             {{- end -}}
-            {{- if or (.Get "caption") (.Get "attr") -}}<p>
+            {{- if or (.Get "caption") (.Get "attr") -}}<p class="inline-block w-full p-0 m-0 mb-4 sm:mx-8">
                 {{- .Get "caption" | markdownify -}}
                 {{- with .Get "attrlink" }}
                     <a href="{{ . }}">

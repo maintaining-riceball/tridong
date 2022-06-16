@@ -23,8 +23,10 @@ author:
 ---
 ## 前言
 
-> 一個壞的教學，讓新的客群遠離使用你的產品<br>
-> 好的文檔應該能更容易的被撰寫、更簡單去維護
+{{< hint type="info" cite="What nobody tells you about documentation" citeSrc="https://www.youtube.com/watch?v=t4vKPhjcMZg" >}}
+好的文檔應更容易的被撰寫、更簡單去維護
+{{< /hint >}}
+
 
 什麼是文檔(documentation)？狹義來說多指與程式有關的說明性文本，但其實生活中大大小小的事都能是文檔。常見到的技術教學是一種文檔，煮飯菜時的食譜也是一種文檔，基本上就是指*技術性的攻略、參考文件*，掌握文檔的撰寫方式，就是掌握如何更好的將知識散布，被人所理解使用。
 
@@ -129,4 +131,3 @@ author:
 
 * [The four kinds of documentation, and why you need to understand what they are](https://www.writethedocs.org/videos/eu/2017/the-four-kinds-of-documentation-and-why-you-need-to-understand-what-they-are-daniele-procida/)
 * [The documentation system](https://documentation.divio.com/)
-* [The four kinds of documentation, and why you need to understand what they are](https://www.writethedocs.org/videos/eu/2017/the-four-kinds-of-documentation-and-why-you-need-to-understand-what-they-are-daniele-procida/)

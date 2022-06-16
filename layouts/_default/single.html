@@ -6,11 +6,11 @@
         <div>
             <!-- Article Heading -->
             <div class="flex items-center min-h-[10rem]">
-                <h1 class="p-8 text-3xl">
+                <h1 class="p-8 text-2xl md:text-3xl">
                     <div class="gsap-heading">
                         {{ .Params.titletc }}
                     </div>
-                    <div class="gsap-heading">
+                    <div class="hidden gsap-heading sm:block">
                         {{ .Title }}
                     </div>
                 </h1>
@@ -154,7 +154,7 @@
 
         <!-- Right content -->
         <div class="pb-8 border-0 lg:border-l">
-            <div class="p-8 leading-relaxed border-b border-stone-200 min-h-[10rem] flex justify-start items-center">
+            <div class="p-8 hidden leading-relaxed border-b border-stone-200 min-h-[10rem] md:flex justify-start items-center">
                 <h2 class="text-2xl leading-snug tracking-wide">
                     {{ .Params.description | safeHTML }}
                 </h2>

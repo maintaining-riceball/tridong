@@ -3,14 +3,13 @@ draft: false
 title: New type of language - Emoji
 titletc: 顏文字，一種全新的語言形式
 thumbnail:
-  src:
-    - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
-  alt: 封面圖片替代文字(請填寫我)
+  src: https://res.cloudinary.com/tridong/image/upload/v1655315763/post/new-type-of-language-emoji/%E8%B2%93%E8%B2%93Hug.jpg
+  alt: 一隻貓貓抱著愛心emoji
 cover:
-  - src: https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
-    alt: 圖片01
-  - src: https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
-    alt: 圖片02
+  - src: https://res.cloudinary.com/tridong/image/upload/v1655315763/post/new-type-of-language-emoji/%E8%B2%93%E8%B2%93Hug.jpg
+    alt: 一隻貓貓抱著愛心emoji
+    height: 630
+    width: 1200
 description: 圖像一直是全人類全球性的通用語言與文化，這樣的風潮其實可以回溯到非常古老以前。人們依舊還是視覺動物，擅長使用圖像去溝通。
 date: 2022-06-06T19:47:37.248Z
 lastUpdateDate: 2022-06-07 03:47
@@ -52,7 +51,8 @@ Emoji 是對文化與地域開放包容的，任何人都可以提交新的表�
 如今在網路上找到各式的圖示與圖片都是非常容易的，但在前互聯網時代，是一件困難重重的事情。像是更少獲取圖片的管道、存儲裝置有限、差勁的圖片品質……都是圖像字體誕生所瞄準解決的問題之一。
 
 打開電腦，依舊能在作業系統附贈的字體中見到牠們的身影，「Wingdings」就是這樣一款專門為了圖像而生的字體，對於這個主題有興趣可以看看 Vox 的 *[Why the Wingdings font exists](https://www.vox.com/2015/8/25/9200801/wingdings-font-history)*。
-<iframe  height="315" src="https://www.youtube-nocookie.com/embed/JdKV1L1DJHc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+{{< youtube id="JdKV1L1DJHc" title="Why the Wingdings font exists" >}}
 
 綜合以上，事實上 Emoji 在 90 年代就有被人們創作為字體所使用的跡象，那麼更早以前呢？進入打字機時代。
 
@@ -66,9 +66,7 @@ Emoji 是對文化與地域開放包容的，任何人都可以提交新的表�
 ## 第一個 Emoji 的由來
 
 簡略了解了 Emoji 的歷史，說到底，現今第一個 Emoji 到底是由哪裡開始的呢？
-
 由 SoftBank 於 1997 發布了 SkyWalker DP-211SW 手機。這是已知的第一款包含一組 emoji 作為其字體一部分的手機，當時的 emoji 仍是黑白的並且只有 12x12 個像素的大小。
-
 原初的 176 個 Emoji 現今被永久於紐約現代美術館，這是一項特色標註了人們在新的時代使用獨特的方式去傳達訊息 —— 全新獨特的，全人類都能解析的視覺語言。
 
 
@@ -81,7 +79,8 @@ Emoji 是對文化與地域開放包容的，任何人都可以提交新的表�
 ## 📅 世界 Emoji 日
 
 [世界 Emoji 日](https://worldemojiday.com/)訂於7/17
-<iframe  height="315" src="https://www.youtube-nocookie.com/embed/gqtCzJCK22I?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+{{< youtube id="gqtCzJCK22I" title="👯‍♀️ How are people celebrating World Emoji Day? 🌏 🎉 🗓" >}}
 
 ## 參考資料
 * [A Brief History of Emoji - Collecteurs](https://www.collecteurs.com/article/a-brief-history-of-emoji)

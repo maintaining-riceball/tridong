@@ -8,7 +8,8 @@ barba.init({
         beforeEnter() {
             matterIndex();
             // console.log('matterindex')
-        }
+        },
+
     }],
     transitions: [{
       sync: false,

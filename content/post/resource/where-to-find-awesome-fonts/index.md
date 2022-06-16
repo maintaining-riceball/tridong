@@ -22,15 +22,13 @@ author:
 本篇文章旨在蒐集各式中文字體資源平台，詳細請注意授權上的需求。
 ## Google Fonts - 開源字體們的秘密基地
 
-<img loading="lazy" width="600" height="315" src="https://ucarecdn.com/ebea99a8-794c-42db-9713-7bb0d5d84e10/01GoogleFont.png" alt="Google Fonts Logo">
+{{< image width="600" height="315" src="https://res.cloudinary.com/tridong/image/upload/v1654544345/post/where-to-find-awesome-fonts/GoogleFont.png" alt="Google Fonts Icon 網頁">}}
 
 [Google Fonts](https://fonts.google.com/) 是由 Google 發起的一個網站，一個可以在上面提交開源字體的平台，能在上面找到各式各樣，來自不同語言與國家的字體，基本提交上去的字體多可「免費商用」，詳細仍需參閱每個字體的版權聲明。
 
 * 網站連結：[Google Font](https://fonts.google.com/)
 
-
-## Google Fonts Icon - 不用再為找圖標而苦惱
-<img loading="lazy" width="600" height="400" src="https://ucarecdn.com/b3f0940f-45ba-4784-b87b-2cc7e1b5cd03/03GoogleIconFont.png" alt="Google Fonts Icon 網頁">
+{{< image width="600" height="400" src="https://res.cloudinary.com/tridong/image/upload/v1654544345/post/where-to-find-awesome-fonts/GoogleIconFont.png" alt="Google Fonts Icon 網頁">}}
 
 你知道嗎？其實 Google 自家的 Material Design Icon 一直以來都是開源免費的，上百種圖示、四種種類的風格，讓你在挑選圖標時不用再擔心統不統一的問題。
 
@@ -38,7 +36,8 @@ author:
 * 相關介紹：[Google Symbols](https://material.io/blog/introducing-symbols)
 ## Adobe Fonts - Adobe 全家桶服務
 
-<img loading="lazy" width="600" height="315" src="https://ucarecdn.com/87c75fed-d1e8-4b03-adc2-aa0989bd3175/02AdobeFont.jpg" alt="Adobe Fonts Logo">
+
+{{< image width="600" height="315" src="https://res.cloudinary.com/tridong/image/upload/v1654544345/post/where-to-find-awesome-fonts/AdobeFont.jpg" alt="Adobe Fonts Logo">}}
 
 [Adobe Fonts](https://fonts.adobe.com/) 前生為「Typekit」是 Adobe 的一項線上服務，提供簡化的字體版權。更重要的是由於是 Adobe 推出的，只要有訂閱 Creative Cloud，可以在網站中登入帳號，點擊一下就可以把你喜愛的字體搬到 Adobe 提供的軟體服務，如：Illustrator、Photoshop 中使用。
 

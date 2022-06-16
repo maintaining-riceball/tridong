@@ -3,6 +3,7 @@ module.exports = {
   content: ['./layouts/**/*.html', './content/**/*.md'],
   theme: {
     fontFamily: {
+      'serif': ["ui-serif", "Noto Serif TC", "Noto Serif CJK TC", "serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
       'sans': ["ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans TC", "Noto Sans CJK TC", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"]
     },
     extend: {
@@ -97,14 +98,8 @@ module.exports = {
               blockquote: {
                 marginLeft: theme('padding.8'),
                 marginRight: theme('padding.8'),
-                borderRadius: theme('rounded.xl'),
                 fontStyle: "normal",
-                padding: "0",
                 borderLeftWidth: "0",
-                borderWidth: "2px",
-                borderStyle: "dotted",
-                borderColor: theme('colors.stone.300'),
-                backgroundColor: theme('colors.stone.100')
               }
 
             },
