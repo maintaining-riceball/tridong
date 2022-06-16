@@ -9,7 +9,7 @@ barba.init({
             {{ $index := resources.Match "js/index/**.js" }}
             {{ $index = $index | resources.Concat "tempIndex.js" | resources.ExecuteAsTemplate "index.js" . }}
             {{ $index = $index | js.Build }}
-            fetch("{{ if .Site.IsServer }}./{{ else }}{{ $.Site.Params.brandUrl }}{{ end }}{{ $index.RelPermalink }}", {method: 'POST', redirect: 'follow'})
+            fetch("{{ if .Site.IsServer }}./{{ else }}{{ $.Site.Params.brandUrl }}{{ end }}{{ $index.RelPermalink}}")
             .then(response => response.text())
             .then(txt => eval(txt))
             .catch(error => console.error('There was an error!', error);)
