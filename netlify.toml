@@ -32,8 +32,8 @@ Cache-Control = "public, max-age=604800"
 for = "/*"
 
 [headers.values]
-X-Frame-Options = "sameorigin"
-X-XSS-Protection = "1; mode=block"
-X-Content-Type-Options = "nosniff"
-Referrer-Policy = "no-referrer"
-Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' 'unsafe-inline' www.google-analytics.com www.googletagmanager.com"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    Content-Security-Policy = "default-src 'self' data: 'unsafe-inline' 'unsafe-eval' 'unsafe-inline' www.google-analytics.com www.googletagmanager.com https://i.imgur.com https://res.cloudinary.com www.youtube-nocookie.com www.youtube.com"
