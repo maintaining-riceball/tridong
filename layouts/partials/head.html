@@ -14,7 +14,7 @@
 
 <!-- Is in .Kind of Term -->
 {{ if eq .Kind "term" }}
-    {{ $taxonomyPrefix := print (.Data.Singular | title) " → " }}
+    {{ $taxonomyPrefix := print (.Title ) print ( replace (.Data.Pages) "Pages" "" ) " → " }}
     {{ $title.Add "content" $taxonomyPrefix }}
     {{ $isTerm = true }}
 {{ end }}
