@@ -87,15 +87,8 @@ function setWall() {
 }
 
 function setBodies(){
-
-
-
 // object colors & variables
-var arts = "#EDDC8C"
-var videos = "#B3E8F3"
-var abouts = '#4D4D4D'
 
-var border = 2
 var radius = 20
 
 // create objects
@@ -111,7 +104,7 @@ var dongC = Bodies.trapezoid(100, 100, 200, 200, 2, {
 });
 
 // art & design
-var illustration = Bodies.rectangle(70, 500, 133, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/RADmiFI.png', xScale: 0.5, yScale: 0.5 }}})
+var illustration = Bodies.rectangle(140, 500, 133, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/RADmiFI.png', xScale: 0.5, yScale: 0.5 }}})
 var art = Bodies.rectangle(35, 460, 56, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/NwQqeng.png', xScale: 0.5, yScale: 0.5 }}})
 var threeD = Bodies.rectangle(90, 460, 52, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/ptUWXgO.png', xScale: 0.5, yScale: 0.5 }}})
 var graphic = Bodies.rectangle(60, 420, 105, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/TyOmVtt.png', xScale: 0.5, yScale: 0.5 }}})
