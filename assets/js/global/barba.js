@@ -35,7 +35,7 @@ barba.init({
         // console.log('Barba Enter');
         const enter = gsap.timeline();
         window.scrollTo(0, 0);
-        enter.set("body", {overflowX: "hidden"}, 0)
+        enter.set("body", {overflow: "unset"}, 0)
              .to('.barba-loading', {display: "none", opacity: 0, duration: 0.75}, 0)
              .from(".gsap-list", {opacity: 0,translateY: 30, duration: .8, stagger: .1, ease: "power4.out"}, -1)
              .from(".gsap-heading", {opacity: 0,translateY: 100, duration: .8, stagger: .1, ease: "power4.out"}, 0)
