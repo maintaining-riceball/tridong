@@ -32,13 +32,6 @@ flowchart LR
   A(Sass) -.預處理 .-> B(CSS) -.後處理 .-> B(CSS) .-> C((瀏覽器))
 ```
 
-<div class="mermaid">
-    graph TD 
-    A[Client] --> B[Load Balancer] 
-    B --> C[Server1] 
-    B --> D[Server2]
-</div>
-
 
 
 ## 使用後處理器的理由？

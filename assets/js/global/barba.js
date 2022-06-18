@@ -33,6 +33,18 @@ barba.init({
 
       },
       enter(data) {
+
+        // console.log('Barba Once');
+        {{ $post := resources.Match "js/post/**.js" }}
+        {{ $post = $post | resources.Concat "tempPost.js" | resources.ExecuteAsTemplate "post.js" . }}
+        {{ $post = $post | js.Build }}
+        fetch("{{ $post.Permalink }}")
+        .then(responsive => responsive.text())
+        .then(txt => eval(txt))
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+
         const enter = gsap.timeline();
         {{ if not .Site.IsServer }}
         window.scrollTo(0, 0);
@@ -46,6 +58,7 @@ barba.init({
              .fromTo(".gsap-image",{opacity:0, clipPath:"clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)"}, {opacity: 1,clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: 1,delay: .2, stagger: .15, ease: "power4.out"}, 0)
             },
       once(data) {
+        
         // console.log('Barba Once');
         {{ $post := resources.Match "js/post/**.js" }}
         {{ $post = $post | resources.Concat "tempPost.js" | resources.ExecuteAsTemplate "post.js" . }}
