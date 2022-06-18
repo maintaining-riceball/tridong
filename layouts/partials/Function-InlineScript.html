@@ -1,12 +1,10 @@
-{{ if .Page.Store.Get "hasMermaid" }}
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>
-        const config = {
-            securityLevel: 'loose',
-            theme: 'neutral',
-            fontFamily: 'inherit',
-        }
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+    const config = {
+        securityLevel: 'loose',
+        theme: 'neutral',
+        fontFamily: 'inherit',
+    }
 
-        mermaid.initialize(config)
-    </script>
-{{ end }}
+    mermaid.initialize(config)
+</script>
