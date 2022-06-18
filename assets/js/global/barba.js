@@ -34,8 +34,10 @@ barba.init({
       enter(data) {
         // console.log('Barba Enter');
         const enter = gsap.timeline();
+        {{ if not .Site.IsServer }}
         window.scrollTo(0, 0);
-        enter.set("body", {overflow: "unset"}, 0)
+        {{ end }} 
+        enter.set("body", {overflowY: "auto", overflowX: "hidden"}, 0)
              .to('.barba-loading', {display: "none", opacity: 0, duration: 0.75}, 0)
              .from(".gsap-list", {opacity: 0,translateY: 30, duration: .8, stagger: .1, ease: "power4.out"}, -1)
              .from(".gsap-heading", {opacity: 0,translateY: 100, duration: .8, stagger: .1, ease: "power4.out"}, 0)
@@ -45,7 +47,9 @@ barba.init({
             },
       once(data) {
         // console.log('Barba Once');
+        {{ if not .Site.IsServer }}
         window.scrollTo(0, 0);
+        {{ end }}
         const once = gsap.timeline();
         once.from(".gsap-heading", {opacity: 0,translateY: 100, duration: .8, stagger: .1, ease: "power4.out"}, 0)
             .from(".gsap-list", {opacity: 0,translateY: 30, duration: .8, stagger: .1, ease: "power4.out"}, 0)

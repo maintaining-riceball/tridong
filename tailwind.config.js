@@ -21,6 +21,7 @@ module.exports = {
               'blockquote p:first-of-type::before': { content: 'none' },
               'blockquote p:first-of-type::after': { content: 'none' },
               h2: {
+                zIndex: "10",
                 backgroundColor: theme('colors.stone.100'),
                 paddingTop: theme('padding.4'),
                 paddingBottom: theme('padding.4'),

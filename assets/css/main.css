@@ -64,14 +64,8 @@ img {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
+.mermaid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

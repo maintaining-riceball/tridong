@@ -15,52 +15,41 @@
     {{ $class.Add "colorDarkest" "border-yellow-300" }}
     {{ $class.Add "colorDarker" "bg-yellow-200" }}
     {{ $class.Add "color" "bg-yellow-50" }}
-    {{ $class.Add "title" "警告" }}
 {{ end }}
 
 {{ if eq $type "danger" }}
     {{ $class.Add "colorDarkest" "border-red-300" }}
     {{ $class.Add "colorDarker" "bg-red-200" }}
     {{ $class.Add "color" "bg-red-50" }}
-    {{ $class.Add "title" "警示" }}
 {{ end }}
 
 {{ if eq $type "info" }}
     {{ $class.Add "colorDarkest" "border-blue-300" }}
     {{ $class.Add "colorDarker" "bg-blue-200" }}
     {{ $class.Add "color" "bg-blue-50" }}
-    {{ $class.Add "title" "資訊" }}
 {{ end }}
 
-
-<div>
-    {{ if $cite }}
-        <figure class="my-16 font-serif font-bold text-center">
-            <blockquote>
-                <p class="mx-auto text-2xl tracking-wider">
-                    {{ .Inner | .Page.RenderString }}
-                </p>
-            </blockquote>
-            <figcaption>
-                <cite class="transition-opacity opacity-60 hover:opacity-100">
-                    <a href="{{ with $citeSrc }}{{ . }}{{ end }}"
-                        >From —— {{ with $cite }}{{ . }}{{ end }}</a
-                    >
-                </cite>
-            </figcaption>
-        </figure>
-    {{ else }}
-        <blockquote
-            class="font-bold text-lg px-8 font-serif pt-4 text-center {{ $class.Get "color" }} border-4 {{ $class.Get "colorDarkest" }}"
-        >
-            <div
-                class="top-0 left-0 w-full font-sans leading-relaxed tracking-wider opacity-60"
-            >
-                {{ $class.Get "title" }}
-            </div>
-            <div class="pb-4 text-2xl">
+{{ if $cite }}
+    <figure class="relative my-16 font-serif font-bold text-center">
+        <blockquote>
+            <p class="mx-auto text-2xl tracking-wider">
                 {{ .Inner | .Page.RenderString }}
-            </div>
+            </p>
         </blockquote>
-    {{ end }}
-</div>
+        <figcaption>
+            <cite class="transition-opacity opacity-60 hover:opacity-100">
+                <a href="{{ with $citeSrc }}{{ . }}{{ end }}"
+                    >From —— {{ with $cite }}{{ . }}{{ end }}</a
+                >
+            </cite>
+        </figcaption>
+    </figure>
+{{ else }}
+    <blockquote
+        class=" text-lg p-16 text-center relative {{ $class.Get "color" }}"
+    >
+        <div class="text-2xl">
+            {{ .Inner | .Page.RenderString }}
+        </div>
+    </blockquote>
+{{ end }}
