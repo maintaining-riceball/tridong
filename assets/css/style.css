@@ -1537,10 +1537,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: right;
 }
 
-.font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-}
-
 .font-serif {
   font-family: ui-serif, Noto Serif TC, Noto Serif CJK TC, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
