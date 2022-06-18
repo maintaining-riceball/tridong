@@ -31,6 +31,16 @@ author:
 flowchart LR
   A(Sass) -.預處理 .-> B(CSS) -.後處理 .-> B(CSS) .-> C((瀏覽器))
 ```
+
+<div class="mermaid">
+    graph TD 
+    A[Client] --> B[Load Balancer] 
+    B --> C[Server1] 
+    B --> D[Server2]
+</div>
+
+
+
 ## 使用後處理器的理由？
 
 後處理器會把現有的 CSS 檔案解析後處理，實現某些功能。例如自動添加 Vendor Prefix ([Prefixfree](https://projects.verou.me/prefixfree/))或使用最新的語法([Stylecow](https://stylecow.github.io/))。不過在本文中會主要舉例 *PostCSS*，並了解它有什麼獨特之處。

@@ -166,14 +166,12 @@
                 {{ if .Params.toc }}
                 {{ .TableOfContents }}
                 {{ end }}
-                {{ .Page.Store.Get "hasMermaid" }}
                 {{ .Content }}
 
-            
             </div>
 
             {{ if .Params.credit }}
-            <div class="p-8 leading-relaxed border-t border-stone-200">
+                <div class="p-8 leading-relaxed border-t border-stone-200">
                     <div class="mt-8">
                         {{ range .Params.credit }}
                             {{ .title }}
@@ -184,7 +182,7 @@
                         {{ end }}
                     </div>
                 </div>
-                {{ end }}
+            {{ end }}
         </div>
     </div>
 {{ end }}

@@ -2,6 +2,7 @@ import barba from '@barba/core';
 import barbaPrefetch from '@barba/prefetch';
 barba.use(barbaPrefetch);
 
+
 barba.init({
     views: [{
         namespace: 'Home',
@@ -32,7 +33,6 @@ barba.init({
 
       },
       enter(data) {
-        // console.log('Barba Enter');
         const enter = gsap.timeline();
         {{ if not .Site.IsServer }}
         window.scrollTo(0, 0);
@@ -47,6 +47,17 @@ barba.init({
             },
       once(data) {
         // console.log('Barba Once');
+        {{ $post := resources.Match "js/post/**.js" }}
+        {{ $post = $post | resources.Concat "tempPost.js" | resources.ExecuteAsTemplate "post.js" . }}
+        {{ $post = $post | js.Build }}
+        fetch("{{ $post.Permalink }}")
+        .then(responsive => responsive.text())
+        .then(txt => eval(txt))
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+
+
         {{ if not .Site.IsServer }}
         window.scrollTo(0, 0);
         {{ end }}
