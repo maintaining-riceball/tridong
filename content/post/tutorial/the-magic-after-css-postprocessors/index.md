@@ -48,12 +48,12 @@ flowchart LR
 * 立即使用最新出爐的語法 ([postcss-preset-env](https://preset-env.cssdb.org/))
 * 提醒語法上的錯誤並修正 ([Stylelint](https://stylelint.io/))
 
-### 那麼和其他 CSS 處理器比起來差在哪裡？
+### 那麼 PostCSS 和其他 CSS 處理器比起來差在哪裡？
 
-* PostCSS 有壓倒性的使用率與好感 ([State of CSS 2021 Pre-/Post-processors](https://2021.stateofcss.com/en-US/technologies/pre-post-processors))
-* PostCSS 本身沒有任何功能，但可以安裝各式各樣社群開發的插件來擴充，
-* PostCSS 風氣自由，可以自行開發插件上傳社群。
-
+* 壓倒性的使用率與好感 ([State of CSS 2021 Pre-/Post-processors](https://2021.stateofcss.com/en-US/technologies/pre-post-processors))。
+* 本身沒有任何功能，但可以安裝各式各樣社群開發的插件來擴充。
+* 能安裝、去除自己想要的功能，更快的建構時間。
+* 風氣自由，可以自行開發插件上傳社群。
 ## 最後，為什麼你可能不需要預處理器
 解釋完了預處理器的好處，也要了解什麼場合，你不應該用它。
 ### 非原生
