@@ -26,7 +26,7 @@ author:
 
 ## 前言
 
-在前端開發領域，常常會聽見的一些預處理器 (Pre-processor)，像是 Sass、LESS、Stylus，是什麼？為什麼存在？這篇文章主要會探討以下幾個重點 (附帶範例)：
+在前端開發領域，常常會聽見的一些預處理器 (Pre-processor)，像是 Sass、less、stylus，是什麼？為什麼存在？這篇文章主要會探討以下幾個重點 (附帶範例)：
 
 * 🤔 CSS 處理器是什麼？
 * ✔️ 提供什麼好處、為什麼需要它們？
@@ -38,19 +38,18 @@ author:
 在今天，撰寫存在於未來的 CSS
 {{</hint>}}
 
-「CSS 處理器」的存在，其實主要就是為了彌補 [CSS](https://zh.wikipedia.org/zh-tw/%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8) 開發上功能不盡理想的地方。在早期，CSS 並沒有複雜的邏輯與功能去撰寫可重複使用與好被管理的代碼，造成開發者們碰到了 *難管理、難擴增* 的難題，特別是在大型的專案事態變得更加混亂，於是出現了 CSS 處理器用於解決這樣的問題。 
+「CSS 處理器」的存在，其實主要就是為了彌補 CSS 開發上功能不盡理想的地方。在早期，並沒有複雜的邏輯與功能去撰寫可重複使用與好被管理的代碼，造成開發者們碰到了 *難管理、難擴增* 的難題，特別是在大型的專案事態變得更加混亂，於是出現了 CSS 處理器用於解決這樣的問題。 
 
 ```mermaid
 flowchart LR
   A(Sass) -.預處理 .-> B(CSS) -.後處理 .-> B(CSS) .-> C((瀏覽器))
-
 ```
 
 藉由*預處理器延伸 CSS 的功能和語法*來實現更為複雜的邏輯與更簡潔的代碼，例如 Variables、Functions、Mixins、Code Nesting……等，實踐 [DRY](https://zh.wikipedia.org/zh-tw/%E4%B8%80%E6%AC%A1%E4%B8%94%E4%BB%85%E4%B8%80%E6%AC%A1) 原則。
 
-抑或是使用*後處理器對現有的 CSS 做處理*，來修飾現有的 CSS，例如 Import、Minification、Autoprefixer、CSS Nano……等
+抑或是使用*後處理器對現有的 CSS 做處理*，來壓縮、修飾、更動現有的 CSS，例如 Import、Minification、Autoprefixer、CSS Nano……等
 
-在本篇文章中，主要探討預處理器的環節，後處理器可以參考筆者的另一篇文章：[那些發生在 CSS 之「後」的魔法 —— 後處理器 ](https://www.tridong.com/post/tutorial/the-magic-after-css-postprocessors/)
+在本篇文章中，主要探討*預處理器*的環節，後處理器可以參考筆者的另一篇文章：[那些發生在 CSS 之「後」的魔法 —— 後處理器 ](https://www.tridong.com/post/tutorial/the-magic-after-css-postprocessors/)
 
 ## 使用預處理器的理由
 

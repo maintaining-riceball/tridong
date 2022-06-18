@@ -46,7 +46,7 @@
     </figure>
 {{ else }}
     <blockquote
-        class=" text-lg p-16 text-center relative {{ $class.Get "color" }}"
+        class=" text-lg p-2 md:p-16 text-left md:text-center relative {{ $class.Get "color" }}"
     >
         <div class="text-2xl">
             {{ .Inner | .Page.RenderString }}

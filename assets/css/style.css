@@ -1833,8 +1833,16 @@ img {
     border-left-width: 1px;
   }
 
+  .md\:p-16 {
+    padding: 4rem;
+  }
+
   .md\:pb-8 {
     padding-bottom: 2rem;
+  }
+
+  .md\:text-center {
+    text-align: center;
   }
 
   .md\:text-3xl {
