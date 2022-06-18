@@ -167,10 +167,23 @@
                 {{ .TableOfContents }}
                 {{ end }}
                 {{ .Content }}
+                {{ if .Page.Store.Get "hasMermaid" }}
+                <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+                <script>
+                    const config = {
+                        securityLevel: 'loose',
+                        theme: 'neutral',
+                        fontFamily: 'inherit',
+                    }
+            
+                    mermaid.initialize(config)
+                </script>
+            {{ end }}
+            
             </div>
 
+            {{ if .Params.credit }}
             <div class="p-8 leading-relaxed border-t border-stone-200">
-                {{ if .Params.credit }}
                     <div class="mt-8">
                         {{ range .Params.credit }}
                             {{ .title }}
@@ -180,8 +193,8 @@
                             <br />
                         {{ end }}
                     </div>
+                </div>
                 {{ end }}
-            </div>
         </div>
     </div>
 {{ end }}
