@@ -17,11 +17,6 @@ author:
   - name: 黃宗瑋
     image: https://res.cloudinary.com/tridong/image/upload/v1654503496/global/%E9%BB%83%E5%AE%97%E7%91%8B-%E9%A0%AD%E5%83%8F.jpg
 ---
-這裡是文章內容。
+## 前言
 
-{{<diagram>}}
-.---------------.       .-----.       .----------------.
-| Pre-processor +------>| CSS |------>| Post-processor |
-'---------------'       '-----'       '----------------'
-{{</diagram>}}
-
+在上一篇文章中[那些發生在 CSS 之「前」的魔法 —— 預處理器](https://www.tridong.com/post/tutorial/the-magic-before-css-preprocessors/)，我們

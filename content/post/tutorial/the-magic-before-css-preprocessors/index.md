@@ -50,7 +50,7 @@ flowchart LR
 
 抑或是使用*後處理器對現有的 CSS 做處理*，來修飾現有的 CSS，例如 Import、Minification、Autoprefixer、CSS Nano……等
 
-在本篇文章中，主要探討預處理器的環節，後處理器可以參考筆者的另一篇文章：[那些發生在 CSS 之「後」的魔法 —— 後處理器 ](http://localhost:1313/post/tutorial/the-magic-after-css-postprocessors/)
+在本篇文章中，主要探討預處理器的環節，後處理器可以參考筆者的另一篇文章：[那些發生在 CSS 之「後」的魔法 —— 後處理器 ](https://www.tridong.com/post/tutorial/the-magic-after-css-postprocessors/)
 
 ## 使用預處理器的理由
 
