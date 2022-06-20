@@ -8,8 +8,6 @@ thumbnail:
 cover:
   - src: https://res.cloudinary.com/tridong/image/upload/v1654885438/post/4-types-of-documentation-nobody-tells-you-about/%E5%9B%9B%E7%A8%AE%E6%96%87%E6%AA%94%E7%9A%84%E7%A8%AE%E9%A1%9E.png
     alt: 4 種文檔象限圖
-    height: 676
-    width: 1200
 description: 好的文檔可以幫助人們更快、更有自信的去上手某一項技術。本篇統整心得，幫助你理解文檔可以被拆分為 4 個種類，並且如何更好的整理、傳遞你的知識和想法。
 date: 2022-06-06T19:45:28.086Z
 lastUpdateDate: 2022-06-07 03:45

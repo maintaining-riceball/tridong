@@ -134,16 +134,14 @@
                     {{ $img := .src }}
                     {{ $width := .width }}
                     {{ $height := .height }}
-
-                    
-                    {{ $image := resources.GetRemote $img }}
-                    {{ $image.Width  }}
-
+                    {{ $remoteImg := resources.GetRemote $img }}
+                    {{ $remoteImgWidth := $remoteImg.Width }}
+                    {{ $remoteImgHeight := $remoteImg.Height }}
 
                     <img
                         class="sticky top-0 w-full gsap-image"
-                        width="{{ $width }}"
-                        height="{{ $height }}"
+                        width="{{ with $width }}{{ $width }}{{ else }}{{ $remoteImgWidth }}{{end}}"
+                        height="{{ with $height }}{{ $height }}{{ else }}{{ $remoteImgHeight }}{{end}}"
                         src="{{ $.Site.Params.cloudinaryImg }}/dpr_auto,f_auto,q_auto/{{ $.Section }}/{{ $.File.ContentBaseName }}/{{ path.Base $img }}"
                         srcset="
                             {{ $.Site.Params.cloudinaryImg }}/w_300,dpr_auto,f_auto,q_auto/{{ $.Section }}/{{ $.File.ContentBaseName }}/{{ path.Base $img }}   300w,

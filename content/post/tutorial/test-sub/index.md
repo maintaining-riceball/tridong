@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: test sub
 titletc: test文章的中文標題(請填寫我)
 thumbnail:
@@ -9,6 +9,7 @@ thumbnail:
 cover:
   - src: https://res.cloudinary.com/tridong/image/upload/v1655694500/post/test-sub/abc.jpg
     alt: abc
+    height: 210
 description: 整篇文章的精華描述，會用於 Google 搜尋上對於這個頁面的解釋。文字介於 65~80 個中文字。
 date: 2022-06-20T03:06:40.189Z
 lastUpdateDate: 2022-06-20 11:06
