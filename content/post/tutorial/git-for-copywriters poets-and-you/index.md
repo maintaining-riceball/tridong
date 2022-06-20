@@ -1,6 +1,6 @@
 ---
 draft: false
-title: Git for copywriters, poets and you
+title: Git for copywriters poets and you
 titletc: 用 Git 寫一首詩，打一段文
 thumbnail:
   src:
@@ -15,6 +15,7 @@ tag:
 author:
   - name: 黃宗瑋
     image: https://res.cloudinary.com/tridong/image/upload/v1654503496/global/%E9%BB%83%E5%AE%97%E7%91%8B-%E9%A0%AD%E5%83%8F.jpg
+
 ---
 ## 前言
 {{<hint>}}
@@ -24,8 +25,8 @@ author:
 [Git](https://git-scm.com/) 的用途廣泛，*大多時候都被用於管理程式碼*，被全球的開發者們廣泛的使用。想藉由本篇文章推廣 Git 其實在不同領域同樣也能發揮它強大的威力 —— *記錄你所寫的東西*。教學將會以*如何用 Git 備份你的詩*為例，以有趣實在的案例為主要導向。以下是章節目錄。
 
 * 😟 問題痛點
+* ✔️ 提供什麼好處、為什麼需要 Git？
 * 🤔 Git 與 GitHub 是什麼？
-* ✔️ 提供什麼好處、為什麼需要它們？
 * 🔎 如何使用 Git？
 
 ## 問題痛點
@@ -41,6 +42,8 @@ author:
 * 佔用大量的硬碟空間。
 * 沒辦法回顧甚至回朔檔案。
 * 沒辦法讓不同人各自對同一個檔案進行編輯。
+
+## 提供什麼好處、為什麼需要它們？
 
 而 Git 就是因應這樣的問題而誕生的一款*軟體*，它會記錄下每一次文件在編輯後的更動內容，並讓你輕鬆的回顧或回朔，與其他人分享或同步進度，造就了：
 
@@ -59,13 +62,17 @@ author:
 Git 是一款開源且免費的分散式版本管理系統。
 {{</hint>}}
 
-分散式版本管理系統，舉例來說，就像是能夠複製圖書館中的每一份文件與歷史紀錄到你的電腦上，經過修改後，再傳回原本的圖書館；而可能會有很多人共同使用同個圖書館，在最後上傳回去的時候才決定誰寫的東西要保留或刪除。
+分散式版本管理系統，舉例來說，就像是能夠複製圖書館中的每一份文件與歷史紀錄到你的電腦上，經過修改後，再傳回原本的圖書館；而可能會有不同人使用同個圖書館，在最後上傳回去的時候才決定誰寫的東西要保留或刪除。
 
-Git 大致就是這樣的軟體來實踐以上功能，這樣的作法讓撰寫文件合作上具有高度的效率。
+Git 大致就是這樣來實踐以上功能，讓合作撰寫文件上具有高度的效率。
 
 ### GitHub
-{{<hint cite="Git" citeSrc="https://git-scm.com/">}}
+{{<hint cite="GitHub Wiki" citeSrc="https://zh.wikipedia.org/zh-tw/GitHub">}}
 GitHub 是微軟提供的一項服務，線上存放 Git 的地方。
 {{</hint>}}
 
 [GitHub](https://github.com/)是 Microsoft 旗下的服務，使用 Git 作為版本控制軟體，除此之外也是世界上最大的代碼代管網站和開源社群。相似的服務還有 [GitLab](https://about.gitlab.com/)、[BitBucket](https://bitbucket.org/product)。
+
+## 如何使用 Git？
+
+先到 [Git](https://git-scm.com/) 的官方網站下載。

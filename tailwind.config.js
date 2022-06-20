@@ -31,6 +31,8 @@ module.exports = {
                 fontSize: theme('fontSize.2xl'),
                 position: "sticky",
                 top: "var(--navbarMainHeight)",
+
+
               },
               h3: {
                 backgroundColor: theme('colors.stone.100'),
@@ -40,8 +42,7 @@ module.exports = {
                 paddingRight: theme('padding.8'),
                 fontWeight: 400,
                 fontSize: theme('fontSize.lg'),
-                position: "sticky",
-                top: "var(--navbarMainHeight)",
+
               },
               p: {
                 paddingLeft: theme('padding.8'),
