@@ -27,7 +27,7 @@
     "scripts": {
         "dev": "concurrently npm:watch:*",
         "watch:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch",
-        "watch:hugo": "hugo server --gc --disableFastRender",
+        "watch:hugo": "hugo server --gc --disableFastRender -D",
         "watch:cms": "yarn netlify-cms-proxy-server",
         "build": "hugo --minify --gc --cleanDestinationDir"
     },

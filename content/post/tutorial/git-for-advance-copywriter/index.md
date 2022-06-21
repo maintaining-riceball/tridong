@@ -1,12 +1,12 @@
 ---
 draft: false
-title: Git for copywriters poets and you
-titletc: 用 Git 寫一首詩，打一段文
+title: Git for advance copywriter
+titletc: 給現代文字工作者簡單易懂的 Git 教學
 thumbnail:
   src:
     - https://res.cloudinary.com/tridong/image/upload/v1654515985/global/%E4%B8%89%E8%A7%92%E6%9D%B1%E6%9D%B1-%E5%93%81%E7%89%8C%E5%B1%95%E7%A4%BA%E5%B0%81%E9%9D%A2.png
   alt: 封面圖片替代文字(請填寫我)
-description: 文字工作者，備份自己的心血結晶是一件重要的事，而 Git 能夠幫助你這一點。不管你所在的領域。
+description: 讓身為現代文字工作者的你更好的管理、備份、不同文件的版本，使用 Git 不需要這麼複雜。
 date: 2022-06-18T18:11:10.978Z
 lastUpdateDate: 2022-06-19 02:11
 category: 教學
@@ -75,4 +75,6 @@ GitHub 是微軟提供的一項服務，線上存放 Git 的地方。
 
 ## 如何使用 Git？
 
-先到 [Git](https://git-scm.com/) 的官方網站下載。
+以上簡單說明完 Git 與 GitHub 之間的關係，讓我們使用本地端的 Git 創建一個「圖書館」並在裡面編寫，藉由簡單的文件來快速入門。
+1. 先到 [Git](https://git-scm.com/) 的官方網站下載。
+

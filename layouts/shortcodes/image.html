@@ -20,8 +20,16 @@
         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
         {{- end -}}
 
-        {{- with .Get "width" }} width="{{ . }}"{{ end -}}
-        {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+
+        {{ $width := .Get "width" }}
+        {{ $height := .Get "height" }}
+        {{ $remoteImg := resources.GetRemote $img }}
+        {{ $remoteImgWidth := $remoteImg.Width }}
+        {{ $remoteImgHeight := $remoteImg.Height }}
+
+
+        {{- with .Get "width" }} width="{{ with $width }}{{ $width }}{{ else }}{{ $remoteImgWidth }}{{end}}"{{ end -}}
+        {{- with .Get "height" }} height="{{ with $height }}{{ $height }}{{ else }}{{ $remoteImgHeight }}{{end}}"{{ end -}}
 
 
         loading="{{- with .Get "loading" -}}{{ . }}{{ else }}lazy{{ end -}}"
