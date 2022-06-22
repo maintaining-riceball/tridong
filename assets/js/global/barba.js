@@ -82,7 +82,7 @@ barba.init({
         loadMermaidOnNeed()
         aimateOnce()
       },
-      before: ({next}) => {
+      before: ({ current, next, trigger}) => {
         // Reset active on navbar
         let menu = document.querySelector('#navlistMain');
         const menuActive = menu.querySelector('.navbarMain--active');
