@@ -1054,16 +1054,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .right-0 {
   right: 0px;
 }
 
 .top-\[var\(--navbarMainHeight\)\] {
   top: var(--navbarMainHeight);
-}
-
-.bottom-0 {
-  bottom: 0px;
 }
 
 .top-auto {
@@ -1141,14 +1141,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: -2rem;
 }
 
-.mt-0\.5 {
-  margin-top: 0.125rem;
-}
-
-.mt-0 {
-  margin-top: 0px;
-}
-
 .-ml-2 {
   margin-left: -0.5rem;
 }
@@ -1179,6 +1171,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mr-px {
   margin-right: 1px;
+}
+
+.mt-0\.5 {
+  margin-top: 0.125rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
 }
 
 .mb-14 {
@@ -1553,14 +1553,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-lg {

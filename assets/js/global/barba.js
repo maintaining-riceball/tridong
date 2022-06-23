@@ -4,8 +4,7 @@ barba.use(barbaPrefetch);
 
 function loadMermaidOnNeed(){
   if (document.querySelectorAll('.mermaid').length > 0) {
-    console.log('loadMermaid');
-
+    // console.log('loadMermaid');
     {{ $mermaid := resources.Match "js/mermaid.js" }}
     {{ $mermaid = $mermaid | resources.Concat "tempMermaid.js" | resources.ExecuteAsTemplate "mermaid.js" . }}
     {{ $mermaid = $mermaid | js.Build }}

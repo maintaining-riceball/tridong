@@ -115,9 +115,11 @@ var music = Bodies.rectangle(400, 360, 86, 40, {chamfer: {radius: radius}, rende
 var star = Bodies.rectangle(80, 260, 42, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/C2qPMbB.png', xScale: 0.5, yScale: 0.5 }}})
 //about
 var about = Bodies.rectangle(230, 140, 87, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/4gPcZVN.png', xScale: 0.5, yScale: 0.5 }}})
-var instagram = Bodies.rectangle(320, 180, 40, 40, {id: 'instagramBody', chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/RStSwfG.png', xScale: 0.5, yScale: 0.5 }}, url: 'https://www.instagram.com/fuse.blog/'})
+var instagram = Bodies.rectangle(320, 180, 40, 40, {id: 'instagramBody', chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/RStSwfG.png', xScale: 0.5, yScale: 0.5 }}, url: '{{ $.Site.Params.brandInstagram }}'})
 var random = Bodies.rectangle(230, 180, 112, 40, {chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/YS51eIC.png', xScale: 0.5, yScale: 0.5 }}})
 
+// Experiment
+var cucumber = Bodies.rectangle(320, 180, 167, 201, {id: 'instagramBody', chamfer: {radius: radius}, render: { sprite: { texture: 'https://i.imgur.com/fR1Ji3m.png', xScale: 0.5, yScale: 0.5 }}, url: '{{ if .Site.IsServer }}.{{ else }}{{ $.Site.Params.brandUrl }}{{ end }}/project/package/ufo-vegetable-farm'})
 
 // Original Shape
 // var illustration = Bodies.rectangle(70, 500, 133, 40, {render: { fillStyle: arts}, chamfer: {radius: 20}})
@@ -125,7 +127,7 @@ var random = Bodies.rectangle(230, 180, 112, 40, {chamfer: {radius: radius}, ren
 
 // add all of the bodies to the world
 World.add(engine.world, [
-  illustration, art, threeD, graphic, photo, documentary, animation, vintage, short, website, article, music, star, about, instagram, random, dongA, dongB, dongC
+  illustration, art, threeD, graphic, photo, documentary, animation, vintage, short, website, article, music, star, about, instagram, random, dongA, dongB, dongC, cucumber
 ]);
 
 // add mouse control
@@ -149,40 +151,41 @@ render.mouse = mouse;
 mouse.element.removeEventListener("mousewheel", mouse.mousewheel);
 mouse.element.removeEventListener("DOMMouseScroll", mouse.mousewheel);
 
-
-
 // Detect clicks vs. drags
-// let click = false;
+let click = false;
 
-// document.addEventListener('mousedown', () => click = true);
-// document.addEventListener('mousemove', () => click = false);
-// document.addEventListener('mouseup', () => console.log(click ? 'click' : 'drag'));
+document.addEventListener('mousedown', () => click = true);
+document.addEventListener('mousemove', () => click = false);
+document.addEventListener('mouseup', () => console.log(click ? 'click' : 'drag'));
 
 // Create a On-Mouseup Event-Handler
-// Events.on(mouseConstraint, 'mouseup', function(event) {
-//   var mouseConstraint = event.source;
-//   var bodies = engine.world.bodies;
-//   if (!mouseConstraint.bodyB) {
-//     for (i = 0; i < bodies.length; i++) { 
-//       var body = bodies[i];
-//       // Check if clicked or dragged
-//       if (click === true) {
-//       if (Matter.Bounds.contains(body.bounds, mouseConstraint.mouse.position)) {
-//           var bodyUrl = body.url;
-//           console.log("Body.Url >> " + bodyUrl);
-//           // Hyperlinking feature
-//           if (bodyUrl != undefined) {
-//             //window.location.href = bodyUrl;
-//             window.open(bodyUrl, '_blank');
-//             console.log("Hyperlink was opened");
-//           }
-//           break;
-//         }
-//       }
-//     }
-//   }
-// });
+Events.on(mouseConstraint, 'mouseup', function(event) {
+  var mouseConstraint = event.source;
+  var bodies = engine.world.bodies;
+  if (!mouseConstraint.bodyB) {
+    var i = 0
+    for (i = 0; i < bodies.length; i++) { 
+      var body = bodies[i];
+      // Check if clicked or dragged
+      if (click === true) {
+      if (Matter.Bounds.contains(body.bounds, mouseConstraint.mouse.position)) {
+          var bodyUrl = body.url;
+          console.log("Body.Url >> " + bodyUrl);
+          // Hyperlinking feature
+          if (bodyUrl != undefined) {
+            //window.location.href = bodyUrl;
+            window.open(bodyUrl, '_blank');
+            console.log("Hyperlink was opened");
+          }
+          break;
+        }
+      }
+    }
+  }
+});
+
 }
+
 // run the engine
 Matter.Runner.run(engine)
 // run the renderer
